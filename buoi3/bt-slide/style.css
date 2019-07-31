@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.box {
+	height: 400px;
+	flex-grow: 1;
+}
+
+.box-1 {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.sidebar {
+	width: 300px;
+	background-color: red;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 50px;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 300px;
+	padding:0 50px;
+	overflow-y: auto;
+}
+
+.content img {
+	max-width: 100%;
+}
+
+.btt {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: white;
+	padding: 10px;
+}
