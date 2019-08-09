@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.top-header-wrapper {
+  background-color: #fcfcfc;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.top-header .logo-header {
+  height: 60%;
+  flex-grow: 0.5;
+}
+.top-header .logo-header a {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+.top-header .logo-header a img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+.top-header .search-header {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.top-header .search-header form.search {
+  display: flex;
+  height: 60%;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  flex-grow: 1;
+}
+.top-header .search-header form.search input[type='text'] {
+  width: 100%;
+  padding: 5px 5px 5px 40px;
+  font-size: 13px;
+  border: none;
+  border: 1px solid #e7e3e3;
+  border-radius: 5px;
+  outline: none;
+}
+.top-header .search-header form.search .fa-search {
+  font-size: 18px;
+  position: absolute;
+  transform: translate(30%, 30%);
+  color: #4f555c;
+  cursor: pointer;
+  line-height: 28px;
+	margin-left: 8px;
+}
+.top-header .login-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  flex-grow: 0.5;
+}
+.top-header .login-header .logo-user {
+  background-color: #e7e3e3;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+}
+.top-header .login-header .logo-user i.fa-user {
+  position: absolute;
+  color: #fff;
+  font-size: 27px;
+  left: 8px;
+  top: 4px;
+}
+.top-header .login-header .user-infomation {
+	margin-right: 30px;
+}
+.top-header .login-header .user-infomation a {
+  margin-right: 50px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  user-select: none;
+}
+.top-header .login-header .user-infomation p {
+	font-size: 12px;
+    color: #a0a0a0;
+    margin-top: 5px;
+}
+.top-header .login-header a:hover {
+  color: purple;
+}
+.top-header .login-header .dropdown {
+  position: relative;
+}
+.top-header .login-header .dropdown i.fa-caret-down {
+  cursor: pointer;
+}
+.top-header .login-header .dropdown .sub-dropdown {
+  background-color: #fcfcfc;
+  position: absolute;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  right: 0;
+  top: 45px;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting {
+  padding: 20px 10px;
+  border-bottom: 1px solid #dad5d5;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting .fa-sun {
+  color: #4f555c;
+  font-size: 25px;
+  padding-right: 10px;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting p {
+  display: inline-block;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting .switch {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  right: -40px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+  background-color: gray;
+  transition: .3s all;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting .switch:checked {
+  background-color: purple;
+  border: 1px solid purple;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting .switch:before {
+  content: '';
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  transition: 0.3s all;
+}
+.top-header .login-header .dropdown .sub-dropdown .setting .switch:checked:before {
+  left: 12px;
+}
+.top-header .login-header .dropdown .sub-dropdown .vip-registration {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-header .login-header .dropdown .sub-dropdown .vip-registration p {
+  display: block;
+  background-color: yellow;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.top-header .login-header .dropdown .sub-dropdown .vip-registration p:hover {
+  color: purple;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.below-header-wrapper {
+  background-color: #f7f7f7;
+}
+
+.below-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.below-header .menu-header {
+  width: 100%;
+  height: 100%;
+}
+.below-header .menu-header > ul {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.below-header .menu-header > ul > li {
+  list-style: none;
+  height: 100%;
+  padding: 15px;
+  display: inline-block;
+  position: relative;
+}
+.below-header .menu-header > ul > li:hover {
+	border-bottom: 2px solid purple; 
+}
+.below-header .menu-header > ul > li > a {
+  display: block;
+  text-decoration: none;
+  color: #92929d;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s ease-out;
+  font-weight: 600;
+}
+.below-header .menu-header > ul > li:hover > a {
+  color: purple;
+}
+
+.below-header .menu-header > ul > li .dropdown-menu {
+	position: absolute;
+	top: calc(100% + 2px);
+	left: 0;
+	min-width: 600px;
+	background-color: #fff;
+	padding: 25px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    display: none;
+}
+
+.below-header .menu-header > ul > li:hover .dropdown-menu {
+	display: flex;
+}
+
+.below-header .menu-header > ul > li .dropdown-menu ul {
+	flex: 1;
+}
+.below-header .menu-header > ul > li .dropdown-menu ul:last-child {
+	margin-right: 0;
+}
+.below-header .menu-header > ul > li .dropdown-menu ul > li {
+	padding: 10px 0;
+}
+
+.below-header .menu-header > ul > li .dropdown-menu ul > li > a {
+	display: block;
+	  text-decoration: none;
+	  color: #92929d;
+	  font-size: 14px;
+	  text-align: center;
+	  height: 100%;
+	  transition: 0.3s ease-out;
+	  text-align: left;
+}
+
+.below-header .menu-header > ul > li .dropdown-menu ul > li a:hover {
+	color: purple;
+}
+
+.below-header .menu-header > ul > li .dropdown-menu ul h1 {
+	 font-size: 14px;
+	 text-transform: uppercase;
+	 color: #333;
+	 margin-bottom: 10px;
+} 

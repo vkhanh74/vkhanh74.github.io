@@ -12,8 +12,8 @@ body {
 	width: 100vw;
 }
 .container {
-	width: 700px;
-	height: 700px;
+	width: 630px;
+	height: 630px;
 	text-align: center;
 }
 
@@ -21,6 +21,7 @@ body {
 	height: 200px;
 	width: 200px;
 	border: 5px solid white;
+	outline: 1px solid #ccc;
 	background-color: red;
 	margin: 5px;
 	float: left;
@@ -28,16 +29,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	transition: 0.3s ease-out;
 }
 
 .img-box img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+	transition: 0.3s ease-out;
 }
 
-.img-box:hover {
+.img-box img:hover  {
 	transform: scale(1.3);
 	transform-origin: center;
 }
