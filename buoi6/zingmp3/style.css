@@ -213,12 +213,12 @@ ul, li {
 .below-header .menu-header > ul > li {
   list-style: none;
   height: 100%;
-  padding: 15px;
   display: inline-block;
   position: relative;
 }
-.below-header .menu-header > ul > li:hover {
-	border-bottom: 2px solid purple; 
+.below-header .menu-header > ul > li.active > a {
+  color: purple;
+  border-bottom: 2px solid purple;
 }
 .below-header .menu-header > ul > li > a {
   display: block;
@@ -228,20 +228,23 @@ ul, li {
   font-size: 14px;
   text-align: center;
   height: 100%;
-  transition: 0.3s ease-out;
+  transition:color 0.3s ease-out;
   font-weight: 600;
+  padding: 15px;
+  border-bottom: 2px solid transparent;
 }
 .below-header .menu-header > ul > li:hover > a {
   color: purple;
+  border-bottom: 2px solid purple; 
 }
 
 .below-header .menu-header > ul > li .dropdown-menu {
 	position: absolute;
-	top: calc(100% + 2px);
+	top: 100%;
 	left: 0;
 	min-width: 600px;
 	background-color: #fff;
-	padding: 25px;
+	padding: 25px 0;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
     display: none;
 }
@@ -257,7 +260,7 @@ ul, li {
 	margin-right: 0;
 }
 .below-header .menu-header > ul > li .dropdown-menu ul > li {
-	padding: 10px 0;
+
 }
 
 .below-header .menu-header > ul > li .dropdown-menu ul > li > a {
@@ -269,10 +272,12 @@ ul, li {
 	  height: 100%;
 	  transition: 0.3s ease-out;
 	  text-align: left;
+    padding: 10px 15px;
 }
 
 .below-header .menu-header > ul > li .dropdown-menu ul > li a:hover {
 	color: purple;
+  background-color: #efefef;
 }
 
 .below-header .menu-header > ul > li .dropdown-menu ul h1 {
@@ -280,4 +285,5 @@ ul, li {
 	 text-transform: uppercase;
 	 color: #333;
 	 margin-bottom: 10px;
+   padding: 10px 15px;
 } 

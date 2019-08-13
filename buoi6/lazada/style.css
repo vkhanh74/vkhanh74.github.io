@@ -118,10 +118,6 @@ nav .cart-icon {
   box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
 }
 
-.banner img {
-	width: 100%;
-}
-
 .banner {
 	background-image: url('image/banner.jpg');
 	background-size: cover;
@@ -136,25 +132,33 @@ nav .cart-icon {
 }
 
 .banner .menu > ul li {
-	padding: 0 10px;
 	text-transform: capitalize;
 }
-.banner .menu > ul li:hover {
+
+.banner ul > li:hover > a{
 	background-color: #eceff1;
 }
+
+.banner ul li ul {
+  height: 100%;
+} 
+
 .banner .menu > ul > li:hover > a{
 	color: #f57224;
 }
 
-.banner .menu > ul > li a {
+.banner .menu > ul > li > a, .banner .menu .menu1 > li > a, .banner .menu .menu2  > li > a {
     font-size: 13px;
     line-height: 27px;
     color: #757575;
     cursor: pointer;
+    display: block;
+    padding: 0 10px;
 }
-.banner .menu > ul li ul {
-	height: 100%;
-} 
+
+.banner .menu > ul > li > .menu1 > li a > i {
+  display: none;
+}
 
 .banner .menu > ul > li > .menu1 > li a:hover {
 	color: #f57224;
@@ -166,13 +170,17 @@ nav .cart-icon {
   top: 0;
   display: none;
 }
-.banner .menu .fa-caret-right{
+
+.banner .menu .fa-angle-right{
   float:right;
   display: none;
+  line-height: 25px;
 }
-.banner .menu li:hover .fa-caret-right{
+
+.banner .menu li:hover .fa-angle-right{
   display:block;
 }
+
 .banner .menu li:hover .menu1 {
   display: block;
 }
@@ -183,6 +191,7 @@ nav .cart-icon {
   top: 0;
   display: none;
 }
+
 .banner .menu .menu1 li:hover .menu2 {
   display: block;
 }
