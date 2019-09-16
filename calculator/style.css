@@ -11,6 +11,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	font-family: 'Segor Ui', sans-serif;
+	background-color: #e9e4f0;
 }
 
 
@@ -36,6 +37,7 @@ input[type=text]:focus {
 	width: 320px;
 	overflow: hidden;
 	box-shadow: 10px 10px 35px -16px rgba(0,0,0,0.58);
+	margin-bottom: 60px;
 }
 
 .author {
@@ -75,4 +77,17 @@ table tr td {
 
 .calculator-keyboard_button span:hover, .calculator-function_button span:hover {
 	background-color: #aeaeae;
+}
+
+.change-theme {
+	text-align: center;
+}
+
+#change-theme {
+	border: 1px solid #dedeed;
+	padding: 15px 40px;
+	background-color: purple;
+	color: #fff;
+	text-decoration: none;
+
 }

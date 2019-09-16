@@ -6,93 +6,113 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="calculator">
-		<div class="author">
-			<p>Design by VuNgocKhanh</p>
+	<div class="container">
+		<div id="calculator">
+			<div class="author">
+				<p>Design by VuNgocKhanh</p>
+			</div>
+			<div class="calculator-screen">
+				<input readonly id="calculator-input" type="text">
+			</div>
+			<div class="calculator-keyboard">
+				<table>
+					<colgroup>
+						<col span="1" style="width: 25%">
+						<col span="1" style="width: 25%">
+						<col span="1" style="width: 25%">
+						<col span="1" style="width: 25%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td id="square2" class="calculator-function_button">
+								<span>√</span>
+							</td>
+							<td id="power2" class="calculator-function_button">
+								<span>x²</span>
+							</td>
+							<td id="power3" class="calculator-function_button">
+								<span>x³</span>
+							</td>
+							<td id="back" class="calculator-function_button">
+								<span><</span>
+							</td>
+						</tr>
+						<tr>
+							<td id="clear" class="calculator-function_button">
+								<span>C</span>
+							</td>
+							<td id="negative" class="calculator-function_button">
+								<span>+/-</span>
+							</td>
+							<td id="percent" class="calculator-function_button">
+								<span>%</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="calculation">/</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="calculator-keyboard_button">
+								<span class="number">1</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">2</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">3</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="calculation">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="calculator-keyboard_button">
+								<span class="number">4</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">5</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">6</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="calculation">-</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="calculator-keyboard_button">
+								<span class="number">7</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">8</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="number">9</span>
+							</td>
+							<td class="calculator-keyboard_button">
+								<span class="calculation">+</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="calculator-keyboard_button">
+								<span class="number">0</span>
+							</td>
+							<td id="dot" class="calculator-function_button">
+								<span>,</span>
+							</td>
+							<td id="equal" class="calculator-function_button">
+								<span>=</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-		<div class="calculator-screen">
-			<input readonly id="calculator-input" type="text">
-		</div>
-		<div class="calculator-keyboard">
-			<table>
-				<colgroup>
-					<col span="1" style="width: 25%">
-					<col span="1" style="width: 25%">
-					<col span="1" style="width: 25%">
-					<col span="1" style="width: 25%">
-				</colgroup>
-				<tbody>
-					<tr>
-						<td id="clear" class="calculator-function_button">
-							<span>C</span>
-						</td>
-						<td id="negative" class="calculator-function_button">
-							<span>+/-</span>
-						</td>
-						<td id="percent" class="calculator-function_button">
-							<span>%</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span class="calculation">/</span>
-						</td>
-					</tr>
-					<tr>
-						<td class="calculator-keyboard_button">
-							<span>1</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>2</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>3</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span class="calculation">*</span>
-						</td>
-					</tr>
-					<tr>
-						<td class="calculator-keyboard_button">
-							<span>4</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>5</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>6</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span class="calculation">-</span>
-						</td>
-					</tr>
-					<tr>
-						<td class="calculator-keyboard_button">
-							<span>7</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>8</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span>9</span>
-						</td>
-						<td class="calculator-keyboard_button">
-							<span class="calculation">+</span>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" class="calculator-keyboard_button">
-							<span>0</span>
-						</td>
-						<td id="dot" class="calculator-function_button">
-							<span>,</span>
-						</td>
-						<td id="equal" class="calculator-function_button">
-							<span>=</span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="change-theme">
+			<a href="#" id="change-theme">Change theme</a>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>

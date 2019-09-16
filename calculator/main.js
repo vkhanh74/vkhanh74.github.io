@@ -1,68 +1,175 @@
-var number = document.querySelectorAll('.calculator-keyboard_button span')
-var input = document.getElementById('calculator-input')
-var clear = document.querySelectorAll('#clear span')
-var negative = document.querySelectorAll('#negative span')
-var equal = document.querySelectorAll('#equal span')
-var percent = document.querySelectorAll('#percent span')
-var dot = document.querySelectorAll('#dot span')
+$(document).ready(function() {
+	
 
-//Xử ý nút clear
-clear[0].addEventListener('click', function() {
-	input.value = "";
-})
+	//Get elements
+	var number = $('.calculator-keyboard_button .number')
+	var calculation = $('.calculator-keyboard_button .calculation')
+	var input = $('#calculator-input')
+	var clear = $('#clear span')
+	var negative = $('#negative span')
+	var equal = $('#equal span')
+	var percent = $('#percent span')
+	var square2 = $('#square2 span')
+	var power2 = $('#power2 span')
+	var power3 = $('#power3 span')
+	var back = $('#back span')
+	var dot = $('#dot span')
+	var changeThemeBtn = $('#change-theme')
 
-//Xử ý nút âm dương
-negative[0].addEventListener('click', function() {
-	if(input.value !== ""){
-		input.value = eval(input.value) * -1;
-	}
-	else {
-		input.value += ""
-	}
-})
+	//Khởi tạo input value ban đầu
+	let inputVal = input.val();
 
-//Xử ý nút phần trăm
-percent[0].addEventListener('click', function() {
-	if(input.value !== ""){
-		input.value = input.value/100;
-	}
-	else {
-		input.value += ""
-	}
-})
+	/*Thêm số và các phép tính vào input*/
 
-//Xử lý nút dấu chấm
-dot[0].addEventListener('click', function() {
-	if(input.value.endsWith(".") == false && input.value !== ""){
-		input.value += "."
-	}
-	else {
-		input.value += ""
-	}
-})
+		//Thêm số vào input
+		number.on('click', function(){
+			let $this = $(this)
+			let number = $this.text()
+			inputVal += number
+			input.val(inputVal)
+		});
 
-//Xứ lý nút kết quả
-equal[0].addEventListener('click', function() {
-	if(input.value !== ""){
-		input.value = eval(input.value);
-	}
-	else {
-		input.value += ""
-	}
-})
+		//Thêm phép tính vào input
+		calculation.on('click', function(event) {
+			let $this = $(this)
+			let calculationSymbol = $this.text()
+			if(inputVal == "" || inputVal.toString().endsWith(".")) {
+				inputVal += "";
+			}
+			else if(inputVal.toString().endsWith(`+`) || inputVal.toString().endsWith(`-`) || inputVal.toString().endsWith(`*`) || inputVal.toString().endsWith(`/`)){
+				let lastChar = inputVal.slice(-1)
+				inputVal = inputVal.replace(lastChar, calculationSymbol);
+			}
+			else {
+				inputVal += calculationSymbol;
 
-//Thêm số và các phép tính vào input
-number.forEach(function(check){
-  	check.addEventListener('click', function(){
-	  	var getIndex = Array.from(number).indexOf(event.target);
-	  	var getNumber = number[getIndex].textContent || number[getIndex].innerText;
-  		
-  		if(input.value == "" && check.classList.contains("calculation")) {
-  			input.value += "";
-  		}
-  		else {
-  			input.value += getNumber
-  		}
+			}
+			input.val(inputVal)
+		});
+
+	//Xử lý nút clear
+		clear.on('click', function(event) {
+			inputVal = ""
+			input.val(inputVal)
+		});
+
+	//Xử ý nút âm dương
+		negative.on('click', function() {
+			if(inputVal[0] == '-') {
+				let split = inputVal.split('')
+				split.shift()
+				if(split.length < 1) {
+					inputVal = split.join();
+				}
+				else {
+					inputVal = split.join('');
+				}
+			}
+			else {
+				if (inputVal == "") {
+					inputVal += "";
+				}
+				else {
+					inputVal = "-" + inputVal;
+				}
+			}
+			input.val(inputVal);
+		})
+
+	// //Xử ý nút phần trăm
+		percent.on('click', function() {
+			let result = eval(inputVal);
+			if(inputVal.toString().includes("+") || inputVal.toString().includes("-") || inputVal.toString().includes("*") || inputVal.toString().includes("/") || inputVal.toString().endsWith(".") || inputVal == ""){
+				inputVal += ""
+			}
+			else {
+				inputVal = result/100;
+			}
+			input.val(inputVal);
+		})
+
+	//Xử lý nút dấu chấm
+		dot.on('click', function() {
+			if(inputVal.toString().endsWith(".") || inputVal.toString().endsWith(`+`) || inputVal.toString().endsWith(`-`) || inputVal.toString().endsWith(`*`) || inputVal.toString().endsWith(`/`) || input.value == ""){
+				inputVal += ""
+			}
+			else {
+				inputVal += "."
+			}
+			input.val(inputVal);
+		})
+
+	//Xứ lý nút kết quả
+		equal.on('click', function() {
+			if(input.value !== ""){
+				inputVal = eval(inputVal);
+			}
+			else {
+				inputVal += ""
+			}
+			input.val(inputVal);
+		})
+
+	//Xử lý nút căn bậc 2
+		square2.on('click', function() {
+			let result = eval(inputVal);
+			if(inputVal.toString().includes("+") || inputVal.toString().includes("-") || inputVal.toString().includes("*") || inputVal.toString().includes("/") || inputVal == "" || inputVal.toString().endsWith(".")){
+				inputVal += ""
+			}
+			else {
+				inputVal = Math.sqrt(result);
+			}
+			input.val(inputVal);
+		})
+
+	//Pow function
+	function pow(number) {
+		let result = eval(inputVal);
+		if(inputVal.toString().includes("+") || inputVal.toString().includes("*") || inputVal.toString().includes("/") || inputVal == "" || inputVal.toString().endsWith(".")){
+			inputVal += ""
+		}
+		else {
+			inputVal = Math.pow(result, number);
+		}
+		input.val(inputVal);
+	}
+
+	//Xử lý nút mũ 2
+		power2.on('click', function() {
+			pow(2)
+		})
+
+	//Xử lý nút mũ 3
+		power3.on('click', function() {
+			pow(3)
+		})
+
+	//Xử lý backspace
+	back.on('click', function(event) {
+		let split = inputVal.split('')
+		split.pop()
+		if(split.length < 1) {
+			inputVal = split.join();
+		}
+		else {
+			inputVal = split.join('');
+		}
+		input.val(inputVal);
 	});
-})
+	
+	//Get random color
+	function getRandomColor() {
+		
+	}
 
+	//Thay đổi giao diện
+	changeThemeBtn.on('click', function(event) {
+		event.preventDefault();
+		let randomColor = "#"+((1<<24)*Math.random()|0).toString(16)
+	  	$('body').css({
+			backgroundColor: randomColor,
+		});
+		
+	});
+
+});
