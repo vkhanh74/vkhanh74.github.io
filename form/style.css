@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe Ui', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://image.freepik.com/free-vector/natural-background-with-tropical-flowers_52683-16125.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    padding: 50px 50px;
+    background-color: bisque;
+    display: inline-block;
+    background-image: url('https://image.freepik.com/free-vector/minimal-diagonal-zigzag-pattern-design_1017-15351.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    border-radius: 5px;
+}
+
+form h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: blueviolet;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+form .input-group {
+    margin-bottom: 30px;
+}
+
+form .input-group label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+form .input-group input {
+    padding: 20px 15px;
+    border: 1px solid #dedede;
+    width: 100%;
+    transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+form .input-group input:focus {
+    outline: 0;
+    border: 1px solid salmon;
+}
+
+form button {
+    padding: 15px 40px;
+    font-size: 18px;
+    background-color: blueviolet;
+    border: 0;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(45deg, rgba(252,70,122,1) 0%, rgba(63,94,251,1) 100%);
+}
+
+form {
+	width: 600px;
+	box-shadow: 0px 7px 38px -15px rgba(0,0,0,0.58);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+form .form-header {
+	background-color: #000;
+}
+
+form .form-header h1 {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+	color: #fff;
+	padding: 15px 0;
+}
+
+form .form-group {
+	padding: 60px 70px;
+	background-color: #fff;
+}
+
+
+
+form .input-group {
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+}
+
+form .input-group.select-group label {
+	display: inline-block;
+}
+
+form .input-group.select-group select {
+	border-radius: 5px;
+	height: 50px;
+	border: 1px solid #dedede;
+	padding: 0 10px;
+	transition: 0.3s ease;
+	font-size: 14px;
+	color: #333;
+	font-weight: 400;
+	margin-right: 15px;
+	background-color: #E7E7E7;
+}
+
+form .input-group.select-group select:focus {
+	outline: 0;
+	border: 1px solid purple;
+}
+
+form .input-group.select-group option {
+	font-size: 14px;
+	color: #333;
+	font-weight: 400;
+}
+
+form .input-group label{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #333;
+	width: 200px;
+}
+
+form .input-group label:after {
+	content: ':';
+}
+
+form .input-group input {
+	border-radius: 5px;
+	width: 100%;
+	height: 50px;
+	border: 1px solid #dedede;
+	background-color: #E7E7E7;
+	padding: 0 15px;
+	transition: 0.3s ease;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 400s;
+	flex: 1;
+}
+
+
+form .input-group input:focus {
+	outline: 0;
+	border: 1px solid purple;
+}
+
+form .input-group input::placeholder {
+	font-size: 14px;
+	color: #aeaeae;
+	font-weight: 400;
+}
+
+#register-btn {
+	cursor: pointer;
+	border-radius: 5px;
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	text-transform: uppercase;
+	background: linear-gradient(45deg, rgba(252,70,122,1) 0%, rgba(63,94,251,1) 100%);
+	border: 1px solid #dedede;
+	transition: 0.3s ease;
+	margin-top: 15px;
+	/*border: 2px solid transparent;*/
+}
+
+#register-btn:hover {
+	background: #fff;
+	background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,122,1) 100%);
+}
+
+#infomation-box p {
+	font-size: 16px;
+	font-weight: 500;
+	color: #6f6f6f;
+	line-height: 30px;
+}

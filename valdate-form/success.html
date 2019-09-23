@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div class="form-header">
+				<h1>Register infomation</h1>
+			</div>
+			<div class="form-group">
+				<div id="infomation-box"></div>
+			</div>
+		</form>	
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			var infoBox = document.getElementById('infomation-box')	
+			var pathName = decodeURIComponent(window.location.href);
+			var findIndex = pathName.indexOf('?')
+			var newStr = pathName.slice(findIndex + 1)
+			var splittedStr = newStr.split('&')
+			var mappedStr = splittedStr.map(function(item){
+				return item.replace('=', ': ').replace(/\+/g, ' ')
+			})
+			
+			for(var i=0; i<mappedStr.length; i++) {
+				if(!mappedStr[i].toLowerCase().includes("password")) {
+					infoBox.innerHTML += '<p class="info-item">' + mappedStr[i] + '</h1>' + '</p>';
+				}
+				else {
+					infoBox.innerHTML += ''
+				}
+			}
+		})
+	</script>
+</body>
+</html>
