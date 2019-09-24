@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead tr {
+    background-color: #000;
+}
+
+table thead tr th {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 15px;
+    text-align: left;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f8f8f8;
+} 
+
+table tbody tr td {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 15px;
+    text-align: left;
+}
+
+.function-icon {
+    color: #333;
+}
+
+.function-icon i {
+    margin-right: 5px;
+}
+
+.function-icon.edit {
+    color: #40aa26;
+}
+
+.function-icon.remove {
+    color: #ff7e67;
+}
+
+.function-icon.edit:after {
+    content: "|";
+    margin: 0 10px;
+    color: #333;
+}
+
+#confirm-box {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirm-box.show {
+    display: flex!important;
+}
+
+#confirm-box.show .confirm-box_content {
+    animation: slideDown 0.3s forwards;
+}
+
+#confirm-box .confirm-box_content {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 14px 12px 45px -34px rgba(0,0,0,0.75);
+}
+
+#confirm-box .confirm-box_content p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#confirm-box .confirm-box_content .btn-group {
+    text-align: center;
+}
+
+#confirm-box .confirm-box_content .btn-group a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#confirm-box .confirm-box_content .btn-group #accept {
+    background-color: #4BB543;
+}
+
+#confirm-box .confirm-box_content .btn-group #cancel {
+    background-color: #ff7e67;
+}
+
+#sort-option {
+    margin-bottom: 30px;
+    boder: 1px solid #dedede;
+    padding: 10px 15px;
+}
+
+#sort-option:focus {
+    outline: 0;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0px); opacity: 1; }
+}
