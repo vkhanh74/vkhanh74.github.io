@@ -79,33 +79,32 @@ $(document).ready(function () {
                 </tr>`
             )
         })
-    }
 
-    //Remove funtion
-    let removeBtn = $('.function-icon.remove')
-    let confirmBox = $('#confirm-box')
-    let acceptBtn = $('#accept')
-    let cancelBtn = $('#cancel')
-   
-    removeBtn.on('click', () => {
-        event.preventDefault();
-        confirmBox.addClass('show')
-        //Confirm delete user
-        acceptBtn.on('click', () => {
+        //Remove funtion
+        let removeBtn = $('.function-icon.remove')
+        let confirmBox = $('#confirm-box')
+        let acceptBtn = $('#accept')
+        let cancelBtn = $('#cancel')
+    
+        removeBtn.on('click', function() {
             event.preventDefault();
-            confirmBox.fadeOut('50', () => {
-                confirmBox.removeClass('show').removeAttr('style')
-                $(this).parent().parent().remove();
+            confirmBox.addClass('show')
+            //Confirm delete user
+            acceptBtn.on('click', () => {
+                event.preventDefault();
+                confirmBox.fadeOut('50', () => {
+                    confirmBox.removeClass('show').removeAttr('style')
+                    $(this).parent().parent().remove();
+                })
             })
         })
-    })
-    
-    //Close confirm box
-    cancelBtn.on('click', function(){
-        event.preventDefault();
-        confirmBox.fadeOut('50', function(){
-            confirmBox.removeClass('show').removeAttr('style')
+        
+        //Close confirm box
+        cancelBtn.on('click', function(){
+            event.preventDefault();
+            confirmBox.fadeOut('50', function(){
+                confirmBox.removeClass('show').removeAttr('style')
+            })
         })
-    })
-
+    }
 });
