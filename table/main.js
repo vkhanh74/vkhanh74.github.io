@@ -21,11 +21,11 @@ $(document).ready(function () {
 
     //Sort student list
     $('select').on('change', function (e) {
+        e.preventDefault()
         var optionSelected = $("option:selected", this);
         var valueSelected = this.value;
         console.log(valueSelected)
         if(valueSelected == 'name-sort') {
-            event.preventDefault()
             let newArr = studentsClone.sort(function(a,b) {
                 if(a.name < b.name) { return -1; }
                 if(a.name > b.name) { return 1; }
@@ -35,7 +35,6 @@ $(document).ready(function () {
             renderStudents(newArr)
         }
         else if(valueSelected == 'birthyear-sort') {
-            event.preventDefault()
             let newArr = studentsClone.sort(function(a,b) {
                 return a.birthyear - b.birthyear;
             })
@@ -43,7 +42,6 @@ $(document).ready(function () {
             renderStudents(newArr)
         }
         else if(valueSelected == 'phone-sort') {
-            event.preventDefault()
             let newArr = studentsClone.sort(function(a,b) {
                 return a.phone - b.phone;
             })
@@ -51,7 +49,6 @@ $(document).ready(function () {
             renderStudents(newArr)
         }
         else if(valueSelected == 'email-sort') {
-            event.preventDefault()
             let newArr = studentsClone.sort(function(a,b) {
                 if(a.email < b.email) { return -1; }
                 if(a.email > b.email) { return 1; }
@@ -61,7 +58,6 @@ $(document).ready(function () {
             renderStudents(newArr)
         }
         else {
-            event.preventDefault()
             tBody.empty();
             renderStudents(students)
         }
@@ -86,17 +82,15 @@ $(document).ready(function () {
     }
 
     //Remove funtion
-
     let removeBtn = $('.function-icon.remove')
     let confirmBox = $('#confirm-box')
     let acceptBtn = $('#accept')
     let cancelBtn = $('#cancel')
-
    
     removeBtn.on('click', () => {
         event.preventDefault();
         confirmBox.addClass('show')
-        // Confirm
+        //Confirm delete user
         acceptBtn.on('click', () => {
             event.preventDefault();
             confirmBox.fadeOut('50', () => {
