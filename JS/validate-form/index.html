@@ -7,6 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div id="error-modal">
+		<div id="error-list">
+		</div>
+	</div>
 	<div class="container">
 		<form id="register-form" action="success.html">
 			<div class="form-header">
@@ -67,19 +71,6 @@
 						<option value='12'>12</option>
 					</select>
 					<select name='Year' id='blah'>
-						<option value='1947'>1947</option>
-						<option value='1948'>1948</option>
-						<option value='1949'>1949</option>
-						<option value='1950'>1950</option>
-						<option value='1951'>1951</option>
-						<option value='1952'>1952</option>
-						<option value='1953'>1953</option>
-						<option value='1954'>1954</option>
-						<option value='1955'>1955</option>
-						<option value='1956'>1956</option>
-						<option value='1957'>1957</option>
-						<option value='1958'>1958</option>
-						<option value='1959'>1959</option>
 						<option value='1960'>1960</option>
 						<option value='1961'>1961</option>
 						<option value='1962'>1962</option>
@@ -114,6 +105,30 @@
 						<option value='1991'>1991</option>
 						<option value='1992'>1992</option>
 						<option value='1993'>1993</option>
+						<option value='1947'>1994</option>
+						<option value='1948'>1995</option>
+						<option value='1949'>1996</option>
+						<option value='1950'>1997</option>
+						<option value='1951'>1998</option>
+						<option value='1952'>1999</option>
+						<option value='1953'>2000</option>
+						<option value='1954'>2001</option>
+						<option value='1955'>2002</option>
+						<option value='1956'>2003</option>
+						<option value='1957'>2004</option>
+						<option value='1958'>2005</option>
+						<option value='1959'>2006</option>
+						<option value='1953'>2007</option>
+						<option value='1954'>2008</option>
+						<option value='1955'>2009</option>
+						<option value='1956'>2010</option>
+						<option value='1957'>2011</option>
+						<option value='1958'>2012</option>
+						<option value='1959'>2013</option>
+						<option value='1956'>2014</option>
+						<option value='1957'>2015</option>
+						<option value='1958'>2016</option>
+						<option value='1959'>2017</option>
 					</select>
 				</div>
 				<div class="input-group">
@@ -130,11 +145,11 @@
 				</div>
 				<div class="input-group">
 					<label for="password">Mật khẩu</label>
-					<input type="password" placeholder="Mật khẩu" name="Password" id="password">
+					<input type="password" placeholder="Mật khẩu" name="Password" id="password" autocomplete="off">
 				</div>
 				<div class="input-group">
 					<label for="re-password">Nhập lại mật khẩu</label>
-					<input type="password" placeholder="Nhập lại mật khẩu" name="Re-password" id="re-password">
+					<input type="password" placeholder="Nhập lại mật khẩu" name="Re-password" id="re-password" autocomplete="off">
 				</div>
 				<input type="submit" id="register-btn">
 			</div>
