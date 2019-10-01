@@ -9,24 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 <body>
-    <div id="confirm-box">
-        <div class="confirm-box_content">
-            <p>Bạn có đồng ý xóa người dùng này ?</p>
-            <div class="btn-group">
-                <a href="#" id="accept">Đồng ý</a>
-                <a href="#" id="cancel">Hủy Bỏ</a>
-            </div>  
-        </div>
-    </div>
     <div class="container">
         <h1>Danh sách học viên</h1>
-        <select name="sort" id="sort-option">
-            <option value="default-sort">Mặc định</option>
-            <option value="name-sort">Sort by name</option>
-            <option value="birthyear-sort">Sort by birth year</option>
-            <option value="phone-sort">Sort by phone</option>
-            <option value="email-sort">Sort by email</option>
-        </select>
         <table>
             <colgroup>
                 <col style="width: 30%">
@@ -36,11 +20,18 @@
                 <col style="width: 20%">
             </colgroup>
             <thead>
-                <tr>
-                    <th>Họ và tên</th>
-                    <th>Năm Sinh</th>
-                    <th>Email</th>
-                    <th>Số điện thoại</th>
+                <tr class="table-search">
+                    <th><input type="text" class="search-input" id="name-search" placeholder="Tìm kiếm họ tên học viên"></th>
+                    <th></th>
+                    <th><input type="text" class="search-input" id="email-search" placeholder="Tìm kiếm email học viên"></th>
+                    <th><input type="text" class="search-input" id="phone-search" placeholder="Tìm kiếm SĐT học viên"></th>
+                    <th></th>
+                </tr>
+                <tr class="table-header">
+                    <th class="sortable" id="full-name">Họ và tên</th>
+                    <th class="sortable" id="birth-year">Năm Sinh</th>
+                    <th class="sortable" id="email">Email</th>
+                    <th class="sortable" id="phone">Số điện thoại</th>
                     <th></th>
                 </tr>
             </thead>
@@ -48,11 +39,12 @@
 
             </tbody>
         </table>
+        <!-- <a href="" id="add-new">+ Add new student</a> -->
     </div>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
 </body>
 </html>

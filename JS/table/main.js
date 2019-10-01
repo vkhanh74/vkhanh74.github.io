@@ -2,16 +2,25 @@ $(document).ready(function () {
 
     let tBody = $('tbody')
 
+    function Student(name,birthyear,email,phone) {
+        this.name = name;
+        this.birthyear = birthyear;
+        this.email = email;
+        this.phone = phone;
+        getIndex = function(){
+            console.log($(this).index())
+        }
+    }
+
     //Orignal students array
     students = [
-        {name: 'Nguyễn Văn C', birthyear: '1992', email: 'leonelmessi@gmail.com', phone: '0878151184'},
-        {name: 'Nguyễn Văn D', birthyear: '1989', email: 'marcoreus@gmail.com', phone: '0841051342'},
-        {name: 'Nguyễn Văn B', birthyear: '1991', email: 'edenharzard@gmail.com', phone: '0544289411'},
-        {name: 'Nguyễn Văn A', birthyear: '1999', email: 'bernaldosilva@gmail.com', phone: '0123456789'},
-        {name: 'Nguyễn Văn F', birthyear: '2002', email: 'nguyenquanghai@gmail.com', phone: '0359412411'},
-        {name: 'Nguyễn Văn E', birthyear: '1998', email: 'ansufati@gmail.com', phone: '0395181312'},
-        
-    ]
+        new Student('Nguyễn Văn C',1992,'leonelmessi@gmail.com','0878151184'),
+        new Student('Nguyễn Văn D',1989,'marcoreus@gmail.com','0878151184'),
+        new Student('Nguyễn Văn B',1991,'edenharzard@gmail.com','0544289411'),
+        new Student('Nguyễn Văn A',1999,'bernaldosilva@gmail.com','0123456789'),
+        new Student('Nguyễn Văn F',2002,'nguyenquanghai@gmail.com','0359412411'),
+        new Student('Nguyễn Văn E',1998,'ansufati@gmail.com','0359412411'),  
+    ] 
     
     //Clone orignal array
     studentsClone = [...students]

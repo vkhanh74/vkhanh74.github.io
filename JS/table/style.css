@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Segoe UI', sans-serif;
 }
@@ -17,6 +18,17 @@ a {
     text-decoration: none;
 }
 
+input {
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #dedede; 
+}
+
+input:focus {
+    outline: 0;
+    border: 1px solid #aeaeae;
+}
+
 h1 {
     font-size: 40px;
     text-align: center;
@@ -24,21 +36,61 @@ h1 {
     margin-bottom: 30px;
 }
 
+.danger {
+    color: #ff7e67;
+}
+
+.success {
+    color: #40aa26
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
-table thead tr {
+table thead .table-header {
     background-color: #000;
 }
 
+table thead .table-search {
+    background-color: #f8f8f8;
+    
+}
+
+
 table thead tr th {
+    padding: 20px 15px;
+}
+
+table thead .table-header th {
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 500;
-    padding: 20px 15px;
     text-align: left;
+    position: relative;
+}
+
+table thead .table-header .sortable {
+    cursor: pointer;
+}
+
+table thead .table-header .sortable:hover:after {
+    display: block;
+}
+
+table thead tr .sortable:after {
+    content: "";
+    display: none;
+    position: absolute;
+    background-image: url('image/sort.svg');
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 10px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
 }
 
 table tbody tr:nth-child(odd) {
@@ -75,71 +127,12 @@ table tbody tr td {
     color: #333;
 }
 
-#confirm-box {
-    display: none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    align-items: center;
-    justify-content: center;
-}
-
-#confirm-box.show {
-    display: flex!important;
-}
-
-#confirm-box.show .confirm-box_content {
-    animation: slideDown 0.3s forwards;
-}
-
-#confirm-box .confirm-box_content {
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 14px 12px 45px -34px rgba(0,0,0,0.75);
-}
-
-#confirm-box .confirm-box_content p {
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-
-#confirm-box .confirm-box_content .btn-group {
-    text-align: center;
-}
-
-#confirm-box .confirm-box_content .btn-group a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    color: #fff;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-#confirm-box .confirm-box_content .btn-group #accept {
-    background-color: #4BB543;
-}
-
-#confirm-box .confirm-box_content .btn-group #cancel {
-    background-color: #ff7e67;
-}
-
-#sort-option {
-    margin-bottom: 30px;
-    boder: 1px solid #dedede;
+#add-new {
     padding: 10px 15px;
-    
-}
-
-#sort-option:focus {
-    outline: 0;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0px); opacity: 1; }
+    display: block;
+    text-align: center;
+    background-color: rgb(219, 219, 219);
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
 }
