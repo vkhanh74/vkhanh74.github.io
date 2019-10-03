@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h1>Danh sách học viên</h1>
+        <input type="text" id="search" placeholder="Tìm kiến họ tên, năm sinh, số điện thoại và email của học viên">
         <table>
             <colgroup>
                 <col style="width: 30%">
@@ -20,13 +21,6 @@
                 <col style="width: 20%">
             </colgroup>
             <thead>
-                <tr class="table-search">
-                    <th><input type="text" class="search-input" id="name-search" placeholder="Tìm kiếm họ tên học viên"></th>
-                    <th></th>
-                    <th><input type="text" class="search-input" id="email-search" placeholder="Tìm kiếm email học viên"></th>
-                    <th><input type="text" class="search-input" id="phone-search" placeholder="Tìm kiếm SĐT học viên"></th>
-                    <th></th>
-                </tr>
                 <tr class="table-header">
                     <th class="sortable" id="full-name">Họ và tên</th>
                     <th class="sortable" id="birth-year">Năm Sinh</th>

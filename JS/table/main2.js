@@ -46,12 +46,21 @@ function removeStudent(index, deleteBtn) {
 }
 
 //Search column
-function search(element,column) {
-    $(element).on('keyup', function(){
-        searchStudent = $(this).val()
+function search() {
+    $('#search').on('keyup', function(){
+        let searchStudent = $(this).val()
+        let toLower = searchStudent.toLowerCase()
         let result = students.filter(function(student){ 
-            return student[column].toLowerCase().includes(searchStudent.toLowerCase())
+            return student.name.toLowerCase().includes(toLower) || student.birthyear.toString().includes(toLower) || student.email.toLowerCase().includes(toLower) || student.phone.toLowerCase().includes(toLower)
         })
+        // $.each(result, function(i,student){
+        //     if(searchStudent){
+        //         var pattern = new RegExp("("+searchStudent+")", "gi");
+        //         var new_text = student.name.replace(pattern, "<span class='highlight'>"+searchStudent+"</span>");
+        //         console.log(student.name.text())
+        //     }
+        // })
+        
         renderStudent(result);
     })
 }
@@ -90,23 +99,6 @@ function sort(element,column) {
     })
 }
 
-$('#add-new').on('click', function(){
-    event.preventDefault()
-    $(this).hide()
-    $('tbody').append(
-        `<tr class="new-student-row">
-            <td><input type="text" id="new-student-name" placeholder="Tên học viên"></td>
-            <td><input type="text" id="new-student-birthyear" placeholder="Năm sinh"></td>
-            <td><input type="text" id="new-student-email" placeholder="Email"></td>
-            <td><input type="text" id="new-student-phone" placeholder="Số điện thoại"></td>
-            <td>
-                <a href="javascript:void(0) id="cancel-create" class="danger">Hủy</a>
-                <a href="javascript:void(0)" id="confirm-create" class="success">Đồng ý</a>
-            </td>
-        </tr>`
-    )
-})
-
 $(function () {
     renderStudent(students);
     search()
@@ -114,9 +106,9 @@ $(function () {
     sort('#birth-year','birthyear')
     sort('#email','email')
     sort('#phone','phone')
-    search('#name-search','name')
-    search('#email-search','email')
-    search('#phone-search','phone')
+    // search('#name-search','name')
+    // search('#email-search','email')
+    // search('#phone-search','phone')
 })
 
     
