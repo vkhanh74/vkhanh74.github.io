@@ -2,7 +2,6 @@ $('.popover[data-trigger="focus"]').on('focus blur', function(e) {
     let title = $(this).attr('title')
     let content = $(this).attr('data-content')
     if( e.type == 'focus'){ 
-        $this = $(this)
         if($(this).attr('data-placement') == 'bottom') {
             $(this).parent().prepend(`<div class="popover-modal bottom"><div class="title"><h2>${title}</h2></div><div class="content"><p>${content}</P></div></div>`)
         }
