@@ -235,7 +235,8 @@ a {
   .footer .footer_content {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center; 
+    flex-wrap: wrap;}
     .footer .footer_content .footer-quick-links a {
       color: #000;
       font-size: 14px;
