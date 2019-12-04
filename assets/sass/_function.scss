@@ -1,0 +1,3 @@
+@function setScheme($tone: medium) {
+    @return map-get($colorScheme, $tone);
+} 

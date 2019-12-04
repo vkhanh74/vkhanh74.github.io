@@ -1,0 +1,65 @@
+.banner {
+    background-color: setScheme(lightest);
+    position: relative;
+    .banner-content {
+        padding-top: 200px;
+        padding-bottom: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .banner-content_left {
+            h2 {
+                @include typo($fsz:50px,$fw:300,$color: setScheme(medium));
+                margin-bottom: 34px;
+                span {
+                    color: setScheme(dark);
+                }
+            }
+            p {
+                @include typo($fsz:24px,$lh:40px,$fw:300,$color: setScheme(dark));
+                margin-bottom: 50px;
+            }
+        }
+        .banner-content_right {
+            img {
+                max-width: 550px;
+            }
+        }
+    }
+    .banner-decoration {
+        position: absolute;
+        top: 65px;
+        right: 60px;
+        .vertical-text {
+            text-align: center;
+            margin-bottom: 70px;
+            .line {
+                height: 115px;
+                width: 1px;
+                background-color: setScheme(light);
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            span {
+                @include typo($fsz:18px,$lh:30px,$fw:300,$color: setScheme(light))
+            }
+        }
+        .vertical-icon {
+            text-align: center;
+            a {
+                @include link($color: setScheme(light),$hvr-color: $base, $fsz:18px,$lh:30px);
+                &:first-child {
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: setScheme(light);
+                        display: block;
+                        transform: rotate(-20deg);
+                        margin: 10px 0;
+                    }
+                }
+            } 
+        }
+    }
+}
