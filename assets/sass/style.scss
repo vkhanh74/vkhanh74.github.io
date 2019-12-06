@@ -1,8 +1,13 @@
-@import 'mixins';
-@import 'function';
-@import 'variable';
-@import 'reset';
-@import 'default';
-@import 'header';
-@import 'banner';
-@import 'skill-card';
+@import 'base/mixins';
+@import 'base/function';
+@import 'base/variable';
+@import 'base/reset';
+
+@import 'components/header';
+@import 'components/skill-card';
+@import 'components/default';
+@import 'components/section-title';
+
+@import 'layout/banner';
+@import 'layout/about';
+@import 'layout/projects';

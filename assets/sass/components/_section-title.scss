@@ -1,0 +1,7 @@
+.section-title {
+	margin-bottom: 75px;
+	h3 {
+		@include typo($fsz: 40px, $color: setScheme(darker), $tt: true, $fw: 600);
+		text-align: center;
+	}
+}

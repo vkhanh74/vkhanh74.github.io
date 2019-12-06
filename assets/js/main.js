@@ -27,14 +27,53 @@ function menuHandle() {
             }
         }
     }
-
-
     fixedNav()
     scrollSpy()
     window.addEventListener('scroll', fixedNav)
     window.addEventListener('scroll', scrollSpy)
 }
 
+function progress() {
+    let skillCircle = document.querySelectorAll('.skill-circle');
+    
+    skillCircle.forEach(function(item){
+        item.addEventListener('mouseover', function(e){
+            let circle = this.getElementsByClassName('circle')[0];
+            let percent = this.getAttribute('data-percent');
+            let percentCal = 1000 - percent;
+            circle.style.strokeDashoffset = percentCal;
+            this.addEventListener('mouseout', function(e) {
+                circle.style.strokeDashoffset = 1000;
+            })
+        })
+    })
+}
+
+function isotope() {
+    let filterBtn = document.querySelectorAll('.filter-button-group a');
+
+    const iso = new Isotope('.grid', {
+        itemSelector: '.element-item',
+        // layoutMode: 'fitRows',
+        stagger: 30,
+    });
+
+    filterBtn.forEach(function(btn) {
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+            let filterValue = this.getAttribute('data-filter');
+            filterBtn.forEach(function(item) {
+                item.classList.remove('active')
+            })
+            this.classList.add('active')
+            iso.arrange({ filter: filterValue });
+            
+        })
+    })
+}
+
 document.addEventListener('DOMContentLoaded', function(e){
     menuHandle()
+    progress()
+    isotope()
 })
