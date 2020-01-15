@@ -9,9 +9,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 <body>
+    <div id="student-modal">
+        <h1>Tạo học viên mới</h1>
+        <form action="">
+            <label for="name">
+                Tên học viên
+                <input type="text" id="name" name="name">
+            </label>
+            <label for="năm sinh">
+                Năm sinh
+                <input type="text" id="birth-year" name="birth-year">
+            </label>
+            <label for="emai">
+                Email
+                <input type="text" id="email" name="email">
+            </label>
+            <label for="phone">
+                Số điện thoại
+                <input type="text" id="phone" name="phone">
+            </label>
+            <button>Tạo học viên</button>
+            <a href="#" id="close-modal">Đóng</a>
+        </form>
+    </div>
     <div class="container">
         <h1>Danh sách học viên</h1>
-        <input type="text" id="search" placeholder="Tìm kiến họ tên, năm sinh, số điện thoại và email của học viên">
+        <div class="table-header">
+            <a href="#" id="create-student">Tạo học viên mới</a>
+            <input type="text" id="search" placeholder="Tìm kiến họ tên, năm sinh, số điện thoại và email của học viên">
+        </div>
         <table>
             <colgroup>
                 <col style="width: 30%">
