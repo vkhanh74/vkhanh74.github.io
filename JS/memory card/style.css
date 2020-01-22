@@ -1,0 +1,205 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+body {
+  font-family: 'Paytone One', sans-serif;
+  background-image: url("https://i.pinimg.com/originals/cc/59/a6/cc59a63550c880baa7ab1cbf2f7760a0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.memory-card-header {
+  margin-bottom: 50px;
+}
+
+.memory-card-header .progress-bar {
+  height: 40px;
+  -webkit-box-shadow: 3px 3px 3px 1px #0000004d;
+          box-shadow: 3px 3px 3px 1px #0000004d;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card-header .progress-bar #current {
+  background-color: #00a99d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.memory-card-body .memory-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.memory-card-body .memory-cards .card {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 250px;
+  margin-bottom: 30px;
+  height: 250px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.memory-card-body .memory-cards .card.isRotated .card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.memory-card-body .memory-cards .card.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.memory-card-body .memory-cards .card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.memory-card-body .memory-cards .card .card-inner .card-front,
+.memory-card-body .memory-cards .card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 10px;
+  border: 10px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px 1px #0000004d;
+          box-shadow: 3px 3px 3px 1px #0000004d;
+}
+
+.memory-card-body .memory-cards .card .card-inner .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.memory-card-body .memory-cards .card .card-inner .card-front img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.memory-card-body .memory-cards .card .card-inner .card-back {
+  background-color: red;
+  background-image: url("image/back.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.play-again-content {
+  border: 5px solid #00a99d;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px 55px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+}
+
+.play-again-content h5 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.play-again-content .action-btn {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  border: 5px solid #00a99d;
+  color: #00a99d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.play-again-content .action-btn:hover {
+  background-color: #00a99d;
+  color: #fff;
+}
+
+.play-again-content .action-btn i {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}

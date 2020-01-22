@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap&subset=vietnamese" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay" id="play-again">
+        <div class="play-again-content">
+            <h5>Bạn đã hết thời gian</h5>
+            <div class="action-btn" id="play-again-btn">
+                <i class="fas fa-redo-alt"></i>
+                <p>Chơi lại</p>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="play">
+        <div class="play-again-content play-content">
+            <h5>Bạn đã sẵn sàng chơi game?</h5>
+            <div class="action-btn" id="play-btn">
+                <i class="fas fa-play"></i>
+                <p>Chơi</p>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="congratulation">
+        <div class="play-again-content congratulation-content">
+            <h5>Chúc mừng bạn đã vượt qua màn chơi</h5>
+            <div class="action-btn" id="congratulation-btn">
+                <i class="fas fa-play"></i>
+                <p>Chơi lại</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="memory-card-header">
+            <div class="progress-bar">
+                <span id="current"></span>
+            </div>
+        </div>
+        <div class="memory-card-body">
+            <div class="memory-cards" id="memory-cards">
+
+            </div>
+        </div>
+    </div>
+    <audio id="background">
+        <source src="sound/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="great">
+        <source src="sound/great.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong">
+        <source src="sound/wrong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="handClap">
+        <source src="sound/hand-clap.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="timeOut">
+        <source src="sound/time-out.mp3" type="audio/mpeg">
+    </audio>
+    <script src="main.js"></script>
+</body>
+
+</html>
