@@ -136,6 +136,29 @@ function replayBackgroundSound() {
   background.play();
 }
 
+function backgroundSoundController() {
+  let button = document.querySelectorAll('.backgroud-sound-controller button')
+  button.forEach((item, index) => {
+    item.addEventListener('click', function (e) {
+      item.classList.remove('active')
+      let activateBtn = this.parentNode.querySelectorAll('button.active')
+      if (activateBtn.length > 0) {
+        activateBtn[0].classList.remove('active')
+      }
+      this.classList.add('active')
+      if (index === 0) {
+        playSound(background)
+      }
+      else if (index === 1) {
+        stopBackgroudSound()
+      }
+      else {
+        replayBackgroundSound()
+      }
+    })
+  })
+}
+
 function disableCards() {
   firstCard.removeEventListener('click', rotateCard);
   nextCard.removeEventListener('click', rotateCard);
@@ -178,7 +201,7 @@ function countDown(time = playTime) {
     if (progress === 0) {
       stopBackgroudSound()
       progressBar.removeAttribute("style")
-      toggleModal('play-again', 'hide')
+      toggleModal('play-again', 'show')
       playSound()
       clearInterval(timer)
     }
@@ -257,5 +280,6 @@ document.addEventListener('DOMContentLoaded', function () {
   startPlay('play-btn', 'play')
   startPlay('congratulation-btn', 'congratulation')
   playAgain()
+  backgroundSoundController()
 })
 
