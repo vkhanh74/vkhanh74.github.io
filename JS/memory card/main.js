@@ -5,7 +5,6 @@ class card {
     this.name = name;
     this.isRotate = isRotate;
   }
-
   render() {
     return (`
         <div class="card" data-id='${this.id}'>
@@ -29,7 +28,7 @@ const cards = [
   new card(6, 'obito.png', 'obito'),
 ]
 
-let playTime = cards.length * 4;
+let playTime = cards.length * 5;
 let isRotated = false;
 let isLocked = false;
 let firstCard, nextCard;
@@ -81,9 +80,10 @@ function rotateCard() {
   checkMatch()
   if (allMatch === cards.length) {
     stopCountDown()
+    stopBackgroudSound()
     setTimeout(() => {
+      toggleModal('congratulation', 'show')
       playSound(handClap)
-      document.getElementById('congratulation').style.display = 'block'
     }, 1000)
   }
 }
@@ -125,6 +125,17 @@ function playSound(sound) {
   }, 400);
 }
 
+function stopBackgroudSound() {
+  let background = document.getElementById('background')
+  background.pause()
+}
+
+function replayBackgroundSound() {
+  let background = document.getElementById('background')
+  background.currentTime = 0;
+  background.play();
+}
+
 function disableCards() {
   firstCard.removeEventListener('click', rotateCard);
   nextCard.removeEventListener('click', rotateCard);
@@ -158,15 +169,16 @@ function cardActions() {
 
 function countDown(time = playTime) {
   const progressBar = document.getElementById('current')
-  togglePlayAgainModal('hide')
+  toggleModal('play-again', 'hide')
   let timer = setInterval(() => {
     --progress
     progressBar.style.width = progress + '%'
     changeBarColor(50, 'orange')
     changeBarColor(10, 'red')
     if (progress === 0) {
+      stopBackgroudSound()
       progressBar.removeAttribute("style")
-      togglePlayAgainModal('show')
+      toggleModal('play-again', 'hide')
       playSound()
       clearInterval(timer)
     }
@@ -182,13 +194,13 @@ function countDown(time = playTime) {
   }
 }
 
-function togglePlayAgainModal(state) {
-  const playAgainModal = document.getElementById('play-again')
+function toggleModal(modal, state) {
+  const selectedModal = document.getElementById(modal)
   if (state === 'hide') {
-    playAgainModal.style.display = 'none'
+    selectedModal.style.display = 'none'
     return
   }
-  playAgainModal.style.display = 'block'
+  selectedModal.style.display = 'block'
 }
 
 function playAgain() {
@@ -197,8 +209,9 @@ function playAgain() {
 }
 
 function replay() {
-  togglePlayAgainModal('hide')
+  toggleModal('play-again', 'hide')
   restartLevel()
+  replayBackgroundSound()
 }
 
 function resetDefault() {
@@ -223,6 +236,7 @@ function startPlay(button, modal) {
   let playBtn = document.getElementById(button)
   let playModal = document.getElementById(modal)
   playBtn.addEventListener('click', (e) => {
+    button === 'play-btn' ? playSound(background) : replayBackgroundSound()
     playModal.style.display = 'none';
     restartLevel()
   })
@@ -236,13 +250,12 @@ function restartLevel() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  playSound(background)
   renderCard()
   cardActions()
-  togglePlayAgainModal('hide')
+  toggleModal('play-again', 'hide')
+  toggleModal('congratulation', 'hide')
   startPlay('play-btn', 'play')
   startPlay('congratulation-btn', 'congratulation')
   playAgain()
-  document.getElementById('congratulation').style.display = 'none'
 })
 
