@@ -54,7 +54,7 @@ let numberOfQuiz = Quizs.length
 let lockClick = false;
 let correctAnswer = 0;
 let barWidth = 100;
-let playTime = numberOfQuiz * 7; //second
+let playTime = numberOfQuiz * 15; //second
 
 function render() {
     let answer = document.querySelector('.quiz-answers')
