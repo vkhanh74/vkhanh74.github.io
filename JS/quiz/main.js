@@ -1,109 +1,176 @@
-$(document).ready(function () {
-    // create questions here
-    var questions = [
-        {text: "Hyper Text Markup Language Stand For?", choices: ["JavaScript", "XHTML","CSS", "HTML"], answer: "HTML"},
-        {text: "Which language is used for styling web pages?", choices: ["HTML", "JQuery", "CSS", "XML"], answer: "CSS"},
-        {text: "Which is not a JavaScript Framework?", choices: ["Python Script", "JQuery","Django", "NodeJS"], answer: "Django"},
-        {text: "Which is used for Connect To Database?", choices: ["PHP", "HTML", "JS", "All"], answer: "PHP"},
-        {text: "Webdevtrick.com is about..", choices: ["Web Design", "Graphic Design", "SEO & Development", "All"], answer: "All"}
-    ];
-
-    function Quiz(questions) {
-        this.score = 0;
-        this.questions = questions;
-        this.questionIndex = 0;
+function quiz(question, answers) {
+    this.question = question;
+    this.answers = answers;
+    this.renderQuiz = () => {
+        let content = ''
+        this.answers.forEach(item => {
+            content += `<div class="answer" ${item.isCorrect ? 'data-correct= "true"' : ''}>${item.name}</div>`
+        })
+        return content
     }
 
-    // create quiz
-    var quiz = new Quiz(questions);    
-    
-    function getQuestionIndex() {
-        return Quiz.questions[Quiz.questionIndex];
+}
+const Quizs = [
+    new quiz(
+        'Chủ tịch Hồ Chí Minh sinh ngày bao nhiêu ?',
+        [
+            { id: 1, name: '19/05/1980', isCorrect: true },
+            { id: 2, name: '15/09/1980' },
+            { id: 3, name: '11/05/1988' },
+            { id: 4, name: '11/09/1988' }
+        ]
+    ),
+    new quiz(
+        '1+1 bằng mấy',
+        [
+            { id: 1, name: '3' },
+            { id: 2, name: '2', isCorrect: true },
+            { id: 3, name: '5' },
+            { id: 4, name: '11' }
+        ]
+    ),
+    new quiz(
+        'Đảng cộng sản Việt Nam được thành lập ngày bao nhiêu ?',
+        [
+            { id: 1, name: '04/01/1931' },
+            { id: 2, name: '05/03/1933' },
+            { id: 3, name: '03/02/1930', isCorrect: true },
+            { id: 4, name: '11/02/1932' }
+        ]
+    ),
+    new quiz(
+        'Nồng độ cồn trong máu bao nhiêu ml thì vi phạm giao thôn',
+        [
+            { id: 1, name: '50 mg đến 80 mg/100 ml máu' },
+            { id: 2, name: '20 mg đến 50 mg/100 ml máu' },
+            { id: 3, name: 'Đã uống rượu bia thì không lái xe', isCorrect: true },
+            { id: 4, name: '15 mg đến 30 mg/100 ml máu' }
+        ]
+    ),
+]
+
+let questionNumber = 0;
+let numberOfQuiz = Quizs.length
+let lockClick = false;
+let correctAnswer = 0;
+let barWidth = 100;
+let playTime = numberOfQuiz * 7; //second
+
+function render() {
+    let answer = document.querySelector('.quiz-answers')
+    let question = document.querySelector('.quiz-question span')
+    let obj = Quizs[questionNumber]
+    if (questionNumber == numberOfQuiz) {
+        displayResult()
+        return;
     }
+    answer.innerHTML = obj.renderQuiz()
+    question.innerHTML = obj.question
+}
 
-    // Quiz.prototype.getQuestionIndex = function() {
-    //     return this.questions[this.questionIndex];
-    // }
+function displayResult() {
+    let resultModal = document.querySelector('#result')
+    let correct = document.querySelector('.result-content .correct')
+    let total = document.querySelector('.result-content .total')
+    resultModal.style.display = "flex"
+    correct.innerHTML = correctAnswer;
+    total.innerHTML = numberOfQuiz
+}
 
-    function guess(answer) {
-        if(Quiz.getQuestionIndex().isCorrectAnswer(answer)) {
-            Quiz.score++;
+function checkAnswer() {
+    let answers = document.querySelectorAll('.answer')
+    answers.forEach((item, index) => {
+        item.addEventListener('click', answerHandle)
+    })
+}
+
+function answerHandle() {
+    if (lockClick) {
+        return
+    }
+    lockClick = true;
+    this.classList.add("choosen")
+
+    if (this.dataset.correct === 'true') {
+        this.classList.add("correct")
+        correctAnswer++
+        nextAnswer()
+        return
+    }
+    else {
+        this.classList.add("wrong")
+        showCorrectAnswer()
+        nextAnswer()
+    }
+}
+
+function nextAnswer() {
+    setTimeout(() => {
+        questionNumber++
+        gameHandle()
+        lockClick = false;
+    }, 1500)
+}
+
+function countDown(time = playTime) {
+    let progressBar = document.querySelector('.quiz-header .current')
+    let timer = setInterval(() => {
+        barWidth--;
+        progressBar.style.width = barWidth + '%';
+        if (barWidth === 0 || questionNumber == numberOfQuiz) {
+            clearInterval(timer)
+            displayResult()
         }
-    
-        Quiz.questionIndex++;
-    }
-    
-    // Quiz.prototype.guess = function(answer) {
-    //     if(this.getQuestionIndex().isCorrectAnswer(answer)) {
-    //         this.score++;
-    //     }
-    
-    //     this.questionIndex++;
-    // }
-    
-    function isEnded() {
-        return Quiz.questionIndex === Quiz.questions.length;
-    }
+    }, (time * 10))
+}
 
-    // Quiz.prototype.isEnded = function() {
-    //     return this.questionIndex === this.questions.length;
-    // }
-    
-    function isCorrectAnswer(choice) {
-        return questions.answer === choice;
-    }
-    
-    
-    // Question.prototype.isCorrectAnswer = function(choice) {
-    //     return this.answer === choice;
-    // }
-    
-    
-    function populate() {
-        if(quiz.isEnded()) {
-            showScores();
-        }
-        else {
-            // show question
-            var element = document.getElementById("question");
-            element.innerHTML = quiz.getQuestionIndex().text;
-    
-            // show options
-            var choices = quiz.getQuestionIndex().choices;
-            for(var i = 0; i < choices.length; i++) {
-                var element = document.getElementById("choice" + i);
-                element.innerHTML = choices[i];
-                guess("btn" + i, choices[i]);
-            }
-    
-            showProgress();
-        }
-    };
-    
-    function guess(id, guess) {
-        var button = document.getElementById(id);
-        button.onclick = function() {
-            quiz.guess(guess);
-            populate();
-        }
-    };
-    
-    
-    function showProgress() {
-        var currentQuestionNumber = quiz.questionIndex + 1;
-        var element = document.getElementById("progress");
-        element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
-    };
-    
-    function showScores() {
-        var gameOverHTML = "<h1>Result</h1>";
-        gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
-        var element = document.getElementById("quiz");
-        element.innerHTML = gameOverHTML;
-    };
-    
-    // display quiz
-    populate();
-    
-    
-});
+function showCorrectAnswer() {
+    let correctAnswer = document.querySelector('.answer[data-correct= "true"]')
+    correctAnswer.classList.add('correct')
+}
+
+function gameHandle() {
+    render()
+    countDown()
+    checkAnswer()
+}
+
+function resetDefaultValue() {
+    questionNumber = 0;
+    lockClick = false;
+    correctAnswer = 0;
+    barWidth = 100;
+}
+
+function resetGame() {
+    let resultModal = document.querySelector('#result')
+    resultModal.style.display = 'none'
+    resetDefaultValue()
+    gameHandle()
+}
+
+function playAgain() {
+    let playAgainBtn = document.querySelector('#play-again-btn')
+    playAgainBtn.addEventListener('click', resetGame)
+}
+
+function startPlay() {
+    let startModal = document.querySelector('#start')
+    let startBtn = document.querySelector('#start-btn')
+    startBtn.addEventListener('click', function (e) {
+        e.preventDefault()
+        startModal.style.display = 'none';
+        gameHandle()
+    })
+}
+
+function playBgSound() {
+    let sound = document.getElementById('bg-sound')
+    sound.play()
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    playBgSound()
+    startPlay()
+    playAgain()
+})
