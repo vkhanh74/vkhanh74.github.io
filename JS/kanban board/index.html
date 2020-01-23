@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kanban board</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.0/css/pro.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="kanban-board-header">
+            <h1>Kanaban board</h1>
+        </div>
+        <div class="kanban-board-body">
+            <div class="kanban-board-body_wrapper">
+                <ul id="sortable1" class="droptrue list-items">
+                    <h1 class="unmoveable-item list-header">To do</h1>
+                    <li class="item">
+                        Earn a million dollar
+                        <span class="remove"><i class="fas fa-trash"></i></span>
+                    </li>
+                    <form class="list-add unmoveable-item" data-for="sortable1">
+                        <input type="text" placeholder="Add a task">
+                        <button class="add-item">Add</button>
+                    </form>
+                </ul>
+
+                <ul id="sortable2" class="droptrue list-items">
+                    <h1 class="unmoveable-item list-header">Doing</h1>
+                    <li class="item">Play game<span class="remove"><i class="fas fa-trash"></i></span></li>
+                    <li class="item">Listen music <span class="remove"><i class="fas fa-trash"></i></span></li>
+                    <form class="list-add unmoveable-item" data-for="sortable2">
+                        <input type="text" placeholder="Add a task">
+                        <button class="add-item">Add</button>
+                    </form>
+                </ul>
+
+                <ul id="sortable3" class="droptrue list-items">
+                    <h1 class="unmoveable-item list-header">Done</h1>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
