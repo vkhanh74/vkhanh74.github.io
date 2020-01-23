@@ -39,28 +39,30 @@ body {
   grid-gap: 30px;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items {
+.kanban-board-body .kanban-board-body_wrapper .col {
   display: inline-table;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 52px 3px rgba(0, 0, 0, 0.37);
           box-shadow: 5px 5px 52px 3px rgba(0, 0, 0, 0.37);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items .list-header {
+.kanban-board-body .kanban-board-body_wrapper .col .list-header {
   padding: 10px 15px;
   background-color: #06a4ff;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   color: #fff;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  border-radius: 5px 5px 0 0;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items .item {
+.kanban-board-body .kanban-board-body_wrapper .col .list-items {
+  padding: 15px;
+}
+
+.kanban-board-body .kanban-board-body_wrapper .col .list-items .item {
   cursor: move;
   list-style: none;
   border: 1px solid #dedede;
@@ -82,51 +84,53 @@ body {
           justify-content: space-between;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items .item span {
+.kanban-board-body .kanban-board-body_wrapper .col .list-items .item span {
   margin-left: 10px;
   cursor: pointer;
   color: #666;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items .item span:hover {
+.kanban-board-body .kanban-board-body_wrapper .col .list-items .item span:hover {
   color: red;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-items .item.ui-sortable-helper {
+.kanban-board-body .kanban-board-body_wrapper .col .list-items .item.ui-sortable-helper {
   border-color: green;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-add {
+.kanban-board-body .kanban-board-body_wrapper .col .list-add {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid #aeaeae;
-  margin-top: 30px;
-  border-radius: 5px;
+  border-top: 1px solid #ddd;
   overflow: hidden;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-add input {
+.kanban-board-body .kanban-board-body_wrapper .col .list-add input {
   border: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 35px;
-  border-right: 1px solid #ddd;
-  padding: 0 15px;
+  height: 40px;
+  border-right: 1px solid #fff;
+  padding: 0 20px;
   font-size: 16px;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-add input:focus {
+.kanban-board-body .kanban-board-body_wrapper .col .list-add input:focus {
   outline: 0;
 }
 
-.kanban-board-body .kanban-board-body_wrapper .list-add button {
-  height: 35px;
+.kanban-board-body .kanban-board-body_wrapper .col .list-add button {
+  height: 40px;
   padding: 0 30px;
   border: 0;
+  background-color: #ddd;
   cursor: pointer;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
 }

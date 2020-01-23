@@ -36,13 +36,12 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px;
 
-        .list-items {
+        .col {
             display: inline-table;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
             background-color: #fff;
             box-shadow: 5px 5px 52px 3px rgba(0, 0, 0, 0.37);
+            border-radius: 5px;
+            overflow: hidden;
 
             .list-header {
                 padding: 10px 15px;
@@ -51,69 +50,76 @@ body {
                 font-weight: 700;
                 font-size: 20px;
                 color: #fff;
-                border-radius: 5px;
-                margin-bottom: 20px;
+                border-radius: 5px 5px 0 0;
             }
 
-            .item {
-                cursor: move;
-                list-style: none;
-                border: 1px solid #dedede;
-                padding: 10px 15px;
-                border-radius: 5px;
-                margin-bottom: 10px;
-                background-color: #f2f2f2;
-                font-size: 16px;
-                color: #333;
-                word-break: break-all;
+            .list-items {
+                padding: 15px;
+
+                .item {
+                    cursor: move;
+                    list-style: none;
+                    border: 1px solid #dedede;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    background-color: #f2f2f2;
+                    font-size: 16px;
+                    color: #333;
+                    word-break: break-all;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span {
+                        margin-left: 10px;
+                        cursor: pointer;
+                        color: #666;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+
+                    &.ui-sortable-helper {
+                        border-color: green;
+                    }
+                }
+            }
+
+
+            .list-add {
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
+                border-top: 1px solid #ddd;
+                overflow: hidden;
 
+                input {
+                    border: 0;
+                    flex: 1;
+                    height: 40px;
+                    border-right: 1px solid #fff;
+                    padding: 0 20px;
+                    font-size: 16px;
 
-                span {
-                    margin-left: 10px;
-                    cursor: pointer;
-                    color: #666;
-
-                    &:hover {
-                        color: red;
+                    &:focus {
+                        outline: 0;
                     }
                 }
 
-                &.ui-sortable-helper {
-                    border-color: green;
+                button {
+                    height: 40px;
+                    padding: 0 30px;
+                    border: 0;
+                    background-color: #ddd;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: #333;
+                    text-transform: uppercase;
                 }
             }
         }
 
-        .list-add {
-            display: flex;
-            justify-content: space-between;
-            border: 1px solid #aeaeae;
-            margin-top: 30px;
-            border-radius: 5px;
-            overflow: hidden;
 
-            input {
-                border: 0;
-                flex: 1;
-                height: 35px;
-                border-right: 1px solid #ddd;
-                padding: 0 15px;
-                font-size: 16px;
-
-                &:focus {
-                    outline: 0;
-                }
-            }
-
-            button {
-                height: 35px;
-                padding: 0 30px;
-                border: 0;
-                cursor: pointer;
-            }
-        }
     }
 }

@@ -14,35 +14,39 @@
 <body>
     <div class="container">
         <div class="kanban-board-header">
-            <h1>Kanaban board</h1>
+            <h1>Kanban board</h1>
         </div>
         <div class="kanban-board-body">
             <div class="kanban-board-body_wrapper">
-                <ul id="sortable1" class="droptrue list-items">
+                <div class="col">
                     <h1 class="unmoveable-item list-header">To do</h1>
-                    <li class="item">
-                        Earn a million dollar
-                        <span class="remove"><i class="fas fa-trash"></i></span>
-                    </li>
+                    <ul id="sortable1" class="droptrue list-items">
+                        <li class="item">
+                            Earn a million dollar
+                            <span class="remove"><i class="fas fa-trash"></i></span>
+                        </li>
+                    </ul>
                     <form class="list-add unmoveable-item" data-for="sortable1">
                         <input type="text" placeholder="Add a task">
                         <button class="add-item">Add</button>
                     </form>
-                </ul>
-
-                <ul id="sortable2" class="droptrue list-items">
+                </div>
+                <div class="col">
                     <h1 class="unmoveable-item list-header">Doing</h1>
-                    <li class="item">Play game<span class="remove"><i class="fas fa-trash"></i></span></li>
-                    <li class="item">Listen music <span class="remove"><i class="fas fa-trash"></i></span></li>
+                    <ul id="sortable2" class="droptrue list-items">
+                        <li class="item">Play game<span class="remove"><i class="fas fa-trash"></i></span></li>
+                        <li class="item">Listen music <span class="remove"><i class="fas fa-trash"></i></span></li>
+                    </ul>
                     <form class="list-add unmoveable-item" data-for="sortable2">
                         <input type="text" placeholder="Add a task">
                         <button class="add-item">Add</button>
                     </form>
-                </ul>
-
-                <ul id="sortable3" class="droptrue list-items">
+                </div>
+                <div class="col">
                     <h1 class="unmoveable-item list-header">Done</h1>
-                </ul>
+                    <ul id="sortable3" class="droptrue list-items">
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

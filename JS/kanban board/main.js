@@ -11,7 +11,7 @@ function addItem() {
         e.preventDefault()
         let dataFor = $(this).attr('data-for')
         let inputType = $(this).children('input').val();
-        $(this).before(`<li class="item">${inputType}<span class="remove"><i class="fas fa-trash"></i></span></li>`);
+        $(this).prev().append(`<li class="item">${inputType}<span class="remove"><i class="fas fa-trash"></i></span></li>`);
         $(this).children('input').val('')
         removeItem()
     })
