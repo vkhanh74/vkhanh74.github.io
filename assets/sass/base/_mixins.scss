@@ -1,4 +1,4 @@
-@mixin link($fsz:18px,$fw:400,$color:setScheme(medium),$lh:1,$hvr-color:setScheme(dark),$tt:false) {
+@mixin link($fsz:18px, $fw:400, $color:setScheme(medium), $lh:1, $hvr-color:setScheme(dark), $tt:false) {
     font-size: $fsz;
     font-weight: $fw;
     color: $color;
@@ -6,22 +6,51 @@
     text-decoration: none;
     transition: 0.3s ease-in-out;
     display: block;
+
     &:hover {
         text-decoration: none;
         color: $hvr-color;
     }
-    @if $tt == true {
+
+    @if $tt==true {
         text-transform: uppercase;
     }
 }
 
-@mixin typo($fsz:18px,$fw:400,$color:setScheme(medium),$lh:1,$tt:false) {
+@mixin typo($fsz:18px, $fw:400, $color:setScheme(medium), $lh:1, $tt:false) {
     font-size: $fsz;
     font-weight: $fw;
     color: $color;
     line-height: $lh;
     display: block;
-    @if $tt == true {
+
+    @if $tt==true {
         text-transform: uppercase;
+    }
+}
+
+@mixin mq($size) {
+    @if $size=='mobile' {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $size=='tablet' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $size=='small-desktop' {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $size=='desktop' {
+        @media (max-width: 1200px) {
+            @content;
+        }
     }
 }

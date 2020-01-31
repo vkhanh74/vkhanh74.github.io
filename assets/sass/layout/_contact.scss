@@ -1,0 +1,36 @@
+.contact {
+    margin-top: -50px;
+
+    .box {
+        background-color: setScheme(lightest);
+        margin-top: -100px;
+        padding-bottom: 100px;
+
+        form {
+
+            input,
+            textarea {
+                margin-bottom: 30px;
+                color: setSchema(dark);
+                border: 0;
+                background-color: transparent;
+                border-bottom: 2px solid setScheme(medium);
+                padding: 10px 30px;
+                font-size: 20px;
+                width: 100%;
+                transition: 0.3s ease;
+                font-family: 'Sulphur Point', sans-serif;
+                resize: none;
+
+                &:focus {
+                    outline: 0;
+                    border-color: $base;
+                }
+
+                &::placeholder {
+                    color: setScheme(medium)
+                }
+            }
+        }
+    }
+}

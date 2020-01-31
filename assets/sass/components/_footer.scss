@@ -1,0 +1,32 @@
+footer {
+    background-color: $base;
+    padding: 25px 0;
+
+    p {
+        font-size: 18px;
+        color: #fff;
+
+        &.footer-credit {
+            i {
+                color: #E31B23;
+            }
+        }
+    }
+
+    .contact-info {
+        text-align: right;
+
+        p {
+            display: inline-block;
+            margin-left: 50px;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

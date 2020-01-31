@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.App {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+}
+
+.bank-header,
+.bank-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-header {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 156, 167, 1) 0%,
+    rgba(255, 94, 98, 1) 100%
+  );
+  position: relative;
+}
+
+.bank-footer {
+  background-color: #f3f3f3;
+}
+
+.withdraw-all-btn {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  background-color: transparent;
+  color: rgb(249, 106, 130);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 30px;
+}

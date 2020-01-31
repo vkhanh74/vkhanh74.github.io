@@ -1,16 +1,92 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,22 +97,35 @@ time, mark, audio, video {
   box-sizing: border-box; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1;
   font-family: 'Sulphur Point', sans-serif; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -97,66 +186,48 @@ header {
           text-decoration: none;
           color: #333333; }
 
-.banner-wrapper {
-  position: relative; }
-  .banner-wrapper .round {
-    position: relative;
-    z-index: 0; }
-  .banner-wrapper .skills-summary {
-    position: relative;
-    z-index: 5;
-    margin-top: -200px;
-    margin-bottom: 100px; }
-    .banner-wrapper .skills-summary .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -15px; }
-      .banner-wrapper .skills-summary .row .skill-card_wrapper {
-        flex: 1 1 33.333%;
-        max-width: 33.333%;
-        padding: 0 15px; }
-        .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card {
-          padding: 30px;
-          position: relative;
-          box-shadow: 5px 18px 59px 0px rgba(0, 0, 0, 0.2);
-          background-color: #fff;
-          border-radius: 5px;
-          height: 395px; }
-          .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card .skill-card_content {
-            padding: 45px 30px 100px;
-            border: 1px solid #39D18E;
-            border-radius: 3px;
-            overflow: hidden;
-            height: 100%; }
-            .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card .skill-card_content h3 {
-              font-size: 50px;
-              font-weight: 500;
-              color: #666666;
-              line-height: 45px;
-              display: block;
-              text-transform: uppercase;
-              margin-bottom: 40px; }
-            .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card .skill-card_content p {
-              font-size: 22px;
-              font-weight: 400;
-              color: #A8A8A8;
-              line-height: 30px;
-              display: block; }
-            .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card .skill-card_content .icon {
-              position: absolute;
-              bottom: 0px;
-              right: 0; }
-              .banner-wrapper .skills-summary .row .skill-card_wrapper .skill-card .skill-card_content .icon svg {
-                fill: #39D18E;
-                stroke: #39D18E;
-                opacity: 0.25; }
-
-.container {
-  max-width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto; }
+.banner-wrapper .skills-summary {
+  margin-top: -200px;
+  margin-bottom: 100px; }
+  .banner-wrapper .skills-summary .skill-cards {
+    margin: 0 -15px; }
+    .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper {
+      padding: 15px; }
+      .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card {
+        padding: 30px;
+        position: relative;
+        box-shadow: -1px 4px 11px 0px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        border-radius: 5px;
+        height: 395px; }
+        .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card .skill-card_content {
+          padding: 45px 30px 100px;
+          border: 1px solid #39D18E;
+          border-radius: 3px;
+          overflow: hidden;
+          height: 100%; }
+          .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card .skill-card_content h3 {
+            font-size: 50px;
+            font-weight: 500;
+            color: #666666;
+            line-height: 45px;
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 40px; }
+          .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card .skill-card_content p {
+            font-size: 22px;
+            font-weight: 400;
+            color: #A8A8A8;
+            line-height: 30px;
+            display: block; }
+          .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card .skill-card_content .icon {
+            position: absolute;
+            bottom: 0px;
+            right: 0; }
+            .banner-wrapper .skills-summary .skill-cards .skill-card_wrapper .skill-card .skill-card_content .icon svg {
+              fill: #39D18E;
+              stroke: #39D18E;
+              opacity: 0.25; }
 
 .btn {
   background-color: #39D18E;
@@ -184,6 +255,24 @@ header {
     display: block;
     text-transform: uppercase;
     text-align: center; }
+
+footer {
+  background-color: #39D18E;
+  padding: 25px 0; }
+  footer p {
+    font-size: 18px;
+    color: #fff; }
+    footer p.footer-credit i {
+      color: #E31B23; }
+  footer .contact-info {
+    text-align: right; }
+    footer .contact-info p {
+      display: inline-block;
+      margin-left: 50px; }
+      footer .contact-info p i {
+        margin-right: 10px; }
+      footer .contact-info p:first-child {
+        margin-left: 0; }
 
 .banner {
   background-color: #F9F9F9;
@@ -253,6 +342,33 @@ header {
           transform: rotate(-20deg);
           margin: 10px 0; }
 
+.contact {
+  margin-top: -50px; }
+  .contact .box {
+    background-color: #F9F9F9;
+    margin-top: -100px;
+    padding-bottom: 100px; }
+    .contact .box form input,
+    .contact .box form textarea {
+      margin-bottom: 30px;
+      color: setSchema(dark);
+      border: 0;
+      background-color: transparent;
+      border-bottom: 2px solid #A8A8A8;
+      padding: 10px 30px;
+      font-size: 20px;
+      width: 100%;
+      transition: 0.3s ease;
+      font-family: 'Sulphur Point', sans-serif;
+      resize: none; }
+      .contact .box form input:focus,
+      .contact .box form textarea:focus {
+        outline: 0;
+        border-color: #39D18E; }
+      .contact .box form input::placeholder,
+      .contact .box form textarea::placeholder {
+        color: #A8A8A8; }
+
 .about {
   margin-bottom: 100px; }
   .about .about-infomation {
@@ -260,9 +376,9 @@ header {
     align-items: center;
     justify-content: space-between; }
     .about .about-infomation .about-infomation_left {
-      max-width: 450px;
-      margin-right: 130px;
       position: relative; }
+      .about .about-infomation .about-infomation_left img {
+        max-width: 100%; }
       .about .about-infomation .about-infomation_left .avatar-decoration {
         position: absolute;
         top: -30px;
@@ -285,6 +401,8 @@ header {
         .about .about-infomation .about-infomation_right .infomation_content ul li.education .school-group .school {
           display: flex;
           margin-bottom: 40px; }
+          .about .about-infomation .about-infomation_right .infomation_content ul li.education .school-group .school:hover .logo {
+            border: 2px solid #39D18E; }
           .about .about-infomation .about-infomation_right .infomation_content ul li.education .school-group .school:last-child {
             margin-bottom: 0; }
           .about .about-infomation .about-infomation_right .infomation_content ul li.education .school-group .school .logo {
@@ -293,7 +411,8 @@ header {
             padding: 15px;
             border-radius: 999px;
             border: 1px solid #DEDEDE;
-            margin-right: 20px; }
+            margin-right: 20px;
+            transition: border 0.3s ease; }
             .about .about-infomation .about-infomation_right .infomation_content ul li.education .school-group .school .logo img {
               width: 100%;
               height: 100%;
@@ -347,34 +466,43 @@ header {
           display: block;
           text-transform: uppercase;
           font-family: 'Montserrat', sans-serif; }
-        .about .skills-wrapper .skills .skills-content .skill-circle_group {
-          display: flex;
+        .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper {
+          display: grid !important;
           justify-content: space-between;
           flex-wrap: wrap;
-          margin: 0 -15px; }
-          .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle {
-            text-align: center;
-            padding: 0 15px;
-            margin-bottom: 50px; }
-            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle .skill-circle--image {
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-column-gap: 20px;
+          grid-row-gap: 30px;
+          margin-bottom: 30px; }
+          .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper:last-child {
+            margin-bottom: 0; }
+          @media (max-width: 1200px) {
+            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper {
+              grid-template-columns: 1fr 1fr 1fr; } }
+          @media (max-width: 768px) {
+            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper {
+              grid-template-columns: 1fr 1fr; } }
+          .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle {
+            text-align: center; }
+            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle .skill-circle--image {
               display: inline-block;
               position: relative;
               border-radius: 999px;
               border: 1px solid #DEDEDE;
               margin-bottom: 20px; }
-              .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle .skill-circle--image .progress {
+              .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle .skill-circle--image .progress {
                 display: block;
                 width: 150px;
                 height: 150px;
                 position: relative; }
-                .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle .skill-circle--image .progress .circle {
+                .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle .skill-circle--image .progress .circle {
                   stroke: #4CC790;
                   fill: none;
                   stroke-width: 2;
                   stroke-dasharray: 1000;
                   stroke-dashoffset: 1000;
                   transition: 1s ease-in-out; }
-              .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle .skill-circle--image img {
+              .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle .skill-circle--image img {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -382,7 +510,7 @@ header {
                 width: 55%;
                 height: 55%;
                 object-fit: contain; }
-            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle h5 {
+            .about .skills-wrapper .skills .skills-content .skill-circle_group .skill-circle_wrapper .skill-circle h5 {
               font-size: 25px;
               font-weight: 400;
               color: setSchme(dark);
@@ -390,8 +518,12 @@ header {
               display: block; }
 
 .projects .projects_content .button-group {
-  border-bottom: 1px solid #DEDEDE;
-  display: inline-block; }
+  display: block;
+  text-align: center;
+  margin-bottom: 50px; }
+  .projects .projects_content .button-group .tabs-button {
+    display: inline-block;
+    border-bottom: 1px solid #DEDEDE; }
   .projects .projects_content .button-group a {
     font-size: 24px;
     font-weight: 400;
@@ -400,10 +532,16 @@ header {
     text-decoration: none;
     transition: 0.3s ease-in-out;
     display: block;
-    display: inline-block; }
+    display: inline-block;
+    padding: 0 30px;
+    border-bottom: 2px solid transparent;
+    font-weight: 600; }
     .projects .projects_content .button-group a:hover {
       text-decoration: none;
       color: #39D18E; }
+    .projects .projects_content .button-group a.active {
+      color: #39D18E;
+      border-bottom: 2px solid #39D18E; }
 
 .projects .projects_content .grid {
   display: flex;
