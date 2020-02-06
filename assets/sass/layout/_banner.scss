@@ -9,9 +9,14 @@
         align-items: center;
         justify-content: space-between;
 
+        @include mq(tablet) {
+            padding-top: 160px;
+            padding-bottom: 200px;
+        }
+
         .banner-content_left {
             h2 {
-                @include typo($fsz:50px, $fw:300, $color: setScheme(medium));
+                @include typo($fsz:50px, $lh: 65px, $fw:300, $color: setScheme(medium));
                 margin-bottom: 34px;
 
                 span {
@@ -23,11 +28,19 @@
                 @include typo($fsz:24px, $lh:40px, $fw:300, $color: setScheme(dark));
                 margin-bottom: 50px;
             }
+
+            @include mq(tablet) {
+                margin-bottom: 50px;
+            }
         }
 
         .banner-content_right {
             img {
                 max-width: 550px;
+
+                @include mq(tablet) {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -36,6 +49,10 @@
         position: absolute;
         top: 65px;
         right: 60px;
+
+        @include mq(small-desktop) {
+            display: none;
+        }
 
         .vertical-text {
             text-align: center;

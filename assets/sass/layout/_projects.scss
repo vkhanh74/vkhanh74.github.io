@@ -21,6 +21,10 @@
                     color: $base;
                     border-bottom: 2px solid $base;
                 }
+
+                @include mq(mobile) {
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -34,6 +38,7 @@
                 height: 295px;
                 padding: 0 15px;
                 margin-bottom: 30px;
+
 
                 &:hover {
                     .project-item {
@@ -68,10 +73,29 @@
                         transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
                         h5 {
-                            @include typo($fsz:30px, $color:#fff, $fw:600, $tt:true);
+                            @include typo($fsz:30px, $lh: 1, $color:#fff, $fw:600, $tt:true);
+                            padding: 0 30px;
+                            text-align: center;
+                        }
+
+                        @include mq(tablet) {
+                            top: 0;
+
+                            h5 {
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
+
+                @include mq(mobile) {
+                    height: 100px;
+
+                    .project-item {
+                        height: 100%;
+                    }
+                }
+
             }
         }
     }

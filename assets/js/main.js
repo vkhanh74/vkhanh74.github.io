@@ -1,13 +1,13 @@
 function menuHandle() {
-    function fixedNav() {
-        let nav = document.getElementsByTagName('header')[0];
-        let navHeight = nav.offsetHeight;
+    let header = document.querySelector('header')
+    function fixedHeader() {
+        let headerHeight = header.offsetHeight;
         let scrollingPosition = window.scrollY;
-        if (scrollingPosition >= navHeight) {
-            nav.classList.add('isFixed')
+        if (scrollingPosition >= headerHeight) {
+            header.classList.add('isFixed')
         }
         else {
-            nav.classList.remove('isFixed')
+            header.classList.remove('isFixed')
         }
     }
 
@@ -27,10 +27,54 @@ function menuHandle() {
             }
         }
     }
-    fixedNav()
+
+    function menuReszie() {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            header.classList.add('isMobile')
+        } else {
+            header.classList.remove('isMobile')
+        }
+    }
+
+    function openSidebarMenu() {
+        const openSidebarBtn = document.querySelector('.open-nav-btn')
+        const navigation = document.querySelector('nav')
+        const navItems = document.querySelectorAll('.nav-item')
+        let isSidebarOpen = false;
+        openSidebarBtn.addEventListener('click', function () {
+            switch (isSidebarOpen) {
+                case false:
+                    this.classList.add('active')
+                    navigation.classList.add('isOpen')
+                    isSidebarOpen = true
+                    break;
+                default:
+                    this.classList.remove('active')
+                    isSidebarOpen = false
+                    navigation.classList.remove('isOpen')
+                    break;
+            }
+
+        })
+
+        console.log(navItems)
+        navItems.forEach((item, index) => {
+            console.log(item)
+            item.addEventListener('click', () => {
+                openSidebarBtn.dispatchEvent('click')
+            })
+        })
+
+    }
+
+    menuReszie()
+    fixedHeader()
     scrollSpy()
-    window.addEventListener('scroll', fixedNav)
+    openSidebarMenu()
+
+    window.addEventListener('scroll', fixedHeader)
     window.addEventListener('scroll', scrollSpy)
+    window.addEventListener('resize', menuReszie)
 }
 
 function progress() {
@@ -54,7 +98,6 @@ function isotope() {
 
     const iso = new Isotope('.grid', {
         itemSelector: '.element-item',
-        // layoutMode: 'fitRows',
         stagger: 30,
     });
 
@@ -73,7 +116,12 @@ function isotope() {
 }
 
 function slickSlider() {
+    let arrowConfig = {
+        prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fal fa-chevron-right"></i></button>'
+    }
     $('.skill-cards').slick({
+        ...arrowConfig,
         slidesToShow: 3,
         responsive: [
             {
@@ -96,6 +144,7 @@ function slickSlider() {
     })
 
     $('.skill-circle_group').slick({
+        ...arrowConfig,
         slidesToShow: 1,
         infinite: false,
         mobileFirst: true,

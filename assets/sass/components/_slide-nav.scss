@@ -1,0 +1,31 @@
+.slick-slider {
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        padding: 10px;
+        border: 1px solid $base;
+        background-color: #fff;
+        font-size: 18px;
+
+        &:focus {
+            outline: 0;
+            background-color: $base;
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: $base;
+            color: #fff;
+        }
+
+        &.slick-prev {
+            left: 0;
+        }
+
+        &.slick-next {
+            right: 0;
+        }
+    }
+}

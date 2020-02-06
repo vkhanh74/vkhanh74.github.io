@@ -2,30 +2,57 @@ footer {
     background-color: $base;
     padding: 25px 0;
 
-    p {
-        font-size: 18px;
-        color: #fff;
-
-        &.footer-credit {
-            i {
-                color: #E31B23;
-            }
-        }
-    }
-
-    .contact-info {
-        text-align: right;
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         p {
-            display: inline-block;
-            margin-left: 50px;
+            font-size: 18px;
+            color: #fff;
 
-            i {
-                margin-right: 10px;
+            &.footer-credit {
+                i {
+                    color: #E31B23;
+                }
+            }
+        }
+
+        .contact-info {
+            text-align: right;
+
+            p {
+                display: inline-block;
+                margin-left: 50px;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @include mq(tablet) {
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+
+                &.footer-credit {
+                    margin-bottom: 10px;
+                }
             }
 
-            &:first-child {
-                margin-left: 0;
+            .contact-info {
+                text-align: center;
+
+                p {
+                    margin-left: 0;
+                    margin-bottom: 5px;
+                }
             }
         }
     }
