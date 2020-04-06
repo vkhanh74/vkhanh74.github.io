@@ -1,3 +1,16 @@
+function countBtnHandle() {
+  let btnContent = "stop";
+  $("#count-btn").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("stop").html(btnContent);
+    if (btnContent === "stop") {
+      btnContent = "start";
+    } else {
+      btnContent = "stop";
+    }
+  });
+}
+
 function expandSubMenu() {
   $(".menu_sub").on("click", function (e) {
     e.preventDefault();
@@ -28,4 +41,5 @@ $(document).ready(function () {
   intitalLibrary();
   toogleSidebar();
   expandSubMenu();
+  countBtnHandle();
 });

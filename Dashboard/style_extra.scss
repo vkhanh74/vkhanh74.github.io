@@ -176,6 +176,9 @@ p {
                   padding: 8px 10px;
                   font-size: 15px;
                 }
+                @include mq($sm) {
+                  font-size: 15px;
+                }
                 &.today {
                   color: $blue;
                 }
@@ -329,6 +332,12 @@ p {
         background-color: $blue;
         &:hover {
           background-color: darken($blue, $amount: 5);
+        }
+      }
+      &.stop {
+        background-color: red;
+        &:hover {
+          background-color: darken(red, $amount: 5);
         }
       }
       &:hover {
