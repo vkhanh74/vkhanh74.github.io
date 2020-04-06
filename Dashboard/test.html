@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style_extra.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.min.css">
+  <link href="assets/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="color">
+    Test
+  </div>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container_header">
+      <div style="width: 100%"><img src="https://active-sec.de/wp-content/uploads/2015/03/logo_sticky.svg" alt=""
+          class="logo-full"></div>
+      <div class="logo d-flex align-items-center">
+        <a href="#"> <strong class="logo_icon"> <img src="https://active-sec.de/wp-content/uploads/2015/03/logo3.png"
+              alt=""> </strong> <span class=""> </span> </a>
+        <div class="icon_menu full_menu">
+          <a href="#" class="menu-toggler sidebar-toggler"></a>
+
+        </div>
+      </div>
+      <div class="right_detail">
+        <div class="row d-flex align-items-center min-h pos-md-r">
+          <div class="col-xl-5 col-3 search_col ">
+          </div>
+          <div class="col-xl-7 col-9 d-flex justify-content-end">
+            <div class="right_bar_top d-flex align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header -->
+
+  <!-- Left sidebar -->
+  <div class="left-sidebar">
+    <div class="side_bar bg_color scroll_auto">
+      <div class="user-panel">
+        <div class="user_image">
+          <img src="assets/images/about-1.jpg" class="img-circle mCS_img_loaded" alt="User Image">
+        </div>
+        <div class="info">
+          <p>
+            Max Max </p>
+          <a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <ul id="dc_accordion" class="sidebar-menu tree">
+        <li class="menu_sub">
+          <a href=""><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        </li>
+
+
+        <li class="menu_sub">
+          <a href="#"> <i class="fas fa-indent"></i> <span>Menü</span>
+            <span class="arrow"></span> </a>
+          <ul class="down_menu">
+            <li>
+              <a href="">Dashboard</a>
+              <a href="module/dienstplan/index.php">Dienstplan</a>
+              <a href="module/kunden/">Kunden</a>
+              <a href="module/mitarbeiter/">Mitarbeiter</a>
+              <a href="module/schichten/">Schichten</a>
+              <a href="module/zeiterfassung/">Zeiterfassung</a>
+              <a href="module/schichterfassung/">Schichterfassung</a>
+              <a href="module/stundenliste/">Stundenliste</a>
+              <a href="module/lohnbuchhaltung/">Lohnbuchhaltung</a>
+              <a href="module/confirm/">Dienbestätigung</a>
+              <a href="module/zeiterfassung/log_index.php">Zeiterfassung Logfile</a>
+              <a href="/includes/logout.php">Ausloggen</a>
+              <a href="register.php">Benutzer hinzufügen</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu_sub">
+          <a href="#"> <i class="fas fa-file-invoice"></i> <span>Rechnungen</span>
+            <span class="arrow"></span> </a>
+          <ul class="down_menu">
+            <li>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu_sub">
+          <a href="#"> <i class="fas fa-tools"></i> <span>Administrator</span>
+            <span class="arrow"></span> </a>
+          <ul class="down_menu">
+            <li>
+              <a href="module/zeiterfassung/log_index.php">Zeiterfassung Logfile</a>
+              <a href="register.php">Konto anlegen</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="menu_sub">
+          <a href="includes/logout.php"><i class="fas fa-sign-out-alt"></i> <span>Ausloggen</span></a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+  <!-- End left sidebar -->
+
+  <!-- Content_right -->
+  <div class="content_wrapper top-nav">
+    <div class="container-fluid">
+      <!--page title start-->
+      <div class="page-heading">
+        <div>
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+              <div class="page-breadcrumb">
+                <h1>Time Recording</h1>
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-md-end d-flex">
+              <div class="breadcrumb_nav">
+                <ol class="breadcrumb">
+                  <li>
+                    <i class="fa fa-home"></i>
+                    <a class="parent-item" href="../dash_content.php">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                  </li>
+                  <li class="active"> Time Recording </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--page title end-->
+      <!--main contents start-->
+      <main>
+        <div class="main-content">
+          <div class="table-wrapper">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="table-header">
+                  <tr class="table-row table-row_header">
+                    <th class="today"> Today </th>
+                    <th> Address </th>
+                    <th> Schichtname </th>
+                    <th> Time Working </th>
+                    <th> Pause </th>
+                    <th> Total Time </th>
+                  </tr>
+                </thead>
+                <tbody class="table-row">
+                  <tr>
+                    <td>
+                      <div class="day-col">
+                        <p class="day">31</p>
+                        <div class="month_block">
+                          <p class="month">Di</p>
+                          <p class="month">Marz</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="address-col">
+                        <h5>Amazon</h5>
+                        <p> Brandlbergstr. 10, 93173 Wenzenbach</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="schichtname-col">
+                        Morning
+                      </div>
+                    </td>
+                    <td>
+                      <div class="time-col">
+                        <i class="far fa-clock"></i>
+                        <p>08:30 - 11:30</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="pause-col">
+                        60min
+                      </div>
+                    </td>
+                    <td>
+                      <div class="total-col">
+                        04:30
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="control-card">
+            <div class="control-card_header">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29809.23353718566!2d105.74713184064511!3d20.946322122884848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134532bef4bcdb7%3A0xbcc7a679fcba07f6!2zSMOgIMSQw7RuZywgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1585907858452!5m2!1svi!2s"
+                width="100%" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="true"
+                tabindex="0"></iframe>
+              <div class="search-box">
+                <input type="text" placeholder="Brandlbergstraße 10,Grünthal...">
+              </div>
+            </div>
+            <div class="control-card_content">
+              <h3 class="range-time">12:00 - 17:00</h3>
+              <h5 class="place">Amazon - Ship morning</h5>
+              <a class="button" style="margin-bottom: 30px" href="#">Start</a>
+              <div class="time-select">
+                <div class="date-picker">
+                  <input data-toggle="datepicker">
+                  <input data-toggle="datepicker">
+                </div>
+                <div class="time-picker">
+                  <input class="time-ref" type="text" placeholder="Start time">
+                  <span>-</span>
+                  <input class="time-ref" type="text" placeholder="End time">
+                </div>
+              </div>
+              <a class="button button-blue" href="#">Change Time</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--main contents start-->
+    </div>
+
+    <!--main contents end-->
+  </div>
+  <!-- Content_right_End -->
+
+  <!-- Footer -->
+  <footer class="footer ptb-20">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="copy_right">
+            <p>
+              2018 ©
+              <a href="https://max4net.de">max4net e.K.</a>
+            </p>
+          </div>
+          <a id="back-to-top" href="#"> <i class="ion-android-arrow-up"></i> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer_End -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/datepicker.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.timepicker.min.js" type="text/javascript"></script>
+  <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
