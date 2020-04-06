@@ -56,7 +56,9 @@ p {
     flex: 1 1 80%;
     max-width: 80%;
     padding-right: 30px;
+    margin-bottom: 30px;
     .table-responsive {
+      margin-bottom: 30px;
       .table {
         border-collapse: separate;
         border-spacing: 0 5px;
@@ -157,6 +159,59 @@ p {
                 &.today {
                   color: $blue;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .table-footer {
+      display: flex;
+      justify-content: space-between;
+      color: $subtitle;
+      @include mq($sm) {
+        flex-wrap: wrap;
+        .showing-item,
+        .timing-detail {
+          flex: 1 1 50%;
+          max-width: 50%;
+        }
+        .timing-detail {
+          text-align: right;
+        }
+        .pagination {
+          margin-top: 15px;
+          flex: 1 1 100%;
+          max-width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .showing-item {
+        span {
+          color: $title;
+        }
+      }
+      .pagination {
+        ul {
+          padding-left: 25;
+          li {
+            list-style: none;
+            display: inline-block;
+            a {
+              padding: 5px 8px;
+              color: #bdc0c2;
+              border: 1px solid #bdc0c2;
+              border-radius: 3px;
+              &.active {
+                background-color: $blue;
+                color: #fff;
+                border-color: transparent;
+              }
+              &:hover {
+                background-color: $blue;
+                color: #fff;
+                border-color: transparent;
               }
             }
           }
