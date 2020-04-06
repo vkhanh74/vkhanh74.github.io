@@ -166,7 +166,7 @@ p {
             &.table-row_header {
               th {
                 padding: 17px 30px;
-                font-size: 17px;
+                font-size: 15px;
                 font-weight: 600;
                 color: $title;
                 @include mq($xxl) {
@@ -174,10 +174,6 @@ p {
                 }
                 @include mq($xl) {
                   padding: 8px 10px;
-                  font-size: 15px;
-                }
-                @include mq($sm) {
-                  font-size: 15px;
                 }
                 &.today {
                   color: $blue;
