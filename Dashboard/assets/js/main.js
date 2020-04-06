@@ -20,6 +20,7 @@ function toogleSidebar() {
   $(".menu-toggler").on("click", function (e) {
     e.preventDefault();
     $("body").toggleClass("nav_small mobile_nav");
+    $(".menu_sub").children(".down_menu").hide();
   });
 }
 
