@@ -74,9 +74,13 @@ p {
           th {
             padding: 10px 30px;
             vertical-align: middle;
-            @include mq($xl) {
+            @include mq($xxl) {
               padding: 10px 20px;
             }
+            @include mq($xl) {
+              padding: 8px 10px;
+            }
+
             &:first-child {
               border-top-left-radius: 5px;
               border-bottom-left-radius: 5px;
@@ -88,6 +92,7 @@ p {
           }
 
           td {
+            $table_common_size: 15px;
             .day-col {
               display: flex;
               align-items: center;
@@ -108,29 +113,40 @@ p {
                 }
               }
             }
-            .table-wrapperddress-col {
+            .address-col {
               h5 {
-                font-size: 15px;
+                font-size: $table_common_size;
                 font-weight: 500;
                 color: $title;
                 margin-bottom: 5px;
               }
               p {
-                font-size: 14px;
+                font-size: $table_common_size - 1;
                 color: $subtitle;
               }
             }
             .schichtname-col {
-              font-size: 15px;
+              font-size: $table_common_size;
               color: $subtitle;
             }
             .time-col {
               display: flex;
               align-items: center;
-              font-size: 15px;
+              font-size: $table_common_size;
               color: $subtitle;
               i {
                 margin-right: 10px;
+              }
+
+              @include mq($xl) {
+                i {
+                  display: none;
+                }
+              }
+              @include mq($md) {
+                i {
+                  display: inline-block;
+                }
               }
             }
             .pause-col {
@@ -150,11 +166,15 @@ p {
             &.table-row_header {
               th {
                 padding: 17px 30px;
-                font-size: 17;
+                font-size: 17px;
                 font-weight: 600;
                 color: $title;
+                @include mq($xxl) {
+                  padding: 10px 20px;
+                }
                 @include mq($xl) {
-                  padding: 15px 20px;
+                  padding: 8px 10px;
+                  font-size: 15px;
                 }
                 &.today {
                   color: $blue;
