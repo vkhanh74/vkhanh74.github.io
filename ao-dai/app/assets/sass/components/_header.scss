@@ -1,0 +1,56 @@
+.header {
+  padding: 20px 0 75px;
+  border-bottom: 1px solid setShadeColor(border);
+  &-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  &-logo {
+    img {
+      @include imgCenter($width: 125px, $type: contain);
+    }
+  }
+  &-navigator {
+    list-style: none;
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      a {
+        @include link($fsz: 20px, $up: true);
+      }
+    }
+  }
+  &-search {
+    position: relative;
+    input {
+      height: 30px;
+      width: 300px;
+      font-size: 12px;
+      padding: 0 10px;
+      color: setShadeColor(dark);
+      border: 1px solid setShadeColor(medium);
+      border-radius: 3px;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      height: 30px;
+      width: 30px;
+      background-color: #000;
+      border: 0;
+      border-radius: 3px;
+      color: #fff;
+    }
+  }
+  &-feature {
+    a {
+      @include link($fsz: 16);
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+}

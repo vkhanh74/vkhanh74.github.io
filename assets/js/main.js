@@ -57,14 +57,6 @@ function menuHandle() {
 
         })
 
-        console.log(navItems)
-        navItems.forEach((item, index) => {
-            console.log(item)
-            item.addEventListener('click', () => {
-                openSidebarBtn.dispatchEvent('click')
-            })
-        })
-
     }
 
     menuReszie()

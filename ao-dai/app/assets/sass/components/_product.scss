@@ -1,0 +1,47 @@
+.product {
+  &:hover {
+    .product-img {
+      img {
+        transform: scale(1.05) rotate(1deg);
+      }
+    }
+  }
+  &-img {
+    display: block;
+    margin-bottom: 17px;
+    overflow: hidden;
+    img {
+      @include imgCenter();
+      transition: $transition;
+    }
+  }
+  &-content {
+    a {
+      @include link($fsz: 20px);
+      display: block;
+      margin-bottom: 16px;
+    }
+    h5 {
+      @include typo;
+      margin-bottom: 20px;
+    }
+  }
+  &-actions {
+    button {
+      @include link($fsz: 15px);
+      border: 1px solid #090808;
+      border-radius: 2px;
+      display: inline-block;
+      height: 40px;
+    }
+    &__atc {
+      padding: 0 26px;
+      i {
+        margin-left: 10px;
+      }
+    }
+    &__wl {
+      width: 40px;
+    }
+  }
+}

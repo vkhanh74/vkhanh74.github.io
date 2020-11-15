@@ -1,0 +1,15 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+  h5 {
+    @include typo($fsz: 35px, $up: true);
+    margin-bottom: 10px;
+  }
+  &__decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #090808;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

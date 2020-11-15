@@ -1,0 +1,24 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  include components/banner.pug
+  section.products-box
+    .anna-container
+      +title({content: 'Sản phẩm nổi bật'})
+      .product-box__content
+        .row
+          each item in feature1
+            .col-3
+              +product({name: item.name, image: item.image, price: item.price})
+  include components/introduction.pug
+  section.products-box
+    .anna-container
+      +title({content: 'Sản phẩm nổi bật'})
+      .product-box__content
+        .row
+          each item in feature1
+            .col-3
+              +product({name: item.name, image: item.image, price: item.price})

@@ -1,0 +1,51 @@
+.banner {
+  margin-bottom: $section-spacing;
+  &-slide {
+    display: flex;
+    align-items: center;
+    background: {
+      image: url("/assets/images/banner-1.png");
+      size: cover;
+      position: top center;
+    }
+    &__content {
+      height: 900px;
+      display: flex;
+      align-items: center;
+      &-wrapper {
+        padding-top: 70px;
+        p {
+          @include typo($fsz: 55px, $lh: 60px, $color: #fff);
+          margin-bottom: 70px;
+        }
+        a {
+          @include link($fsz: 36px, $color: #fff, $fw: 600);
+          border: 1px solid #fff;
+          padding: 5px 16px;
+          border-radius: 5px;
+          &:hover {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      .dots-item {
+        height: 5px;
+        width: 60px;
+        border-radius: 999px;
+        background-color: #fff;
+      }
+    }
+  }
+}

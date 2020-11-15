@@ -1,0 +1,16 @@
+.footer {
+  &-title {
+    margin-bottom: 30px;
+    &:after {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 1px;
+      background-color: #828282;
+    }
+    h3 {
+      @include typo($fsz: 20px, $up: true);
+      padding-bottom: 15px;
+    }
+  }
+}
