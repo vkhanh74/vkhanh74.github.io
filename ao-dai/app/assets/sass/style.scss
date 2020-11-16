@@ -2,6 +2,7 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "base/ui";
 @import "base/reset";
 @import "base/fonts";
 @import "base/container";
@@ -12,5 +13,7 @@
 @import "components/section-title";
 @import "components/product";
 @import "components/introduction";
+@import "components/pagination";
 
 @import "page/homepage";
+@import "page/about";

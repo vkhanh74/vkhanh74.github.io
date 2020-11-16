@@ -1,0 +1,24 @@
+extends base/layout.pug
+block title
+  title Áo dài truyền thống
+block header
+  include components/header.pug
+block content
+  .spacing
+  section.products-box
+    .anna-container
+      +title({content: 'Áo dài truyền thống'})
+      .product-box__filter
+        select(name="")
+          option(hidden selected disabled) Bộ lọc
+          option(value="0") Mặc định
+          option(value="1") Lọc theo giá: Thấp đến cao
+          option(value="2") Lọc theo giá: Capo đến thấp
+          option(value="3") Lọc theo chữ cái: A đến Z
+          option(value="4") Lọc theo chữ cái: Z đến A
+      .product-box__content
+        .row
+          each item in feature2
+            .col-3
+              +product({name: item.name, image: item.image, price: item.price})
+      +pagination({currentPage: 2, disableNext: true})

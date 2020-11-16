@@ -1,0 +1,13 @@
+mixin pagination(props = {})
+  -var {url= 'ao-dai-truyen-thong', currentPage = 1, totalPage = 2, disableNext = false, disablePrev = false} = props
+  -var n = 1;
+  ul.pagination
+    if !disablePrev
+      li  
+        a(href=`${url}-${currentPage - 1}.html`) Trước
+    while n <= totalPage
+      li(class=`${n === currentPage ? 'active' : ''}`)
+        a(href=`${url}-${n}.html`)= n++
+    if !disableNext
+      li  
+        a(href=`${url}-${currentPage + 1}.html`) Sau

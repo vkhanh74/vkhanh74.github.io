@@ -1,4 +1,6 @@
 .footer {
+  padding: 50px 90px;
+  border-top: 1px solid setShadeColor(border);
   &-title {
     margin-bottom: 30px;
     &:after {
@@ -11,6 +13,53 @@
     h3 {
       @include typo($fsz: 20px, $up: true);
       padding-bottom: 15px;
+    }
+  }
+  &-links {
+    list-style: none;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      a {
+        @include link($fsz: 13px);
+        &:before {
+          content: "\f105";
+          font-family: "Font Awesome 5 Pro";
+          margin-right: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &-contact {
+    ul {
+      list-style: none;
+    }
+    &__info {
+      margin-bottom: 20px;
+      li {
+        @include typo($fsz: 13px);
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        i {
+          width: 20px;
+          text-align: center;
+          margin-right: 10px;
+        }
+      }
+    }
+    &__social {
+      li {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        a {
+          @include link($fsz: 18px);
+        }
+      }
     }
   }
 }

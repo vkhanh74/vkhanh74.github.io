@@ -13,13 +13,42 @@
   }
   &-navigator {
     list-style: none;
-    li {
+    & > li {
       display: inline-block;
+      position: relative;
+      &:hover {
+        & > a {
+          color: red;
+        }
+        .header-navigator__dropdown {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
       &:not(:last-child) {
         margin-right: 20px;
       }
-      a {
+      & > a {
         @include link($fsz: 20px, $up: true);
+      }
+      .header-navigator__dropdown {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        background-color: #fff;
+        list-style: none;
+        width: 300px;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+        border: 1px solid setShadeColor(border);
+        li {
+          padding: 15px 20px;
+          border-bottom: 1px solid setShadeColor(border);
+          a {
+            @include link($fsz: 16px);
+          }
+        }
       }
     }
   }
