@@ -553,12 +553,6 @@ template {
     .pagination li.active a {
       text-decoration: underline; }
 
-.products-box .product-box__filter select {
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding: 8px 21px;
-  margin-bottom: 40px; }
-
 .products-box .product {
   margin-bottom: 70px; }
 
@@ -576,3 +570,12 @@ template {
     font-weight: normal;
     line-height: 26px;
     text-indent: 20px; }
+
+.shop-filter select {
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 8px 21px;
+  margin-bottom: 40px; }
+
+.shop-products .product {
+  margin-bottom: 70px; }
