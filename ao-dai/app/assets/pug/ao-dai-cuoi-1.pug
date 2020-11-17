@@ -1,0 +1,8 @@
+extends base/layout.pug
+block title
+  title Áo dài cưới
+block header
+  include components/header.pug
+block content
+  .spacing
+  +shopLayout({title: 'Áo dài cưới', url: 'ao-dai-cuoi', data: adc.slice(0, 12), disablePrev: true})
