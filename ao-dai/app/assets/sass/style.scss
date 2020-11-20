@@ -10,6 +10,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/banner";
+@import "components/quantity";
 @import "components/section-title";
 @import "components/product";
 @import "components/introduction";
@@ -17,4 +18,6 @@
 
 @import "page/homepage";
 @import "page/about";
+@import "page/product-detail";
 @import "page/shop";
+@import "page/login";

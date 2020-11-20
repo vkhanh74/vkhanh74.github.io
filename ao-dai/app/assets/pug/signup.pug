@@ -1,0 +1,22 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  .login
+    .anna-container
+      .row
+        .col-8.mx-auto
+          form(action="index.html").login-form
+            h2 Đăng ký
+            input(type="text" placeholder="Tên" required)
+            input(type="text" placeholder="Họ" required)
+            input(type="text" placeholder="Email" required)
+            input(type="password" placeholder="Mật khẩu" required)
+            .form-helpers
+              span
+              a(href="login.html") Bạn đã có tài khoản ? Đăng nhập
+            .form-btn
+              button Đăng ký
+              a(href="index.html") Trở về

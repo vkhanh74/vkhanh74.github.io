@@ -1,0 +1,11 @@
+include ../mixin/title.pug
+include ../mixin/product.pug
+include ../base/variable.pug
+.relate-products
+  .anna-container
+    +title({content: "Sản phẩm tương tự"})
+    .col-12
+      .row
+        each item in feature1.slice(0,4)
+          .col-3
+            +product({name: item.name, price: item.price, image: item.image })
