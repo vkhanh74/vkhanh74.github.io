@@ -1,0 +1,73 @@
+extends base/layout.pug
+block title
+  title Giỏ hàng
+block header
+  include components/header.pug
+block content
+  .spacing
+  .cart
+    .anna-container
+      .row
+        .col-9
+          .cart-table
+            table
+              colgroup
+                col(style='width: 115px')
+                col(style='width:25%')
+                col(style='width:20%')
+                col(style='width:25%')
+                col(style='width:25%')
+                col(style='width:5%')
+              thead
+                tr
+                  th Sản phẩm
+                  th 
+                  th Số lượng
+                  th Giá bán
+                  th Tổng
+                  th 
+              tbody
+                each item in feature1.slice(0,3)
+                  tr
+                    td
+                      img(src=item.image, alt="Product image")
+                    td= item.name
+                    td
+                      input(type="number" min="1" value="1")
+                    td= item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+                    td= item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+                    td
+                      a(href="#")
+                        i.far.fa-times
+          a.back(href="#")
+            i.far.fa-long-arrow-left
+            | Quay lại
+        .col-3
+          .cart-total
+            .cart-total__header
+              h2 Giỏ hàng của Bạn
+              table
+                tbody
+                  tr
+                    th Tổng tất cảm
+                    td 1.260.000đ
+                  tr
+                    th Phí ship
+                    td 20.000đ
+              form
+                label Mã giảm giá
+                input(type="text" placeholder="ABCDGTYW")
+                button Áp dụng
+            .cart-total__final
+              table
+                tr
+                  th Total
+                  td 1.260.000đ
+                tr
+                  td
+                  td -10%
+                tr
+                  td
+                  td 1.180.000đ
+            button Thanh toán
+            

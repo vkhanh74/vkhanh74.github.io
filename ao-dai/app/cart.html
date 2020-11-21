@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Homepage 1</title>
+    <title>Giỏ hàng</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"/>
     <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
@@ -46,21 +46,106 @@
       </div>
     </div>
     <div id="content">
-      <div class="login">
+      <div class="spacing"></div>
+      <div class="cart">
         <div class="anna-container">
           <div class="row">
-            <div class="col-8 mx-auto">
-              <form class="login-form" action="index.html">
-                <h2>Đăng ký</h2>
-                <input type="text" placeholder="Tên" required="required"/>
-                <input type="text" placeholder="Họ" required="required"/>
-                <input type="text" placeholder="Email" required="required"/>
-                <input type="password" placeholder="Mật khẩu" required="required"/>
-                <div class="form-helpers"><span></span><a href="login.html">Bạn đã có tài khoản ? Đăng nhập</a></div>
-                <div class="form-btn">
-                  <button>Đăng ký</button><a href="index.html">Trở về</a>
+            <div class="col-9">
+              <div class="cart-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 115px"/>
+                    <col style="width:25%"/>
+                    <col style="width:20%"/>
+                    <col style="width:25%"/>
+                    <col style="width:25%"/>
+                    <col style="width:5%"/>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Sản phẩm</th>
+                      <th> </th>
+                      <th>Số lượng</th>
+                      <th>Giá bán</th>
+                      <th>Tổng</th>
+                      <th> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="assets/images/products/1.png" alt="Product image"/></td>
+                      <td>Áo dài lụa vàng họa tiết</td>
+                      <td>
+                        <input type="number" min="1" value="1"/>
+                      </td>
+                      <td>350.000đ</td>
+                      <td>350.000đ</td>
+                      <td><a href="#"><i class="far fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="assets/images/products/2.png" alt="Product image"/></td>
+                      <td>Áo dài lụa hồng thêu hoa</td>
+                      <td>
+                        <input type="number" min="1" value="1"/>
+                      </td>
+                      <td>380.000đ</td>
+                      <td>380.000đ</td>
+                      <td><a href="#"><i class="far fa-times"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="assets/images/products/3.png" alt="Product image"/></td>
+                      <td>Áo dài lụa vàng họa tiết</td>
+                      <td>
+                        <input type="number" min="1" value="1"/>
+                      </td>
+                      <td>400.000đ</td>
+                      <td>400.000đ</td>
+                      <td><a href="#"><i class="far fa-times"></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><a class="back" href="#"><i class="far fa-long-arrow-left"></i>Quay lại</a>
+            </div>
+            <div class="col-3">
+              <div class="cart-total">
+                <div class="cart-total__header">
+                  <h2>Giỏ hàng của Bạn</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Tổng tất cảm</th>
+                        <td>1.260.000đ</td>
+                      </tr>
+                      <tr>
+                        <th>Phí ship</th>
+                        <td>20.000đ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <form>
+                    <label>Mã giảm giá</label>
+                    <input type="text" placeholder="ABCDGTYW"/>
+                    <button>Áp dụng</button>
+                  </form>
                 </div>
-              </form>
+                <div class="cart-total__final">
+                  <table>
+                    <tr>
+                      <th>Total</th>
+                      <td>1.260.000đ</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>-10%</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>1.180.000đ</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Thanh toán</button>
+              </div>
             </div>
           </div>
         </div>

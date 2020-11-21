@@ -1,0 +1,44 @@
+extends base/layout.pug
+block title
+  title Liên hệ với chúng tôi
+block header
+  include components/header.pug
+block content
+  .spacing
+  .contact
+    .anna-container
+      .row
+        .col-6
+          .contact-form
+            h2.contact-title Góp ý với chúng tôi
+            p Mọi góp ý của bạn sẽ giúp chúng tôi hoàn thiện hơn
+            form(action="index.html")
+              .row
+                .col-6
+                  .input-item
+                    label Họ và tên*
+                    input(type="text" placeholder="Tên" required)
+                .col-6
+                  .input-item
+                    label Email*
+                    input(type="text" placeholder="Email" required)
+                .col-12
+                  .input-item
+                    label Lời nhắn *
+                    textarea(placeholder="Nội dung")
+                  button Gửi
+        .col-6
+          .contact-map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.8557330138037!2d105.78512721542373!3d21.078423491455833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aacbe6467c61%3A0xd35625288cdd59fd!2zMjAgUGjhuqFtIFbEg24gxJDhu5NuZywgWHXDom4gxJDhu4luaCwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1605973902161!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
+          .contact-detail
+            h2.contact-title Liên hệ với chúng tôi
+            ul
+              li
+                i.fas.fa-map-marker-alt
+                |20 PHẠM VĂN ĐỒNG,CẦU GIẤY,HÀ NỘI 
+              li
+                i.fas.fa-mobile-alt
+                |0388891700 
+              li
+                i.far.fa-envelope
+                |anna123@gmail.com 
