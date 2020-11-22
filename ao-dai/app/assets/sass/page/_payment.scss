@@ -31,9 +31,11 @@
       padding: 5px 15px;
       margin-bottom: 20px;
       border-radius: 5px;
+      position: relative;
       &-selector {
         display: flex;
         align-items: center;
+        cursor: pointer;
         &__input {
           label {
             display: block;
@@ -54,6 +56,26 @@
         text-align: right;
         border-left: 1px solid #000;
         @include link;
+      }
+      &-options {
+        position: absolute;
+        top: calc(100% + 3px);
+        width: 100%;
+        left: 0;
+        background-color: #fff;
+        list-style: none;
+        border: 1px solid #000;
+        border-radius: 5px;
+        li {
+          padding: 10px 20px;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #dcdcdc;
+          }
+          a {
+            @include link($fsz: 14px);
+          }
+        }
       }
     }
   }

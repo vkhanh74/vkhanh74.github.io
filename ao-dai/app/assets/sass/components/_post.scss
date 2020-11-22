@@ -1,0 +1,29 @@
+.post {
+  margin-bottom: 75px;
+  &:hover {
+    .post-image {
+      img {
+        transform: scale(1.05) rotate(1deg);
+      }
+    }
+  }
+  &-image {
+    overflow: hidden;
+    margin-bottom: 20px;
+    img {
+      @include imgCenter;
+      transition: $transition;
+    }
+  }
+  &-content {
+    a {
+      @include link($fsz: 25px, $fw: 600);
+      display: block;
+      margin-bottom: 10px;
+    }
+    p {
+      @include typo($fsz: 20px, $lh: 28px);
+      @include overflowText(3);
+    }
+  }
+}

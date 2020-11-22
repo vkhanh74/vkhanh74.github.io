@@ -1,0 +1,14 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  .spacing
+  +title({content: 'Tin tức'})
+  .news
+    .anna-container
+      .row
+        each post in news
+          .col-6
+            +post({title: post.title, description: post.description, image: post.image})

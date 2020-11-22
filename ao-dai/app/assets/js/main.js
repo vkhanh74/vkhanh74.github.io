@@ -16,7 +16,26 @@ const renderPage = () => {
   }
 };
 
+const customSelectHandle = () => {
+  $(".customed-select-selector").on("click", function (e) {
+    e.preventDefault();
+    $(this).next().slideToggle(200);
+  });
+
+  $(".customed-select-options li a").on("click", function (e) {
+    e.preventDefault();
+    let span = $(this)
+      .parents(".customed-select-options")
+      .siblings(".customed-select-selector")
+      .children(".customed-select-selector__input")
+      .children("span");
+    span.text($(this).text());
+    $(this).parents(".customed-select-options").slideUp(200);
+  });
+};
+
 $(document).ready(function () {
   banner();
   renderPage();
+  customSelectHandle();
 });
