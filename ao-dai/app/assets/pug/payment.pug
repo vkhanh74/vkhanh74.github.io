@@ -1,0 +1,92 @@
+extends base/layout.pug
+block title
+  title Thanh toán
+block header
+  include components/header.pug
+block content
+  .spacing
+  .payment
+    .anna-container
+      .row
+        .col-8
+          h2 Thương hiệu thời trang cao cấp
+          ul.breadcrumb
+            li Giỏ hàng >
+            li.current Thông tin giao hàng
+          form
+            input(type="text" placeholder="Họ và tên")
+            .row
+              .col-8
+                input(type="text" placeholder="Email")
+              .col-4
+                input(type="text" placeholder="Điện thoại")
+              .col-12
+                input(type="text" placeholder="Địa chỉ")
+              .col-6
+                .customed-select
+                  .customed-select-selector
+                    .customed-select-selector__input
+                      label Tỉnh
+                      span Hà Nội
+                    a(href="#").customed-select__angle
+                      i.fas.fa-angle-down
+                  ul.customed-select-options
+                    li 
+                      a(href="#") Hà nội
+                    li 
+                      a(href="#") Hải Phòng
+                    li 
+                      a(href="#") Hồ Chí Minh 
+              .col-6
+                .customed-select
+                  .customed-select-selector
+                    .customed-select-selector__input
+                      label Quận/Huyện
+                      span Cầu Giấy
+                    a(href="#").customed-select__angle
+                      i.fas.fa-angle-down
+                  ul.customed-select-options
+                    li 
+                      a(href="#") Cầu Giấy 
+                    li 
+                      a(href="#") Đông Anh
+                    li 
+                      a(href="#") Long Biên
+                    li 
+                      a(href="#") Hai Bà Trưng
+                    li 
+                      a(href="#") Đống Đa
+                    li 
+                      a(href="#") Thạch Thất
+                    li 
+                      a(href="#") Hoàn Kiếm
+            h5.payment-title Phương thức vận chuyển
+            .collapse
+              .collapse-header
+                .fake-checkbox
+                  span
+                label(for="shipping") Đơn hàng chuyển khoản trước trên 1 triệu 
+                span(style="margin-left: auto") 0đ
+            h5.payment-title Phương thức thanh toán
+            .collapse
+              .collapse-header
+                .fake-checkbox
+                  span
+                label(for="payment") Chuyển khoản qua  ngân hàng
+              .collapse-content
+                p(style="margin-bottom: 30px") Bạn có thể chuyển tiền vào tài khoản sau của Pantio: Sau khi khách đặt hàng, bộ phận CSKH của Pantio sẽ liên hệ lại để chốt đơn hàng và thông báo tổng số tiền để khách hàng chuyển khoản ( gồm đơn giá sản phẩm + phí vận chuyển ).
+                p Tài Khoản: Ngân hàng Ngoại Thương Việt Nam ( Vietcombank )
+                p Tên TK: Công ty TNHH Thời trang H và A
+                p Số TK: 0021.000.421.168
+                p Chi nhánh: Vietcombank Hà Nội.
+          .payment-btn
+            a(href="cart.html") 
+              i.far.fa-long-arrow-left
+              |Giỏ hàng
+            a(href="#") Đặt hàng
+        
+            
+          
+
+
+

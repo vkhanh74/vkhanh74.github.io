@@ -646,7 +646,7 @@ template {
       .cart-total table th {
         color: #000;
         font-size: 18px;
-        font-weight: normal;
+        font-weight: 500;
         line-height: 1;
         text-align: left; }
       .cart-total table td {
@@ -690,6 +690,12 @@ template {
       line-height: 35px; }
       .cart-total .cart-submit:hover {
         color: #f26460; }
+    .cart-total .table-bill tr:nth-child(1) th,
+    .cart-total .table-bill tr:nth-child(1) td {
+      padding: 0; }
+    .cart-total .table-bill tr:nth-child(2) td,
+    .cart-total .table-bill tr:nth-child(2) th {
+      padding: 5px 0; }
   .cart .back {
     border: 1px solid #000;
     padding: 7px;
@@ -787,6 +793,122 @@ template {
     font-weight: normal;
     line-height: 26px;
     text-indent: 20px; }
+
+.payment {
+  margin-bottom: 70px; }
+  .payment h2 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 15px; }
+  .payment .breadcrumb {
+    margin-bottom: 15px; }
+    .payment .breadcrumb li {
+      display: inline-block;
+      color: #000;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1; }
+      .payment .breadcrumb li:last-child {
+        font-weight: 500; }
+  .payment form input {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    border: 1px solid #000;
+    border-radius: 5px; }
+    .payment form input::placeholder {
+      color: #c4c4c4; }
+  .payment form .customed-select {
+    border: 1px solid #000;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px; }
+    .payment form .customed-select-selector {
+      display: flex;
+      align-items: center; }
+      .payment form .customed-select-selector__input label {
+        display: block;
+        color: #c4c4c4;
+        margin-bottom: 5px; }
+      .payment form .customed-select-selector__input span {
+        font-weight: 500; }
+    .payment form .customed-select-options {
+      display: none; }
+    .payment form .customed-select__angle {
+      margin-left: auto;
+      width: 30px;
+      text-align: right;
+      border-left: 1px solid #000;
+      color: #000;
+      font-size: 14px;
+      font-weight: normal;
+      text-decoration: none;
+      line-height: 1;
+      transition: 0.2s ease-in-out;
+      cursor: pointer; }
+      .payment form .customed-select__angle:hover {
+        color: #f26460; }
+  .payment-title {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 23px; }
+  .payment .collapse {
+    margin-bottom: 30px;
+    border: 1px solid #000;
+    border-radius: 5px; }
+    .payment .collapse-header {
+      border: 1px solid #000;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding: 10px; }
+      .payment .collapse-header .fake-checkbox {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        border-radius: 999px;
+        margin-right: 15px; }
+        .payment .collapse-header .fake-checkbox span {
+          height: 10px;
+          width: 10px;
+          background-color: #fff;
+          border-radius: 999px; }
+    .payment .collapse-content {
+      padding: 50px 125px;
+      text-align: center; }
+      .payment .collapse-content p {
+        color: #000;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 24px; }
+  .payment-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .payment-btn a {
+      padding: 10px 15px;
+      display: inline-block;
+      border: 1px solid #000;
+      border-radius: 5px;
+      color: #000;
+      font-size: 15px;
+      font-weight: normal;
+      text-decoration: none;
+      line-height: 1;
+      transition: 0.2s ease-in-out;
+      cursor: pointer; }
+      .payment-btn a:hover {
+        color: #f26460; }
+      .payment-btn a i {
+        margin-right: 10px; }
 
 .product-detail {
   margin-bottom: 128px; }

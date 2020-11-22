@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Giỏ hàng</title>
+    <title>Thanh toán</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"/>
     <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
@@ -47,104 +47,83 @@
     </div>
     <div id="content">
       <div class="spacing"></div>
-      <div class="cart">
+      <div class="payment">
         <div class="anna-container">
           <div class="row">
-            <div class="col-9">
-              <div class="cart-table">
-                <table>
-                  <colgroup>
-                    <col style="width: 115px"/>
-                    <col style="width:25%"/>
-                    <col style="width:20%"/>
-                    <col style="width:25%"/>
-                    <col style="width:25%"/>
-                    <col style="width:5%"/>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>Sản phẩm</th>
-                      <th> </th>
-                      <th>Số lượng</th>
-                      <th>Giá bán</th>
-                      <th>Tổng</th>
-                      <th> </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src="assets/images/products/1.png" alt="Product image"/></td>
-                      <td>Áo dài lụa vàng họa tiết</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>350.000đ</td>
-                      <td>350.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="assets/images/products/2.png" alt="Product image"/></td>
-                      <td>Áo dài lụa hồng thêu hoa</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>380.000đ</td>
-                      <td>380.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="assets/images/products/3.png" alt="Product image"/></td>
-                      <td>Áo dài lụa vàng họa tiết</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>400.000đ</td>
-                      <td>400.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div><a class="back" href="index.html"><i class="far fa-long-arrow-left"></i>Quay lại</a>
-            </div>
-            <div class="col-3">
-              <div class="cart-total">
-                <div class="cart-total__header">
-                  <h2>Giỏ hàng của Bạn</h2>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Tổng tất cả</th>
-                        <td>1.260.000đ</td>
-                      </tr>
-                      <tr>
-                        <th>Phí ship</th>
-                        <td>20.000đ</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <form>
-                    <label>Mã giảm giá</label>
-                    <input type="text" placeholder="ABCDGTYW"/>
-                    <button>Áp dụng</button>
-                  </form>
+            <div class="col-8">
+              <h2>Thương hiệu thời trang cao cấp</h2>
+              <ul class="breadcrumb">
+                <li>Giỏ hàng ></li>
+                <li class="current">Thông tin giao hàng</li>
+              </ul>
+              <form>
+                <input type="text" placeholder="Họ và tên"/>
+                <div class="row">
+                  <div class="col-8">
+                    <input type="text" placeholder="Email"/>
+                  </div>
+                  <div class="col-4">
+                    <input type="text" placeholder="Điện thoại"/>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" placeholder="Địa chỉ"/>
+                  </div>
+                  <div class="col-6">
+                    <div class="customed-select">
+                      <div class="customed-select-selector">
+                        <div class="customed-select-selector__input">
+                          <label>Tỉnh</label><span>Hà Nội</span>
+                        </div><a class="customed-select__angle" href="#"><i class="fas fa-angle-down"></i></a>
+                      </div>
+                      <ul class="customed-select-options">
+                        <li> <a href="#">Hà nội</a></li>
+                        <li> <a href="#">Hải Phòng</a></li>
+                        <li> <a href="#">Hồ Chí Minh </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="customed-select">
+                      <div class="customed-select-selector">
+                        <div class="customed-select-selector__input">
+                          <label>Quận/Huyện</label><span>Cầu Giấy</span>
+                        </div><a class="customed-select__angle" href="#"><i class="fas fa-angle-down"></i></a>
+                      </div>
+                      <ul class="customed-select-options">
+                        <li> <a href="#">Cầu Giấy </a></li>
+                        <li> <a href="#">Đông Anh</a></li>
+                        <li> <a href="#">Long Biên</a></li>
+                        <li> <a href="#">Hai Bà Trưng</a></li>
+                        <li> <a href="#">Đống Đa</a></li>
+                        <li> <a href="#">Thạch Thất</a></li>
+                        <li> <a href="#">Hoàn Kiếm</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="cart-total__final">
-                  <table class="table-bill">
-                    <tr>
-                      <th>Total</th>
-                      <td>1.260.000đ</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>-10%</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>1.180.000đ</td>
-                    </tr>
-                  </table>
-                </div><a class="cart-submit" href="payment.html">Thanh toán</a>
-              </div>
+                <h5 class="payment-title">Phương thức vận chuyển</h5>
+                <div class="collapse">
+                  <div class="collapse-header">
+                    <div class="fake-checkbox"><span></span></div>
+                    <label for="shipping">Đơn hàng chuyển khoản trước trên 1 triệu </label><span style="margin-left: auto">0đ</span>
+                  </div>
+                </div>
+                <h5 class="payment-title">Phương thức thanh toán</h5>
+                <div class="collapse">
+                  <div class="collapse-header">
+                    <div class="fake-checkbox"><span></span></div>
+                    <label for="payment">Chuyển khoản qua  ngân hàng</label>
+                  </div>
+                  <div class="collapse-content">
+                    <p style="margin-bottom: 30px">Bạn có thể chuyển tiền vào tài khoản sau của Pantio: Sau khi khách đặt hàng, bộ phận CSKH của Pantio sẽ liên hệ lại để chốt đơn hàng và thông báo tổng số tiền để khách hàng chuyển khoản ( gồm đơn giá sản phẩm + phí vận chuyển ).</p>
+                    <p>Tài Khoản: Ngân hàng Ngoại Thương Việt Nam ( Vietcombank )</p>
+                    <p>Tên TK: Công ty TNHH Thời trang H và A</p>
+                    <p>Số TK: 0021.000.421.168</p>
+                    <p>Chi nhánh: Vietcombank Hà Nội.</p>
+                  </div>
+                </div>
+              </form>
+              <div class="payment-btn"><a href="cart.html"> <i class="far fa-long-arrow-left"></i>Giỏ hàng</a><a href="#">Đặt hàng</a></div>
             </div>
           </div>
         </div>
