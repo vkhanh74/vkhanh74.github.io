@@ -1,0 +1,7 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  h5 {
+    @include typo($fsz: 40px, $up: true);
+  }
+}

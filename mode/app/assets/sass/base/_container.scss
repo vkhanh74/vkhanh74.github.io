@@ -1,0 +1,13 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+.mode-container {
+  max-width: 960px;
+  @include make-container($gutter: 30px);
+}
+
+.mode-container-wide {
+  max-width: 1100px;
+  @include make-container($gutter: 30px);
+}

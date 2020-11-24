@@ -1,0 +1,24 @@
+.pagination {
+  background-color: #e5e5e5;
+  list-style: none;
+  padding: 20px 0;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: $section-spacing;
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    a {
+      @include link($fsz: 20px);
+    }
+    &.active {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

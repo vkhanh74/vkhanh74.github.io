@@ -1,0 +1,14 @@
+mixin product(props = {})
+  -var {name, price, image, hideImage} = props
+  .product
+    if !hideImage
+      a(href="product-detail.html").product-img
+        img(src=image, alt="Product image")
+    .product-content
+      a.product-name(href="product-detail.html")= name
+      h5.product-price= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+    .product-actions
+      button.product-actions__atc(href="#") Thêm vào giỏ hàng
+        i.fa.fa-shopping-cart
+      button.product-actions__wl(href="#")
+        i.far.fa-heart

@@ -1,0 +1,83 @@
+.header {
+  &-top {
+    padding: 38px 0 50px;
+    background-color: #000;
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-logo {
+      img {
+        @include imgCenter($height: 60px, $width: 200px, $type: contain);
+      }
+    }
+    .header-features {
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        &-auth {
+          display: flex;
+          align-items: center;
+          a {
+            @include link($fsz: 12px, $color: #fff);
+          }
+          span {
+            @include typo($color: #fff, $fsz: 12px);
+            padding: 0 10px;
+          }
+        }
+        &-icons {
+          a {
+            @include link($fsz: 14px, $color: #fff);
+            &:first-child {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      &__bottom {
+        position: relative;
+        input {
+          height: 30px;
+          width: 220px;
+          font-size: 12px;
+          padding: 0 10px 0 40px;
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          background-color: #000;
+          &::placeholder {
+            color: #fff;
+            font-style: italic;
+          }
+        }
+        button {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          background-color: transparent;
+          border: 0;
+          transform: translateY(-50%);
+          @include link($fsz: 14px, $color: #fff);
+        }
+      }
+    }
+  }
+  &-bottom {
+    padding: 20px 0;
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        text-align: center;
+        width: 100%;
+        a {
+          @include link($fsz: 18px, $up: true, $fw: 600);
+        }
+      }
+    }
+  }
+}

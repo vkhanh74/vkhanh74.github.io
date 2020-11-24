@@ -1,0 +1,27 @@
+.introduction {
+  margin-bottom: $section-spacing;
+  &-section {
+    &:first-child {
+      .introduction-section__content {
+        padding-left: 150px;
+      }
+    }
+    &:last-child {
+      .introduction-section__content {
+        padding-left: 70px;
+      }
+    }
+    &__image {
+      img {
+        @include imgCenter;
+      }
+    }
+    .product {
+      &-content {
+        a {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

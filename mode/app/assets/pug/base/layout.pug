@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		include variable.pug
+		include ../mixin/title.pug
+		include ../mixin/product.pug
+		include ../mixin/pagination.pug
+		include ../mixin/shop-layout.pug
+		include ../mixin/post.pug
+		block title
+			title Document
+		include link.pug
+	body
+		block header
+		#content
+			block content
+				h1 Happing coding
+		include ../components/footer.pug
+		include script.pug
+		

@@ -1,0 +1,15 @@
+.shop {
+  &-filter {
+    select {
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 8px 21px;
+      margin-bottom: 40px;
+    }
+  }
+  &-products {
+    .product {
+      margin-bottom: $section-spacing;
+    }
+  }
+}

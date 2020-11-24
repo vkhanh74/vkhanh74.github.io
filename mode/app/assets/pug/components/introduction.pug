@@ -1,0 +1,19 @@
+include ../mixin/product.pug
+.introduction
+  .anna-container
+    .introduction-section
+      .row.no-gutters.align-items-center
+        .col-6
+          .introduction-section__image
+            img(src="assets/images/introduction-1.png", alt="Introduction image")
+        .col-6
+          .introduction-section__content
+            +product({name: 'Bộ áo dài cưới thêu họa tiết', price: 530000, hideImage: true})
+    .introduction-section
+      .row.no-gutters.align-items-center
+        .col-6
+          .introduction-section__content
+            +product({name: 'Bộ áo dài cưới thêu họa tiết', price: 750000, hideImage: true})
+        .col-6
+          .introduction-section__image
+            img(src="assets/images/introduction-2.png", alt="Introduction image")

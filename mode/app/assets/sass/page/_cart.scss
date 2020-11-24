@@ -1,0 +1,151 @@
+.cart {
+  margin-bottom: $section-spacing;
+  &-table {
+    padding-right: 60px;
+    border-right: 1px solid #000;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      thead {
+        tr {
+          th {
+            &:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            border-bottom: 1px solid #000;
+            text-align: center;
+            padding: 30px 15px;
+            &:first-child {
+              padding: 30px 0 15px;
+              img {
+                height: 140px;
+              }
+            }
+            &:nth-child(2) {
+              text-align: left;
+            }
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(5) {
+              @include typo($fsz: 20px, $lh: 25px);
+              padding: 30px 20px;
+            }
+            &:nth-child(3) {
+              input {
+                width: 68px;
+                height: 30px;
+                font-size: 16px;
+                padding-left: 10px;
+              }
+            }
+            &:nth-child(6) {
+              a {
+                @include link($fsz: 16px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-total {
+    padding-left: 50px;
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      @include typo($fsz: 24px);
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        margin-top: 15px;
+      }
+    }
+    table {
+      width: 100%;
+      th,
+      td {
+        padding: 15px 0;
+      }
+      th {
+        @include typo($fsz: 18px, $fw: 500);
+        text-align: left;
+      }
+      td {
+        text-align: right;
+      }
+    }
+    form {
+      margin-bottom: 90px;
+      label {
+        margin-bottom: 12px;
+        display: block;
+      }
+      input {
+        width: 100%;
+        height: 28px;
+        border: 1px solid #000;
+        border-radius: 3px;
+        margin-bottom: 18px;
+        padding: 0 12px;
+        &::placeholder {
+          color: #c4c4c4;
+        }
+      }
+      button {
+        height: 30px;
+        width: 80px;
+        border-radius: 3px;
+        border: 1px solid #000;
+        margin-left: auto;
+        display: block;
+      }
+    }
+    .cart-submit {
+      width: 100%;
+      background-color: #000;
+      border-radius: 3px;
+      color: #fff;
+      height: 35px;
+      display: block;
+      @include link($color: #fff);
+      text-align: center;
+      line-height: 35px;
+    }
+    .table-bill {
+      tr {
+        &:nth-child(1) {
+          th,
+          td {
+            padding: 0;
+          }
+        }
+        &:nth-child(2) {
+          td,
+          th {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  .back {
+    border: 1px solid #000;
+    padding: 7px;
+    @include link($fsz: 15px);
+    display: inline-block;
+    border-radius: 5px;
+    i {
+      margin-right: 10px;
+    }
+  }
+}

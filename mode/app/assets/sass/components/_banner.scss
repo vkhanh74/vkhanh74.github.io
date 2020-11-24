@@ -1,0 +1,49 @@
+.banner {
+  margin-bottom: $section-spacing;
+  &-slide {
+    display: flex;
+    align-items: center;
+    background: {
+      image: url("/assets/images/banner-1.png");
+      size: cover;
+      position: center;
+    }
+    &__content {
+      height: 600px;
+      display: flex;
+      align-items: center;
+      &-wrapper {
+        width: 100%;
+        h3 {
+          @include typo($fsz: 48px, $color: #fff, $fw: 600);
+          margin-bottom: 10px;
+        }
+        h5 {
+          @include typo($fsz: 36px, $color: #fff, $fw: 600);
+          margin-bottom: 30px;
+        }
+        a {
+          @include link($fsz: 18px, $color: #fff, $fw: 500);
+        }
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      .dots-item {
+        height: 5px;
+        width: 60px;
+        border-radius: 999px;
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+include title.pug
+include pagination.pug
+include product.pug
+mixin shopLayout(props = {})
+  -var {data = [], disablePagination = false, title, url = 'ao-dai-truyen-thong', currentPage = 1, disablePrev = false, disableNext = false} = props;
+  .shop
+    .anna-container
+      +title({content: title})
+      .shop-filter
+          select(name="")
+            option(hidden selected disabled) Bộ lọc
+            option(value="0") Mặc định
+            option(value="1") Lọc theo giá: Thấp đến cao
+            option(value="2") Lọc theo giá: Capo đến thấp
+            option(value="3") Lọc theo chữ cái: A đến Z
+            option(value="4") Lọc theo chữ cái: Z đến A
+      .shop-products
+        .row
+          each item in data
+            .col-3
+              +product({name: item.name, image: item.image, price: item.price})
+      if !disablePagination
+        +pagination({url, currentPage, disablePrev, disableNext})
