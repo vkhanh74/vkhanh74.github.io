@@ -1,6 +1,7 @@
 .header
   .anna-container
     .header-wrapper
+      include cart-modal.pug
       a.header-logo(href="index.html")
         img(src="https://i1.wp.com/www.writefromscratch.com/wp-content/uploads/2018/12/demo-logo.png?ssl=1", alt="Logo")
       ul.header-navigator
@@ -35,7 +36,7 @@
           i.fas.fa-phone-alt
         a(href="login.html")
           i.fas.fa-user
-        a(href="#")
+        a(href="wishlist.html")
           i.fas.fa-heart
-        a(href="cart.html")
+        a#cart-controller(href="cart.html")
           i.fas.fa-shopping-cart

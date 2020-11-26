@@ -1,5 +1,5 @@
 mixin title(props = {})
-  -var {content} = props;
+  -var {content, style} = props;
   .section-title
-    h5= content
+    h5(style=style)= content
     .section-title__decoration

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Giỏ hàng</title>
+    <title>Khuyến mại</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"/>
     <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
@@ -100,104 +100,56 @@
     </div>
     <div id="content">
       <div class="spacing"></div>
-      <div class="cart">
+          <div class="section-title">
+            <h5>Sản phẩm khuyến mại</h5>
+            <div class="section-title__decoration"></div>
+          </div>
+      <div class="shop-products">
         <div class="anna-container">
           <div class="row">
-            <div class="col-9">
-              <div class="cart-table">
-                <table>
-                  <colgroup>
-                    <col style="width: 115px"/>
-                    <col style="width:25%"/>
-                    <col style="width:20%"/>
-                    <col style="width:25%"/>
-                    <col style="width:25%"/>
-                    <col style="width:5%"/>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>Sản phẩm</th>
-                      <th> </th>
-                      <th>Số lượng</th>
-                      <th>Giá bán</th>
-                      <th>Tổng</th>
-                      <th> </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src="assets/images/products/1.png" alt="Product image"/></td>
-                      <td>Áo dài lụa vàng họa tiết</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>350.000đ</td>
-                      <td>350.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="assets/images/products/2.png" alt="Product image"/></td>
-                      <td>Áo dài lụa hồng thêu hoa</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>380.000đ</td>
-                      <td>380.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="assets/images/products/3.png" alt="Product image"/></td>
-                      <td>Áo dài lụa vàng họa tiết</td>
-                      <td>
-                        <input type="number" min="1" value="1"/>
-                      </td>
-                      <td>400.000đ</td>
-                      <td>400.000đ</td>
-                      <td><a href="#"><i class="far fa-times"></i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div><a class="back" href="index.html"><i class="far fa-long-arrow-left"></i>Quay lại</a>
+            <div class="col-4">
+                  <div class="product"><a class="product-img" href="product-detail.html"><img src="assets/images/products/9.png" alt="Product image"/></a>
+                    <div class="product-content"><a class="product-name" href="product-detail.html">Áo dài lụa đỏ nam</a>
+                      <h5 class="product-price">650.000đ</h5>
+                    </div>
+                    <div class="product-actions">
+                      <button class="product-actions__atc" href="#">Thêm vào giỏ hàng<i class="fa fa-shopping-cart"></i></button>
+                      <button class="product-actions__wl" href="#"><i class="far fa-heart"></i></button>
+                    </div>
+                  </div>
             </div>
-            <div class="col-3">
-              <div class="cart-total">
-                <div class="cart-total__header">
-                  <h2>Giỏ hàng của Bạn</h2>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Tổng tất cả</th>
-                        <td>1.260.000đ</td>
-                      </tr>
-                      <tr>
-                        <th>Phí ship</th>
-                        <td>20.000đ</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <form>
-                    <label>Mã giảm giá</label>
-                    <input type="text" placeholder="ABCDGTYW"/>
-                    <button>Áp dụng</button>
-                  </form>
-                </div>
-                <div class="cart-total__final">
-                  <table class="table-bill">
-                    <tr>
-                      <th>Total</th>
-                      <td>1.260.000đ</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>-10%</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>1.180.000đ</td>
-                    </tr>
-                  </table>
-                </div><a class="cart-submit" href="payment.html">Thanh toán</a>
-              </div>
+            <div class="col-4">
+                  <div class="product"><a class="product-img" href="product-detail.html"><img src="assets/images/products/10.png" alt="Product image"/></a>
+                    <div class="product-content"><a class="product-name" href="product-detail.html">Áo dài màu vàng thêu hoa</a>
+                      <h5 class="product-price">550.000đ</h5>
+                    </div>
+                    <div class="product-actions">
+                      <button class="product-actions__atc" href="#">Thêm vào giỏ hàng<i class="fa fa-shopping-cart"></i></button>
+                      <button class="product-actions__wl" href="#"><i class="far fa-heart"></i></button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                  <div class="product"><a class="product-img" href="product-detail.html"><img src="assets/images/products/11.png" alt="Product image"/></a>
+                    <div class="product-content"><a class="product-name" href="product-detail.html">Áo dài đỏ thêu hoa</a>
+                      <h5 class="product-price">450.000đ</h5>
+                    </div>
+                    <div class="product-actions">
+                      <button class="product-actions__atc" href="#">Thêm vào giỏ hàng<i class="fa fa-shopping-cart"></i></button>
+                      <button class="product-actions__wl" href="#"><i class="far fa-heart"></i></button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                  <div class="product"><a class="product-img" href="product-detail.html"><img src="assets/images/products/12.png" alt="Product image"/></a>
+                    <div class="product-content"><a class="product-name" href="product-detail.html">Áo dài cách tân đỏ</a>
+                      <h5 class="product-price">750.000đ</h5>
+                    </div>
+                    <div class="product-actions">
+                      <button class="product-actions__atc" href="#">Thêm vào giỏ hàng<i class="fa fa-shopping-cart"></i></button>
+                      <button class="product-actions__wl" href="#"><i class="far fa-heart"></i></button>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>

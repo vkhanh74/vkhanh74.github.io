@@ -21,7 +21,60 @@
   <body>
     <div class="header">
       <div class="anna-container">
-        <div class="header-wrapper"><a class="header-logo" href="index.html"><img src="https://i1.wp.com/www.writefromscratch.com/wp-content/uploads/2018/12/demo-logo.png?ssl=1" alt="Logo"/></a>
+        <div class="header-wrapper">
+          <div class="cart-modal">
+            <div class="cart-table">
+              <table>
+                <colgroup>
+                  <col style="width: 115px"/>
+                  <col style="width:25%"/>
+                  <col style="width:20%"/>
+                  <col style="width:25%"/>
+                  <col style="width:25%"/>
+                  <col style="width:5%"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Sản phẩm</th>
+                    <th> </th>
+                    <th>Số lượng</th>
+                    <th>Giá bán</th>
+                    <th>Tổng</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="assets/images/products/1.png" alt="Product image"/></td>
+                    <td>Áo dài lụa vàng họa tiết</td>
+                    <td>
+                      <input type="number" min="1" value="1"/>
+                    </td>
+                    <td>350.000đ</td>
+                    <td>350.000đ</td>
+                    <td><a href="#"><i class="far fa-times"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td><img src="assets/images/products/2.png" alt="Product image"/></td>
+                    <td>Áo dài lụa hồng thêu hoa</td>
+                    <td>
+                      <input type="number" min="1" value="1"/>
+                    </td>
+                    <td>380.000đ</td>
+                    <td>380.000đ</td>
+                    <td><a href="#"><i class="far fa-times"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cart-modal-footer">
+              <textarea rows="10"></textarea>
+              <div class="cart-modal-footer__right">
+                <h2>Tổng: <span> 350.000đ</span></h2>
+                <div class="btn-group"><a href="cart.html">Cập nhập giỏ hàng </a><a href="payment.html">Tiến hàng thanh toán</a></div>
+              </div>
+            </div><a class="continue-shopping" href="ao-dai-cuoi-1.pug"> <i class="far fa-long-arrow-left"></i>Tiếp tục mua hàng</a>
+          </div><a class="header-logo" href="index.html"><img src="https://i1.wp.com/www.writefromscratch.com/wp-content/uploads/2018/12/demo-logo.png?ssl=1" alt="Logo"/></a>
           <ul class="header-navigator">
             <li><a href="index.html">Trang Chủ</a></li>
             <li><a href="introduction.html">Giới thiệu</a></li>
@@ -41,7 +94,7 @@
             <input type="text" placeholder="Tìm kiếm"/>
             <button><i class="fal fa-search"></i></button>
           </div>
-          <div class="header-feature"><a href="#"><i class="fas fa-phone-alt"></i></a><a href="login.html"><i class="fas fa-user"></i></a><a href="#"><i class="fas fa-heart"></i></a><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></div>
+          <div class="header-feature"><a href="#"><i class="fas fa-phone-alt"></i></a><a href="login.html"><i class="fas fa-user"></i></a><a href="wishlist.html"><i class="fas fa-heart"></i></a><a id="cart-controller" href="cart.html"><i class="fas fa-shopping-cart"></i></a></div>
         </div>
       </div>
     </div>

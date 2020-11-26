@@ -1,0 +1,14 @@
+extends base/layout.pug
+block title
+  title Khuyến mại
+block header
+  include components/header.pug
+block content
+  .spacing
+  +title({content: 'Sản phẩm khuyến mại'})
+  .shop-products
+    .anna-container
+      .row
+        each item in feature2.slice(0,4)
+          .col-4
+            +product({name: item.name, image: item.image, price: item.price})

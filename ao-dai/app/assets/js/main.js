@@ -16,6 +16,31 @@ const renderPage = () => {
   }
 };
 
+const cartModalHandle = () => {
+  $(".cart-modal").slideUp();
+  $("#cart-controller").on("click", function (e) {
+    e.preventDefault();
+    $(".cart-modal").is(":hide") {
+      $(".cart-modal").slideDown(300);
+    }
+  });
+  $(document).mouseup(function (e) {
+    var container = $(".cart-modal");
+    if($(e.target) ===  $("#cart-controller")) {
+      return
+    }
+    else {
+      if(
+      !container.is(e.target) &&
+      !$("#cart-controller").hasClass("fa-shopping-cart") &&
+      container.has(e.target).length === 0
+    ) {
+      container.slideUp();
+    }
+  }
+  });
+};
+
 const customSelectHandle = () => {
   $(".customed-select-selector").on("click", function (e) {
     e.preventDefault();
@@ -38,4 +63,5 @@ $(document).ready(function () {
   banner();
   renderPage();
   customSelectHandle();
+  cartModalHandle();
 });

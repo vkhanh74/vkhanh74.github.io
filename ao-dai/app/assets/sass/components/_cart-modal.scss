@@ -1,0 +1,57 @@
+.cart-modal {
+  min-width: 800px;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  right: 0;
+  top: calc(100% + 30px);
+  padding: 7px 7px 15px 7px;
+  border: 1px solid #ccc;
+  .cart-table {
+    border-right: 0;
+    padding-right: 0;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    textarea {
+      width: 325px;
+      height: 150px;
+      resize: none;
+    }
+    &__right {
+      text-align: right;
+      h2 {
+        @include typo($fsz: 24px, $fw: 600);
+        margin-bottom: 40px;
+        span {
+          font-weight: 500;
+        }
+      }
+      .btn-group {
+        a {
+          height: 45px;
+          padding: 0 10px;
+          display: inline-block;
+          @include link($fsz: 16px, $up: true, $fw: 600);
+          line-height: 45px;
+          &:first-child {
+            background-color: #c4c4c4;
+            margin-right: 10px;
+          }
+          &:last-child {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .continue-shopping {
+    @include link($fsz: 24px, $fw: 600);
+    i {
+      margin-right: 10px;
+    }
+  }
+}

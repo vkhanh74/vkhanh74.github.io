@@ -1,0 +1,14 @@
+extends base/layout.pug
+block title
+  title Sản phẩm yêu thích
+block header
+  include components/header.pug
+block content
+  .spacing
+  .shop-products
+    .anna-container
+      +title({content: "Sản phẩm yêu thích"}) 
+      .row
+        each item in feature1.slice(0,4)
+          .col-4
+            +product({name: item.name, image: item.image, price: item.price})

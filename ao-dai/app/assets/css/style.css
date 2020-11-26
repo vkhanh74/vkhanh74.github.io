@@ -239,7 +239,8 @@ template {
   .header-wrapper {
     display: flex;
     align-items: baseline;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative; }
   .header-logo img {
     height: 100%;
     width: 125px;
@@ -323,6 +324,70 @@ template {
       color: #f26460; }
     .header-feature a:not(:last-child) {
       margin-right: 15px; }
+
+.cart-modal {
+  min-width: 800px;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  right: 0;
+  top: calc(100% + 30px);
+  padding: 7px 7px 15px 7px;
+  border: 1px solid #ccc; }
+  .cart-modal .cart-table {
+    border-right: 0;
+    padding-right: 0; }
+  .cart-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .cart-modal-footer textarea {
+      width: 325px;
+      height: 150px;
+      resize: none; }
+    .cart-modal-footer__right {
+      text-align: right; }
+      .cart-modal-footer__right h2 {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 40px; }
+        .cart-modal-footer__right h2 span {
+          font-weight: 500; }
+      .cart-modal-footer__right .btn-group a {
+        height: 45px;
+        padding: 0 10px;
+        display: inline-block;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        line-height: 1;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        text-transform: uppercase;
+        line-height: 45px; }
+        .cart-modal-footer__right .btn-group a:hover {
+          color: #f26460; }
+        .cart-modal-footer__right .btn-group a:first-child {
+          background-color: #c4c4c4;
+          margin-right: 10px; }
+        .cart-modal-footer__right .btn-group a:last-child {
+          background-color: #000;
+          color: #fff; }
+  .cart-modal .continue-shopping {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1;
+    transition: 0.2s ease-in-out;
+    cursor: pointer; }
+    .cart-modal .continue-shopping:hover {
+      color: #f26460; }
+    .cart-modal .continue-shopping i {
+      margin-right: 10px; }
 
 .footer {
   padding: 50px 90px;
@@ -456,7 +521,8 @@ template {
     border-radius: 3px;
     border: 1px solid #000;
     text-align: center;
-    position: absolute; }
+    position: absolute;
+    background-color: #fff; }
     .quantity-controller.-descrease {
       left: 0;
       top: 0; }

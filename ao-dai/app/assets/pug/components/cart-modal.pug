@@ -1,0 +1,43 @@
+include ../base/variable.pug
+.cart-modal
+  .cart-table
+    table
+      colgroup
+        col(style='width: 115px')
+        col(style='width:25%')
+        col(style='width:20%')
+        col(style='width:25%')
+        col(style='width:25%')
+        col(style='width:5%')
+      thead
+        tr
+          th Sản phẩm
+          th 
+          th Số lượng
+          th Giá bán
+          th Tổng
+          th 
+      tbody
+        each item in feature1.slice(0,2)
+          tr
+            td
+              img(src=item.image, alt="Product image")
+            td= item.name
+            td
+              input(type="number" min="1" value="1")
+            td= item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+            td= item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+            td
+              a(href="#")
+                i.far.fa-times
+  .cart-modal-footer
+    textarea(rows="10")
+    .cart-modal-footer__right
+      h2 Tổng: 
+        span  350.000đ
+      .btn-group
+        a(href="cart.html") Cập nhập giỏ hàng 
+        a(href="payment.html") Tiến hàng thanh toán
+  a.continue-shopping(href="ao-dai-cuoi-1.pug") 
+    i.far.fa-long-arrow-left
+    |Tiếp tục mua hàng
