@@ -6,6 +6,12 @@
     }
     .product-detail-image__small {
       width: 60px;
+      display: flex;
+      img {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
     }
     img {
       @include imgCenter;

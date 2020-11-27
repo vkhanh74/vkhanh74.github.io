@@ -1043,7 +1043,10 @@ template {
   .product-detail-image .product-detail-image__large {
     margin-bottom: 15px; }
   .product-detail-image .product-detail-image__small {
-    width: 60px; }
+    width: 60px;
+    display: flex; }
+    .product-detail-image .product-detail-image__small img:not(:last-child) {
+      margin-right: 30px; }
   .product-detail-image img {
     height: 100%;
     width: 100%;

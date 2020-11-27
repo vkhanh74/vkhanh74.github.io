@@ -2,7 +2,7 @@ include title.pug
 include pagination.pug
 include product.pug
 mixin shopLayout(props = {})
-  -var {data = [], disablePagination = false, title, url = 'ao-dai-truyen-thong', currentPage = 1, disablePrev = false, disableNext = false} = props;
+  -var {data = [], href, disablePagination = false, title, url = 'ao-dai-truyen-thong', currentPage = 1, disablePrev = false, disableNext = false} = props;
   .shop
     .anna-container
       +title({content: title})
@@ -18,6 +18,6 @@ mixin shopLayout(props = {})
         .row
           each item in data
             .col-3
-              +product({name: item.name, image: item.image, price: item.price})
+              +product({name: item.name, href, image: item.image, price: item.price})
       if !disablePagination
         +pagination({url, currentPage, disablePrev, disableNext})

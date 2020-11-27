@@ -1,8 +1,8 @@
 mixin product(props = {})
-  -var {name, price, image, hideImage} = props
+  -var {name, price, image, hideImage, href = "product-detail.html"} = props
   .product
     if !hideImage
-      a(href="product-detail.html").product-img
+      a(href=href).product-img
         img(src=image, alt="Product image")
     .product-content
       a.product-name(href="product-detail.html")= name
