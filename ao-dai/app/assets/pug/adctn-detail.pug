@@ -1,0 +1,48 @@
+extends base/layout.pug
+block title
+  title Áo dài cách tân nữ
+block header
+  include components/header.pug
+block content
+  .spacing
+  .product-detail
+    .anna-container
+      .row
+        .col-4
+          .product-detail-image
+            .product-detail-image__large
+              img(src="assets/images/detail/big-2.png", alt="Product detail")
+            .product-detail-image__small
+              img(src="assets/images/detail/small-2.png", alt="Product detail")
+              img(src="assets/images/detail/small-2.1.png", alt="Product detail")
+              img(src="assets/images/detail/small-2.2.png", alt="Product detail")
+        .col-8
+          .product-detail-content
+            h3.product-detail-name Áo dài thêu hoa cách tân
+            p.product-detail-price
+              span $: 
+              |410.000đ
+            .product-detail-variation
+              .product-detail-variation__item
+                h5 Màu sắc:
+                img(src="assets/images/detail/big-2.png", alt="Product detail")
+              .product-detail-variation__item
+                h5 Kích thước:
+                .product-detail-variation__item-colors
+                  a.active(href="#") S
+                  a(href="#") M
+                  a(href="#") L
+                  a(href="#") XL
+            h5.product-detail-title Số lượng sản phẩm
+            .quantity
+              button.quantity-controller.-decrease -
+              .quantity-input 1
+              button.quantity-controller.-increase +
+            h5.product-detail-title Chi tiết sản phẩm
+            p.product-detail-description Áo làm từ Vải Taffeta là tên loại vải dệt láng bóng từ sợi tơ hoặc các sợi nhân tạo có độ bóng, lại không bám da và giúp định hình dáng trang phục dễ dàng. Quần làm từ Vải phi lụa là loại vải được làm từ một loại tơ và lụa sản xuất từ tơ tằm. Đây là loại lụa được đánh giá cao về giá trị cũng như tính ứng dụng của nó.
+            p.product-detail-description Chất liệu phối: Vải voan thực chất là 1 loại vải có nguồn gốc từ sợi nhân tạo, mang lại độ mềm mại, nhẹ nhàng và cảm giác bay bổng, thoải mái cho người mặc và có độ bóng nhẹ.
+            .product-detail-buttons
+              a(href="#") Thêm vào giỏ hàng
+              a(href="#") Mua ngay
+  include components/relate-product
+  .spacing
