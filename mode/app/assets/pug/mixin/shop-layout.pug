@@ -2,22 +2,80 @@ include title.pug
 include pagination.pug
 include product.pug
 mixin shopLayout(props = {})
-  -var {data = [], disablePagination = false, title, url = 'ao-dai-truyen-thong', currentPage = 1, disablePrev = false, disableNext = false} = props;
+  -var {data = [], title} = props;
   .shop
-    .anna-container
-      +title({content: title})
-      .shop-filter
-          select(name="")
-            option(hidden selected disabled) Bộ lọc
-            option(value="0") Mặc định
-            option(value="1") Lọc theo giá: Thấp đến cao
-            option(value="2") Lọc theo giá: Capo đến thấp
-            option(value="3") Lọc theo chữ cái: A đến Z
-            option(value="4") Lọc theo chữ cái: Z đến A
-      .shop-products
-        .row
-          each item in data
-            .col-3
-              +product({name: item.name, image: item.image, price: item.price})
-      if !disablePagination
-        +pagination({url, currentPage, disablePrev, disableNext})
+    .mode-container-full
+      .row
+        .col-3
+          .shop-sidebar
+            .shop-sidebar__section
+              h3.shop-sidebar__title Category
+              ul
+                li
+                  a(href="#") 
+                    img(src="assets/images/ic-cap.png", alt="")
+                    |Caps
+                li
+                  a(href="#") 
+                    img(src="assets/images/ic-bag.png", alt="")
+                    |Bags
+                li
+                  a(href="#") 
+                    img(src="assets/images/ic-glass.png", alt="")
+                    |Sunglasses
+                li
+                  a(href="#") 
+                    img(src="assets/images/ic-sock.png", alt="")
+                    |Socks
+            .shop-sidebar__section
+              h3.shop-sidebar__title Colors
+              - var n = 1;
+              .colors
+                while n < 12
+                  a(href="#")
+                    img(src=`assets/images/colors/${n++}.png`)
+            .shop-sidebar__section
+              h3.shop-sidebar__title Price
+              .range-slide-container
+                span $5
+                input#myRange.slider(type='range' min='1' max='100' value='50')
+                span $45
+            .shop-sidebar__section
+              div
+                a(href="#") Filter
+              div
+                a(href="#") Reset
+        .col-9
+          .shop-content
+            .shop-content__header
+              h5= title
+              select
+                option(hidden disabled selected) Sort by
+                option A to Z
+                option Z to A
+                option Price high to low
+                option Price low to high
+            .shop-content__main
+              .products
+                each item in data
+                  +product({image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
+              .pagination
+                ul
+                  li
+                    a(href="#")
+                      i.fas.fa-step-backward
+                  li
+                    a(href="#")
+                      i.fas.fa-angle-left
+                  li.active
+                    a(href="#") 1
+                  li
+                    a(href="#") 2
+                  li
+                    a(href="#") 3
+                  li
+                    a(href="#")
+                      i.fas.fa-angle-right
+                  li
+                    a(href="#")
+                      i.fas.fa-step-forward

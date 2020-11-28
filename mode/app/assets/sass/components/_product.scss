@@ -17,32 +17,33 @@
   }
   &-content {
     a {
-      @include link($fsz: 20px);
+      @include link($fsz: 14px, $fw: 500);
       display: block;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
     h5 {
-      @include typo;
+      @include typo($fsz: 14px, $fw: 500);
       margin-bottom: 20px;
     }
   }
-  &-actions {
-    button {
-      @include link($fsz: 15px);
-      background-color: transparent;
-      border: 1px solid #090808;
-      border-radius: 2px;
-      display: inline-block;
-      height: 40px;
-    }
-    &__atc {
-      padding: 0 26px;
-      i {
-        margin-left: 10px;
+  &-status {
+    display: flex;
+    justify-content: space-between;
+    h5 {
+      @include typo($fsz: 14px);
+      &:first-child {
+        &.red {
+          color: #f94a41;
+        }
+        &.green {
+          color: #04af30;
+        }
       }
-    }
-    &__wl {
-      width: 40px;
+      &:last-child {
+        i {
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
