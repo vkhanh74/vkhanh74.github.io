@@ -1,0 +1,10 @@
+.page-cover {
+  text-align: center;
+  padding: 150px 0;
+  background: {
+    image: url("../images/page-cover.png");
+  }
+  h1 {
+    @include typo($fsz: 40px, $lh: 60px, $color: #fff);
+  }
+}

@@ -1,0 +1,10 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  .page-cover
+    h1 Spring - Summer <br/> Collection
+  .spacing
+  +shopLayout({title: 'Clothing', data: clothings, hideSidebar: true, hideHeader: true, hidePagination: true})

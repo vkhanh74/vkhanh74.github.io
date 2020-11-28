@@ -2,80 +2,83 @@ include title.pug
 include pagination.pug
 include product.pug
 mixin shopLayout(props = {})
-  -var {data = [], title} = props;
+  -var {data = [], title, hideSidebar, hideHeader, hidePagination} = props;
   .shop
     .mode-container-full
       .row
-        .col-3
-          .shop-sidebar
-            .shop-sidebar__section
-              h3.shop-sidebar__title Category
-              ul
-                li
-                  a(href="#") 
-                    img(src="assets/images/ic-cap.png", alt="")
-                    |Caps
-                li
-                  a(href="#") 
-                    img(src="assets/images/ic-bag.png", alt="")
-                    |Bags
-                li
-                  a(href="#") 
-                    img(src="assets/images/ic-glass.png", alt="")
-                    |Sunglasses
-                li
-                  a(href="#") 
-                    img(src="assets/images/ic-sock.png", alt="")
-                    |Socks
-            .shop-sidebar__section
-              h3.shop-sidebar__title Colors
-              - var n = 1;
-              .colors
-                while n < 12
-                  a(href="#")
-                    img(src=`assets/images/colors/${n++}.png`)
-            .shop-sidebar__section
-              h3.shop-sidebar__title Price
-              .range-slide-container
-                span $5
-                input#myRange.slider(type='range' min='1' max='100' value='50')
-                span $45
-            .shop-sidebar__section
-              div
-                a(href="#") Filter
-              div
-                a(href="#") Reset
-        .col-9
+        if !hideSidebar
+          .col-3
+            .shop-sidebar
+              .shop-sidebar__section
+                h3.shop-sidebar__title Category
+                ul
+                  li
+                    a(href="#") 
+                      img(src="assets/images/ic-cap.png", alt="")
+                      |Caps
+                  li
+                    a(href="#") 
+                      img(src="assets/images/ic-bag.png", alt="")
+                      |Bags
+                  li
+                    a(href="#") 
+                      img(src="assets/images/ic-glass.png", alt="")
+                      |Sunglasses
+                  li
+                    a(href="#") 
+                      img(src="assets/images/ic-sock.png", alt="")
+                      |Socks
+              .shop-sidebar__section
+                h3.shop-sidebar__title Colors
+                - var n = 1;
+                .colors
+                  while n < 12
+                    a(href="#")
+                      img(src=`assets/images/colors/${n++}.png`)
+              .shop-sidebar__section
+                h3.shop-sidebar__title Price
+                .range-slide-container
+                  span $5
+                  input#myRange.slider(type='range' min='1' max='100' value='50')
+                  span $45
+              .shop-sidebar__section
+                div
+                  a(href="#") Filter
+                div
+                  a(href="#") Reset
+        .div(class=`${hideSidebar ? 'col-12' : 'col-9'}`)
           .shop-content
-            .shop-content__header
-              h5= title
-              select
-                option(hidden disabled selected) Sort by
-                option A to Z
-                option Z to A
-                option Price high to low
-                option Price low to high
+            if !hideHeader
+              .shop-content__header
+                h5= title
+                select
+                  option(hidden disabled selected) Sort by
+                  option A to Z
+                  option Z to A
+                  option Price high to low
+                  option Price low to high
             .shop-content__main
               .products
                 each item in data
                   +product({image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
-              .pagination
-                ul
-                  li
-                    a(href="#")
-                      i.fas.fa-step-backward
-                  li
-                    a(href="#")
-                      i.fas.fa-angle-left
-                  li.active
-                    a(href="#") 1
-                  li
-                    a(href="#") 2
-                  li
-                    a(href="#") 3
-                  li
-                    a(href="#")
-                      i.fas.fa-angle-right
-                  li
-                    a(href="#")
-                      i.fas.fa-step-forward
+              if !hidePagination
+                .pagination
+                  ul
+                    li
+                      a(href="#")
+                        i.fas.fa-step-backward
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-left
+                    li.active
+                      a(href="#") 1
+                    li
+                      a(href="#") 2
+                    li
+                      a(href="#") 3
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-right
+                    li
+                      a(href="#")
+                        i.fas.fa-step-forward
