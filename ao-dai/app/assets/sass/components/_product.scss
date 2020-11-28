@@ -24,6 +24,10 @@
     h5 {
       @include typo;
       margin-bottom: 20px;
+      display: inline-block;
+    }
+    del {
+      margin-right: 20px;
     }
   }
   &-actions {

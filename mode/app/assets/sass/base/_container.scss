@@ -11,3 +11,12 @@
   max-width: 1100px;
   @include make-container($gutter: 30px);
 }
+
+.mode-container-full {
+  max-width: 1170px;
+  @include make-container(0);
+  @include media-breakpoint-down(md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

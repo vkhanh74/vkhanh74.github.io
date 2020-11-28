@@ -9,6 +9,6 @@ block content
   .shop-products
     .anna-container
       .row
-        each item in feature2.slice(0,4)
+        each item in discount
           .col-4
-            +product({name: item.name, image: item.image, price: item.price})
+            +product({name: item.name, discount: item.discount, image: item.image, price: item.price})

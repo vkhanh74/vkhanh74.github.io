@@ -614,7 +614,11 @@ template {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: inline-block; }
+
+.product-content del {
+  margin-right: 20px; }
 
 .product-actions button {
   color: #000;

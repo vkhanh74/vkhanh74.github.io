@@ -1,12 +1,16 @@
 mixin product(props = {})
-  -var {name, price, image, hideImage, href = "product-detail.html"} = props
+  -var {name, price, discount, image, hideImage, href = "product-detail.html"} = props
   .product
     if !hideImage
       a(href=href).product-img
         img(src=image, alt="Product image")
     .product-content
       a.product-name(href="product-detail.html")= name
-      h5.product-price= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+      if discount
+        del= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+        h5.product-price= (price - discount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
+      else
+        h5.product-price= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
     .product-actions
       button.product-actions__atc(href="#") Thêm vào giỏ hàng
         i.fa.fa-shopping-cart

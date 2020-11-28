@@ -237,6 +237,18 @@ template {
   margin-right: auto;
   margin-left: auto; }
 
+.mode-container-full {
+  max-width: 1170px;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (max-width: 991.98px) {
+    .mode-container-full {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
 .header-top {
   padding: 38px 0 50px;
   background-color: #000; }

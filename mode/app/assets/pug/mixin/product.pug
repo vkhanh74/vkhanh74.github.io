@@ -1,14 +1,12 @@
 mixin product(props = {})
-  -var {name, price, image, hideImage} = props
+  -var {name, price, image, status, rate} = props
   .product
     if !hideImage
       a(href="product-detail.html").product-img
         img(src=image, alt="Product image")
     .product-content
       a.product-name(href="product-detail.html")= name
-      h5.product-price= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + 'đ'
-    .product-actions
-      button.product-actions__atc(href="#") Thêm vào giỏ hàng
-        i.fa.fa-shopping-cart
-      button.product-actions__wl(href="#")
-        i.far.fa-heart
+      h5.product-price= price
+    .product-status
+      h5= `${status === 0 ? 'SOLD OUT' : "AVAILABLE"}`
+      h5= `${rate}/5`

@@ -1,0 +1,48 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  .spacing
+  +title({content: 'Products'})
+  .shop
+    .mode-container-full
+      .row
+        .col-3
+          .shop-sidebar
+            .shop-sidebar__section
+              h3.shop-sidebar__title Category
+              ul
+                li
+                  a(href="#") Caps
+                li
+                  a(href="#") Bags
+                li
+                  a(href="#") Sunglasses
+                li
+                  a(href="#") Socks
+            .shop-sidebar__section
+              h3.shop-sidebar__title Colors
+            .shop-sidebar__section
+              h3.shop-sidebar__title price
+                .slidecontainer
+                  span $5
+                  input#myRange.slider(type='range' min='1' max='100' value='50')
+                  span $45
+            .shop-sidebar__section
+              a(href="#") Filter
+              a(href="#") Reset
+        .col-9
+          .shop-content
+            .shop-content__header
+              h5 Clothing
+              select
+                option(hidden disabled selected) Sortby
+                option A to Z
+                option Z to A
+                option Price high to low
+                option Price low to high
+            .shop-content__main
+              each item in data.slice(0, 12)
+                +product({image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
