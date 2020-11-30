@@ -1,0 +1,9 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  include components/banner.pug
+  .spacing
+  +shopLayout({title: 'Accessories', productClass: '-bordered', data: sales, hideSidebar: true, hideHeader: true})

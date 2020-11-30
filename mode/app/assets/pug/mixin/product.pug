@@ -1,13 +1,20 @@
 mixin product(props = {})
-  -var {name, price, image, status, rate} = props
-  .product
+  -var {name, price, discount, image, status, rate, className = ''} = props
+  div(class=`product ${className}`)
+    a.product-wishlist(href="#")
+      i.far.fa-heart
     a(href="product-detail.html").product-img
       img(src=image, alt="Product image")
-    .product-content
-      a.product-name(href="product-detail.html")= name
-      h5.product-price= price
-    .product-status
-      h5(class=`${status === 0 ? 'red' : "green"}`)= `${status === 0 ? 'SOLD OUT' : "AVAILABLE"}`
-      h5
-        i.fas.fa-star
-        =`${rate}/5`
+    .product-content__wrapper
+      .product-content
+        a.product-name(href="product-detail.html")= name
+        if discount
+          del= price
+          h5.product-price.-discount= discount
+        else
+          h5.product-price= price
+      .product-status
+        h5(class=`${status === 0 ? 'red' : "green"}`)= `${status === 0 ? 'SOLD OUT' : "AVAILABLE"}`
+        h5
+          i.fas.fa-star
+          =`${rate}/5`

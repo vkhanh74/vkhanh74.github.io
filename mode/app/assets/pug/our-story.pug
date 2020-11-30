@@ -1,0 +1,49 @@
+extends base/layout.pug
+block title
+  -var story=['av1.png', 'av2.png', 'av3.png', 'av4.png', 'av5.png', 'av4.png', 'av2.png']
+  title Our Story
+block header
+  include components/header.pug
+block content
+  .our-story
+    .our-story-section
+      .our-story-banner
+        h1 Our Story
+      .our-story-content
+        .our-story-content__image
+          img(src="assets/images/os-1.png", alt="")
+        .mode-container
+          .row
+            .col-4
+            .col-8
+              .our-story-content__main
+                p We don’t do fashion like anyone else does fashion. Our MODE Brands, created by our London design team, look between the lines to bring you the freshest clothing, shoes, accessories and gifts. When it comes to other brands at MODE, we select the best of those too – so, guaranteed, you'll always get the biggest variety, most covetable exclusives and coolest collabs.
+                p Giving you the confidence to express your individuality, MODE DESIGN interprets major trends, adding that next-level MODE spin. Representing in our size ranges (MODE Curve, Tall, Petite and Maternity), we've got all the stuff you need to invent a style that’s all yours… making every day, night and everything in-between as extraordinary as you are.
+                p MODE EDITION is designed for the most memorable moments of your life so you can turn up and stand out in occasionwear that’s as unique as you. In our size ranges and including our beautiful MODEEDITION Wedding Collection, we'll have you dancing before the party's even begun.
+    .our-story-section
+      .our-story-banner
+        h1 OUR DESIGNERS
+      .our-story-content
+        section.story
+        .mode-container
+          .story-content
+            .story-slide
+              each item in story
+                .slide-item
+                  img(src=`assets/images/${item}`, alt="image")
+            p We believe in a world where you have total freedom to be you, without judgement. To experiment. To express yourself. To be brave and grab life as the extraordinary adventure it is. So we make sure everyone has an equal chance to discover all the amazing things they’re capable of – no matter who they are, where they’re from or what looks they like to boss. We exist to give you the confidence to be whoever you want to be.
+            p Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find your fit, offering our MODE Brands in more than 30 sizes – and we're committed to providing all sizes at the same price – so you can be confident we’ve got the perfect thing for you. We’re also proud to partner with GLAAD, one of the biggest voices in LGBTQ activism, on a gender-neutral collection to unite in accelerating acceptance.
+    .our-story-section
+      .our-story-banner
+        h1 Our factory
+      .our-story-content
+        .mode-container
+          p When was the first time you thought about who made your clothes?  Growing up, either my mother or I made my clothes, and sometimes we’d buy them at a local shop.  I never thought about where the clothes in that shop came from, but my guess is that most were made in the USA because there was so much manufacturing here back then. 
+          p Now, through serendipity, I have my own factory in Philipsburg, Pennsylvania, and a big focus of my blog will be the things we do every day.  Trust me, it’s always something, and so instead of thinking I’m spending all day putting out fires (not literally!) on the factory floor, I’m going to think of how to make those incidents interesting to you.
+          p Transparency in women’s clothing is trending, and so I’m going to start by showing you who makes the clothes you buy at NunaWraps.  There are three of us, and while we each have our specialties, we all chip in and do what needs to be done.
+          p First, here’s the factory.  I’ll walk you through production in future blogs.
+          p This is me cutting.  If this looks like fun or just interesting, stay tuned because I’ll detail the whole process in future blogs.  I’m not an expert, but I can speak to our experiences here (where I have become an expert).  In the background you see a few of our rolls of fabric—I’ll also write about the supply chain and sourcing.
+          p Arlene is camera shy, but that’s her sewing.  If you’ve heard about industrial sewing machines, that’s what you’re looking at. You may also recognize the fabric as this garment is currently for sale.  Arlene has lots of experience and she’s an expert at trouble-shooting cantankerous machines.  In addition, she’s FAST! And accurate. 
+          p Finally, here’s Amber, my assistant and quality-control person extraordinaire.  Everyone needs an Amber.  She runs the factory floor when I’m away, and I’ll blog another time on what it takes to do that job. 
+    
+

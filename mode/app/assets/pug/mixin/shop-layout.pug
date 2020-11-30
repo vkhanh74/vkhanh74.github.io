@@ -2,7 +2,7 @@ include title.pug
 include pagination.pug
 include product.pug
 mixin shopLayout(props = {})
-  -var {data = [], title, hideSidebar, hideHeader, hidePagination} = props;
+  -var {data = [], productClass, title, hideSidebar, hideHeader, hidePagination} = props;
   .shop
     .mode-container-full
       .row
@@ -60,7 +60,7 @@ mixin shopLayout(props = {})
             .shop-content__main
               .products
                 each item in data
-                  +product({image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
+                  +product({className: productClass, discount: item.discount, image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
               if !hidePagination
                 .pagination
                   ul
