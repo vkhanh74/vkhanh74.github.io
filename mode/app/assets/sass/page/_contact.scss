@@ -1,73 +1,92 @@
-.contact {
-  margin-bottom: $section-spacing;
-  &-title {
-    @include typo($fsz: 25px);
-    margin-bottom: 30px;
-    &:after {
-      content: "";
-      margin-top: 13px;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: #c4c4c4;
+.contact-us {
+  &-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    background: {
+      size: cover;
+      position: center;
+    }
+    h1 {
+      @include typo($fsz: 40px, $color: #fff, $up: true);
     }
   }
-  &-form {
-    padding-right: 15px;
-    p {
-      @include typo();
-      margin-bottom: 30px;
-    }
-    .input-item {
-      label {
-        display: block;
-        margin-bottom: 30px;
+  &-section {
+    &:nth-child(1) {
+      .contact-us-banner {
+        background-image: url("../images/cu-bg-1.png");
       }
-      input {
-        width: 100%;
-        height: 40px;
-        border: 1px solid #bdbdbd;
-        border-radius: 3px;
-        padding: 0 13px;
-        margin-bottom: 30px;
-      }
-      textarea {
-        width: 100%;
-        height: 245px;
-        border: 1px solid #bdbdbd;
-        resize: none;
-        border-radius: 3px;
-        padding: 14px 23px;
-        margin-bottom: 55px;
-      }
-    }
-    button {
-      width: 175px;
-      height: 50px;
-      background-color: #e0e0e0;
-      border: 0;
-      border-radius: 5px;
-      text-transform: uppercase;
-      transition: $transition;
-      &:hover {
-        color: #fff;
-        background-color: red;
-      }
-    }
-  }
-  &-map {
-    margin-bottom: 75px;
-  }
-  &-detail {
-    ul {
-      list-style: none;
-      li {
-        @include typo($fsz: 14px);
-        i {
-          width: 30px;
+      .contact-us-content {
+        padding: 60px 0;
+        p {
+          @include typo($fsz: 14px, $lh: 17px);
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
         }
-        &:not(:last-child) {
+        ul {
+          list-style: none;
+          li {
+            @include typo($lh: 22px);
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .contact-us-banner {
+        background-image: url("../images/cu-bg-2.png");
+      }
+      .contact-us-content {
+        padding: 60px 0;
+        p {
+          @include typo($fsz: 14px, $lh: 17px);
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+        ul {
+          list-style: none;
+          li {
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            a {
+              @include link($lh: 22px, $fw: 500);
+              i {
+                height: 30px;
+                width: 30px;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 999px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .contact-us-banner {
+        background-image: url("../images/cu-bg-3.png");
+      }
+      .contact-us-content {
+        padding: 60px 0;
+
+        .add-block {
           margin-bottom: 30px;
+          h5 {
+            @include typo($fsz: 14px, $up: true);
+            margin-bottom: 15px;
+          }
+          p {
+            @include typo($fsz: 14px, $lh: 17px);
+            &:not(:last-child) {
+              margin-bottom: 5px;
+            }
+          }
         }
       }
     }

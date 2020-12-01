@@ -1,0 +1,59 @@
+extends base/layout.pug
+block title
+  title Help
+block header
+  include components/header.pug
+block content
+  .spacing
+  .help
+    .mode-container
+      .row
+        .col-5(style="border-right: 1px solid #000")
+          #v-pills-tab.nav.flex-column.nav-pills(role='tablist' aria-orientation='vertical')
+            a#v-pills-home-tab.nav-link.active(data-toggle='pill' href='#v-pills-home' role='tab' aria-controls='v-pills-home' aria-selected='true') I. Terms and Conditions
+            a#v-pills-profile-tab.nav-link(data-toggle='pill' href='#v-pills-profile' role='tab' aria-controls='v-pills-profile' aria-selected='false') II. FAQs
+            a#v-pills-messages-tab.nav-link(data-toggle='pill' href='#v-pills-messages' role='tab' aria-controls='v-pills-messages' aria-selected='false') III. Got questions?
+        .col-7
+          #v-pills-tabContent.tab-content
+            #v-pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-home-tab')
+              h3.tab-title Terms and Conditions
+              .tab-content-block
+                h5.tab-subtitle Returns and Changes
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle Warranty
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle Delivery
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+            #v-pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-profile-tab')
+              h3.tab-title FAQs
+              .tab-content-block
+                h5.tab-subtitle How do I purchase?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle What’s your return policy?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle How can I track my order?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle How can I contact MODE?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle How can I create an account?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+              .tab-content-block
+                h5.tab-subtitle I forgot my password!
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor est eget risus tincidunt fermentum. Nulla scelerisque tortor leo, molestie lacinia sem commodo sit amet. Quisque malesuada tortor non eleifend maximus. In hac habitasse platea dictumst.
+            #v-pills-messages.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-messages-tab')
+              h3.tab-title Got question
+              .tab-content-block
+                p If you have any questions, please feel free to ask us! Write your question in the box below and we’ll send you our answer as soon as possible.
+              form(action="/")
+                input(type="text" placeholder="Email address:")
+                textarea(name="", cols="30", rows="10")
+                .text-right
+                  button Submit
+
+

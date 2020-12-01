@@ -13,7 +13,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1170px,
   xxl: 1400px,
-  xxxl: 1770px
+  xxxl: 1770px,
 );
 
 $container-max-widths: (
@@ -35,4 +35,5 @@ $container-max-widths: (
   }
 }
 
+@import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/bootstrap-grid";

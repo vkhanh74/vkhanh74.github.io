@@ -1,0 +1,66 @@
+.help {
+  margin-bottom: $section-spacing;
+  .nav-pills {
+    .nav-link {
+      @include link($fsz: 21px);
+      background-color: transparent;
+      &.active {
+        &:after {
+          content: "\f105";
+          font-family: "Font Awesome 5 Pro";
+          float: right;
+        }
+      }
+    }
+  }
+  .tab-content {
+    min-height: 750px;
+    padding-left: 20px;
+    .tab-pane {
+      .tab-title {
+        @include typo($fsz: 24px);
+        margin-bottom: 30px;
+      }
+      .tab-subtitle {
+        @include typo($fsz: 18px);
+        margin-bottom: 15px;
+      }
+      .tab-content-block {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+      form {
+        input {
+          width: 100%;
+          height: 40px;
+          padding: 0 20px;
+        }
+        textarea {
+          padding: 20px;
+          resize: none;
+          width: 100%;
+          border-top: 0;
+          margin-bottom: 15px;
+          &:focus {
+            outline: 0;
+          }
+        }
+        .text-right {
+          text-align: right;
+          width: 100%;
+          button {
+            height: 30px;
+            width: 180px;
+            background-color: #00aa5b;
+            color: #fff;
+            border: 0;
+            &:hover {
+              background-color: lighten(#00aa5b, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,102 +1,102 @@
 .product-detail {
-  margin-bottom: 128px;
+  margin-bottom: $section-spacing;
   &-image {
-    .product-detail-image__large {
-      margin-bottom: 15px;
-    }
-    .product-detail-image__small {
-      width: 60px;
-    }
     img {
       @include imgCenter;
     }
+    &__big {
+      margin-bottom: 20px;
+    }
+    &__small {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      img {
+        width: 22%;
+      }
+    }
   }
   &-content {
-    padding-left: 50px;
-    .product-detail-name {
-      @include typo($fsz: 30px);
-      margin-bottom: 20px;
-    }
-    .product-detail-price {
-      @include typo($fsz: 20px);
-      margin-bottom: 20px;
-      span {
-        font-size: 25px;
+    .product-detail {
+      &-name {
+        @include typo($fsz: 24px);
+        margin-bottom: 6px;
       }
-    }
-    .product-detail-variation {
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #000;
-      max-width: 510px;
-      padding: 20px 0 40px;
-      margin-bottom: 17px;
-      &__item {
-        display: flex;
+      &-code {
+        @include typo($fsz: 14px);
+        margin-bottom: 20px;
+      }
+      &-price {
+        margin-bottom: 40px;
         h5 {
-          @include typo($fsz: 25px);
-          width: 170px;
+          @include typo($fsz: 18px);
+          margin-bottom: 5px;
         }
-        &:nth-child(1) {
-          margin-bottom: 30px;
-          img {
-            @include imgCenter($height: 120px, $width: 80px);
-            display: inline-block;
+        span {
+          @include typo($fsz: 14px, $color: #00ff33);
+        }
+      }
+      &-select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        label {
+          @include typo();
+        }
+        select {
+          width: 90px;
+          height: 25px;
+          font-size: 14px;
+        }
+      }
+      &-btn {
+        margin-bottom: 30px;
+        a {
+          height: 40px;
+          background-color: #000;
+          text-align: center;
+          display: inline-block;
+          border: 1px solid #000;
+          @include link($fsz: 14px, $lh: 40px, $color: #fff);
+          &:first-child {
+            width: 235px;
+            margin-right: 10px;
+            i {
+              margin-right: 10px;
+            }
           }
-        }
-        &:nth-child(2) {
-          a {
-            @include link($fsz: 20px, $lh: 40px);
-            height: 40px;
+          &:last-child {
             width: 40px;
-            text-align: center;
-            border: 1px solid black;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            &.active {
-              &:after {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                height: 30px;
-                width: 30px;
-                bottom: -20px;
-                right: -20px;
-                background-color: #000;
-                transform: rotate(45deg);
-              }
-            }
-
-            &:not(:last-child) {
-              margin-right: 25px;
-            }
+            background-color: transparent;
+            color: #000;
+          }
+        }
+      }
+      &-description {
+        h3 {
+          @include typo($fsz: 24px);
+          margin-bottom: 30px;
+        }
+        p {
+          @include typo($fsz: 14px, $lh: 17px);
+          &:not(:last-child) {
+            margin-bottom: 10px;
           }
         }
       }
     }
-    .product-detail-title {
-      @include typo($fsz: 25px, $fw: 500);
-      margin-bottom: 20px;
+  }
+}
+
+.also-like {
+  margin-bottom: $section-spacing;
+  .section-title {
+    h5 {
+      font-size: 30px;
     }
-    .quantity {
-      margin-bottom: 30px;
-    }
-    .product-detail-description {
-      @include typo($lh: 22px);
-      margin-bottom: 20px;
-    }
-    .product-detail-buttons {
-      margin-top: 120px;
-      a {
-        @include link($fsz: 25px);
-        padding: 16px 22px;
-        border: 1px solid #000;
-        display: inline-block;
-        border-radius: 3px;
-        &:first-child {
-          margin-right: 10px;
-        }
-      }
-    }
+  }
+  .product {
+    margin-bottom: 30px;
   }
 }

@@ -1,0 +1,63 @@
+extends base/layout.pug
+block title
+  title Product detail
+block header
+  include components/header.pug
+block content
+  .spacing
+  .product-detail
+    .mode-container
+      .row
+        .col-7
+          .product-detail-image
+            .product-detail-image__big
+              img(src="assets/images/pd-1.png", alt="")
+            .product-detail-image__small
+              img(src="assets/images/pds-1.png", alt="")
+              img(src="assets/images/pds-2.png", alt="")
+              img(src="assets/images/pds-3.png", alt="")
+              img(src="assets/images/pds-4.png", alt="")
+        .col-5
+          .product-detail-content
+            h3.product-detail-name Jack & Jones Originals T-Shirt
+            h5.product-detail-code Product code: A158.05.574
+            
+            .product-detail-price
+              h5 $12.00
+              span Avaiable
+            .product-detail-select
+              label Sizes
+              select
+                option(value="M" selected) M
+                option(value="L") L
+                option(value="XL") XL
+            .product-detail-select
+              label Colors
+              select
+                option(value="White" selected) White
+                option(value="Red") Red
+                option(value="Blue") Blue
+            .product-detail-select
+              label Quantity
+              select
+                option(value="1" selected) 1
+                option(value="2") 2
+                option(value="3") 3
+            .product-detail-btn
+              a(href="#") 
+                i.fal.fa-shopping-cart
+                |Add to cart
+              a(href="#")
+                i.far.fa-heart
+            .product-detail-description
+              h3 Description
+              p It is a long established fact that a reader will be distracted by the readable content of a page.
+              p - When looking at its layout. 
+              p - The point of using Lorem Ipsum is that it has a  more-or-less normal distribution of letters.
+  .also-like
+    .mode-container
+      +title({content: 'You may also like'})
+      .row
+        each item in clothings.slice(0,6)
+          .col-4
+            +product({className: productClass, discount: item.discount, image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})

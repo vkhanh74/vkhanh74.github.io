@@ -1,0 +1,61 @@
+extends base/layout.pug
+block title
+  -var story=['av1.png', 'av2.png', 'av3.png', 'av4.png', 'av5.png', 'av4.png', 'av2.png']
+  title Our Story
+block header
+  include components/header.pug
+block content
+  .contact-us.contact-us
+    .contact-us-section
+      .contact-us-banner
+        h1 Our Company
+      .contact-us-content
+        .mode-container
+          p We don’t do fashion like anyone else does fashion. Our MODE Brands, created by our London design team, look between the lines to bring you the freshest clothing, shoes, accessories and gifts. When it comes to other brands at MODE, we select the best of those too – so, guaranteed, you'll always get the biggest variety, most covetable exclusives and coolest collabs.
+          p Giving you the confidence to express your individuality, MODE DESIGN interprets major trends, adding that next-level MODE spin. Representing in our size ranges (MODE Curve, Tall, Petite and Maternity), we've got all the stuff you need to invent a style that’s all yours… making every day, night and everything in-between as extraordinary as you are.
+          ul
+            li Address: 70 Truc Khe str., Ba Dinh dist., Hanoi
+            li Hotline: 1900 1234
+            li Email: mode@outlook.com
+    .contact-us-section
+      .contact-us-banner
+        h1 Follow us
+      .contact-us-content
+        .mode-container
+          p We believe in a world where you have total freedom to be you, without judgement. To experiment. To express yourself. To be brave and grab life as the extraordinary adventure it is. So we make sure everyone has an equal chance to discover all the amazing things they’re capable of – no matter who they are, where they’re from or what looks they like to boss. We exist to give you the confidence to be whoever you want to be.
+          p Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find your fit, offering our MODE Brands in more than 30 sizes – and we're committed to providing all sizes at the same price – so you can be confident we’ve got the perfect thing for you. We’re also proud to partner with GLAAD, one of the biggest voices in LGBTQ activism, on a gender-neutral collection to unite in accelerating acceptance.
+          ul
+            li
+              a(href="#")
+                i.fab.fa-facebook-f
+                | Facebook
+            li
+              a(href="#")
+                i.fab.fa-instagram
+                |Instagram
+            li
+              a(href="#")
+                i.fab.fa-twitter
+                |Twitter
+    .contact-us-section
+      .contact-us-banner
+        h1 Stores
+      .contact-us-content
+        .mode-container
+          .add-block
+            h5 HAI BA TRUNG dist.
+            p - 308 Ba Trieu str., Hai Ba Trung dist., Hanoi - 024 39 781 062
+          .add-block
+            h5 DONG DA dist.
+            p - 93 Nguyen Chi Thanh str., Dong Da dist., Hanoi - 024 62 594 091
+            p - 133 Thai Ha str., Dong Da dist., Hanoi- 024 62 603 009
+          .add-block
+            h5 HOAN KIEM dist
+            p - 18 Dien Bien Phu str., Hoan Kiem dist., Hanoi - 024 3232 1303
+            p - 64 Trang Tien, Hoan Kiem dist., Hanoi - 024 3200 9249
+          .add-block
+            h5 CAU GIAY dist.
+            p - 241 Xuan Thuy str., Cau Giay dist., Hanoi - 024 37 954 227
+            p - 222 Tran Duy Hung str., Cau Giay dist., Hanoi - 024 62 598 741
+    
+
