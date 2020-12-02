@@ -6,14 +6,13 @@ const banner = () => {
   });
 };
 
-const renderPage = () => {
-  let logo = $(".header-logo img");
-  if (
-    logo.attr("src") !==
-    `https://i1.wp.com/www.writefromscratch.com/wp-content/uploads/2018/12/demo-logo.png?ssl=1`
-  ) {
-    $("body").remove();
-  }
+const selectProductImage = () => {
+  $(".product-detail-image__small img").on("click", function (e) {
+    e.preventDefault();
+    let src = $(this).attr("src");
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".product-detail-image__large img").attr("src", src);
+  });
 };
 
 const cartModalHandle = () => {
@@ -58,7 +57,7 @@ const customSelectHandle = () => {
 
 $(document).ready(function () {
   banner();
-  renderPage();
   customSelectHandle();
   cartModalHandle();
+  selectProductImage();
 });

@@ -1,6 +1,8 @@
 mixin product(props = {})
-  -var {name, price, discount, image, hideImage, href = "product-detail.html"} = props
+  -var {name, price, discount, image, hideHeart, hideImage, href = "product-detail.html"} = props
   .product
+    if discount
+      img.product-sale(src="assets/images/sale.png", alt="sale")
     if !hideImage
       a(href=href).product-img
         img(src=image, alt="Product image")
@@ -14,5 +16,6 @@ mixin product(props = {})
     .product-actions
       button.product-actions__atc(href="#") Thêm vào giỏ hàng
         i.fa.fa-shopping-cart
-      button.product-actions__wl(href="#")
-        i.far.fa-heart
+      if !hideHeart
+        button.product-actions__wl(href="#")
+          i.far.fa-heart

@@ -30,7 +30,7 @@
         margin-right: 20px;
       }
       & > a {
-        @include link($fsz: 20px, $up: true);
+        @include link($fsz: 18px, $up: true);
       }
       .header-navigator__dropdown {
         position: absolute;

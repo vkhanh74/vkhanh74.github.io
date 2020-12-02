@@ -11,6 +11,10 @@
         &:not(:last-child) {
           margin-right: 30px;
         }
+        cursor: pointer;
+        &.active {
+          border: 2px solid #000;
+        }
       }
     }
     img {
