@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Our Story</title>
+    <title>Payment</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"/>
     <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
@@ -46,66 +46,90 @@
       </div>
     </div>
     <div id="content">
-      <div class="contact-us contact-us">
-        <div class="contact-us-section">
-          <div class="contact-us-banner">
-            <h1>Our Company</h1>
-          </div>
-          <div class="contact-us-content">
-            <div class="mode-container">
-              <p>We don’t do fashion like anyone else does fashion. Our MODE Brands, created by our London design team, look between the lines to bring you the freshest clothing, shoes, accessories and gifts. When it comes to other brands at MODE, we select the best of those too – so, guaranteed, you'll always get the biggest variety, most covetable exclusives and coolest collabs.</p>
-              <p>Giving you the confidence to express your individuality, MODE DESIGN interprets major trends, adding that next-level MODE spin. Representing in our size ranges (MODE Curve, Tall, Petite and Maternity), we've got all the stuff you need to invent a style that’s all yours… making every day, night and everything in-between as extraordinary as you are.</p>
-              <ul>
-                <li>Address: 70 Truc Khe str., Ba Dinh dist., Hanoi</li>
-                <li>Hotline: 1900 1234</li>
-                <li>Email: mode@outlook.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="contact-us-section">
-          <div class="contact-us-banner">
-            <h1>Follow us</h1>
-          </div>
-          <div class="contact-us-content">
-            <div class="mode-container">
-              <p>We believe in a world where you have total freedom to be you, without judgement. To experiment. To express yourself. To be brave and grab life as the extraordinary adventure it is. So we make sure everyone has an equal chance to discover all the amazing things they’re capable of – no matter who they are, where they’re from or what looks they like to boss. We exist to give you the confidence to be whoever you want to be.</p>
-              <p>Our audience (AKA you) is wonderfully unique. And we do everything we can to help you find your fit, offering our MODE Brands in more than 30 sizes – and we're committed to providing all sizes at the same price – so you can be confident we’ve got the perfect thing for you. We’re also proud to partner with GLAAD, one of the biggest voices in LGBTQ activism, on a gender-neutral collection to unite in accelerating acceptance.</p>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="contact-us-section">
-          <div class="contact-us-banner">
-            <h1>Stores</h1>
-          </div>
-          <div class="contact-us-content">
-            <div class="mode-container">
-              <div class="add-block">
-                <h5>HAI BA TRUNG dist.</h5>
-                <p>- 308 Ba Trieu str., Hai Ba Trung dist., Hanoi - 024 39 781 062</p>
-              </div>
-              <div class="add-block">
-                <h5>DONG DA dist.</h5>
-                <p>- 93 Nguyen Chi Thanh str., Dong Da dist., Hanoi - 024 62 594 091</p>
-                <p>- 133 Thai Ha str., Dong Da dist., Hanoi- 024 62 603 009</p>
-              </div>
-              <div class="add-block">
-                <h5>HOAN KIEM dist</h5>
-                <p>- 18 Dien Bien Phu str., Hoan Kiem dist., Hanoi - 024 3232 1303</p>
-                <p>- 64 Trang Tien, Hoan Kiem dist., Hanoi - 024 3200 9249</p>
-              </div>
-              <div class="add-block">
-                <h5>CAU GIAY dist.</h5>
-                <p>- 241 Xuan Thuy str., Cau Giay dist., Hanoi - 024 37 954 227</p>
-                <p>- 222 Tran Duy Hung str., Cau Giay dist., Hanoi - 024 62 598 741</p>
+      <div class="spacing"></div>
+      <div class="checkout">
+        <div class="mode-container">
+          <form action="/checkout-complete.html">
+            <div class="form-section">
+              <h5 class="checkout-title">CUSTOMER INFORMATION</h5>
+              <div class="row">
+                <div class="col-6">
+                  <input type="text" required="required" placeholder="Full name:"/>
+                </div>
+                <div class="col-6">
+                  <input type="text" required="required" placeholder="Phone number:"/>
+                </div>
+                <div class="col-12">
+                  <input type="text" required="required" placeholder="Email address:"/>
+                </div>
+                <div class="col-6">
+                  <select required="required">
+                    <option value="0" disabled="disabled" hidden="hidden" selected="selected">City</option>
+                    <option value="1">Hà Nội</option>
+                    <option value="2">Hải Phòng</option>
+                    <option value="3">Hồ Chí Minh</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select required="required">
+                    <option value="0" disabled="disabled" hidden="hidden" selected="selected">District</option>
+                    <option value="1">Đống Đa</option>
+                    <option value="2">Long Biên</option>
+                    <option value="3">Hoàn Kiếm</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <input type="text" required="required" placeholder="Address:"/>
+                </div>
               </div>
             </div>
-          </div>
+            <div class="form-section">
+              <h5 class="checkout-title">PAYMENT</h5>
+              <div class="row">
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="text" required="required"/>
+                    <label>Card number</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <div class="row">
+                      <div class="col-2">
+                        <input required="required" type="text" placeholder="MM"/>
+                      </div>
+                      <div class="col-2">
+                        <input required="required" type="text" placeholder="YY"/>
+                      </div>
+                    </div>
+                    <label>EXPINATION DATE</label>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="input-group">
+                    <input type="text" required="required" placeholder="YY"/>
+                    <label>Sercurity code</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <div class="row">
+                      <div class="col-6">
+                        <input required="required" type="text" placeholder="First name"/>
+                      </div>
+                      <div class="col-6">
+                        <input required="required" type="text" placeholder="Last name"/>
+                      </div>
+                    </div>
+                    <label>Cardholder name</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="center">
+              <button>Pay now</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,0 +1,62 @@
+extends base/layout.pug
+block title
+  title Payment
+block header
+  include components/header.pug
+block content
+  .spacing
+  .checkout
+    .mode-container
+      form(action="/checkout-complete.html")
+        .form-section
+          h5.checkout-title CUSTOMER INFORMATION
+          .row
+            .col-6
+              input(type="text" required placeholder="Full name:")
+            .col-6
+              input(type="text" required placeholder="Phone number:")
+            .col-12
+              input(type="text" required placeholder="Email address:")
+            .col-6
+              select(required)
+                option(value="0" disabled hidden selected) City
+                option(value="1") Hà Nội
+                option(value="2") Hải Phòng
+                option(value="3") Hồ Chí Minh
+            .col-6
+              select(required)
+                option(value="0" disabled hidden selected) District
+                option(value="1") Đống Đa
+                option(value="2") Long Biên
+                option(value="3") Hoàn Kiếm
+            .col-12
+              input(type="text" required placeholder="Address:")
+        .form-section
+          h5.checkout-title PAYMENT
+          .row
+            .col-12
+              .input-group
+                input(type="text" required)
+                label Card number
+            .col-12
+              .input-group
+                .row
+                  .col-2
+                    input(required type="text" placeholder="MM")
+                  .col-2
+                    input(required type="text" placeholder="YY")
+                label EXPINATION DATE
+            .col-5
+              .input-group
+                input(type="text" required placeholder="YY")
+                label Sercurity code
+            .col-12
+              .input-group
+                .row
+                  .col-6
+                    input(required type="text" placeholder="First name")
+                  .col-6
+                    input(required type="text" placeholder="Last name")
+                label Cardholder name
+        .center
+          button Pay now

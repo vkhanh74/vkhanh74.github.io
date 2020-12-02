@@ -1,4 +1,4 @@
 mixin title(props = {})
-  -var {content, style} = props;
-  .section-title
+  -var {content, style, align} = props;
+  .section-title(style=`text-align: ${align}`)
     h5(style=style)= content

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Homepage 1</title>
+    <title>Cart</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"/>
     <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
@@ -46,60 +46,133 @@
       </div>
     </div>
     <div id="content">
-      <div class="banner">
-        <div class="banner-slide" style="background-image: url('assets/images/banner.png')">
-          <div class="mode-container">
-            <div class="banner-slide__content">
-              <div class="banner-slide__content-wrapper">
-                <div class="row">
-                  <div class="col-12 col-lg-10">
-                    <h3>Sale 20% off</h3>
-                    <h5>today</h5><a href="#">Check it out</a>
-                  </div>
-                </div>
-              </div>
+      <div class="spacing"></div>
+          <div class="section-title" style="text-align: undefined">
+            <h5>Cart</h5>
+          </div>
+      <div class="cart">
+        <div class="mode-container">
+          <div class="cart-table">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img src="assets/images/products/clothing/1.png" alt="Image"/></td>
+                  <td> 
+                    <p>Jack &amp; Jones Originals T-Shirt</p>
+                    <div class="cart-select -has-label">
+                      <label>Sizes</label>
+                      <select>
+                        <option value="1">M</option>
+                        <option value="2">L</option>
+                        <option value="3">XL</option>
+                      </select>
+                    </div>
+                    <div class="cart-select -has-label">
+                      <label>Colors</label>
+                      <select>
+                        <option value="1">White</option>
+                        <option value="2">Red</option>
+                        <option value="3">Blue</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-select">
+                      <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>$19.02</td>
+                  <td><a href="#"><i class="far fa-times"></i></a></td>
+                </tr>
+                <tr>
+                  <td><img src="assets/images/products/clothing/2.png" alt="Image"/></td>
+                  <td> 
+                    <p>Jack &amp; Jones Originals T-Shirt</p>
+                    <div class="cart-select -has-label">
+                      <label>Sizes</label>
+                      <select>
+                        <option value="1">M</option>
+                        <option value="2">L</option>
+                        <option value="3">XL</option>
+                      </select>
+                    </div>
+                    <div class="cart-select -has-label">
+                      <label>Colors</label>
+                      <select>
+                        <option value="1">White</option>
+                        <option value="2">Red</option>
+                        <option value="3">Blue</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-select">
+                      <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>$16.44</td>
+                  <td><a href="#"><i class="far fa-times"></i></a></td>
+                </tr>
+                <tr>
+                  <td><img src="assets/images/products/clothing/3.png" alt="Image"/></td>
+                  <td> 
+                    <p>Jack &amp; Jones Originals T-Shirt</p>
+                    <div class="cart-select -has-label">
+                      <label>Sizes</label>
+                      <select>
+                        <option value="1">M</option>
+                        <option value="2">L</option>
+                        <option value="3">XL</option>
+                      </select>
+                    </div>
+                    <div class="cart-select -has-label">
+                      <label>Colors</label>
+                      <select>
+                        <option value="1">White</option>
+                        <option value="2">Red</option>
+                        <option value="3">Blue</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-select">
+                      <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>$15.45</td>
+                  <td><a href="#"><i class="far fa-times"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-footer__total">
+              <p>Total<span>120$</span></p>
             </div>
+            <div class="cart-footer__button"><a href="shop-clothings.html">Return to shop</a><a href="checkout.html">Checkout</a></div>
           </div>
         </div>
       </div>
-      <section class="categories">
-        <div class="mode-container">
-              <div class="section-title" style="text-align: undefined">
-                <h5>Products</h5>
-              </div><a class="categories-item" href="#" style="background-image: url('assets/images/categories-1.png')"><span>Clothing</span></a>
-          <div class="empty"></div><a class="categories-item" href="#" style="background-image: url('assets/images/categories-2.png')"><span>ACCESSORIES</span></a>
-        </div>
-      </section>
-      <section class="collection">
-        <div class="mode-container">
-              <div class="section-title" style="text-align: undefined">
-                <h5>Products</h5>
-              </div>
-          <div class="row">
-            <div class="col-6"><a class="categories-item" href="#" style="background-image: url('assets/images/collection-1.png')"><span>Clothing</span></a></div>
-            <div class="col-6"><a class="categories-item" href="#" style="background-image: url('assets/images/collection-2.png')"><span>ACCESSORIES</span></a></div>
-          </div>
-        </div>
-      </section>
-      <section class="story">
-        <div class="mode-container">
-              <div class="section-title" style="text-align: undefined">
-                <h5 style="color: #fff">HUMANS OF MODE</h5>
-              </div>
-          <div class="story-content">
-            <div class="story-slide">
-              <div class="slide-item"><img src="assets/images/av1.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av2.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av3.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av4.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av5.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av4.png" alt="image"/></div>
-              <div class="slide-item"><img src="assets/images/av2.png" alt="image"/></div>
-            </div>
-            <p>We have 168 suppliers who use 713 factories around the world. We’re serious about making sure every single person in that supply chain is safe at work, respected and earns a living wage. We set high ethical standards and support our suppliers to help them meet them. </p>
-          </div>
-        </div>
-      </section>
     </div>
     <div class="footer">
       <div class="footer-top">
