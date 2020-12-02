@@ -1,0 +1,9 @@
+extends base/layout.pug
+block title
+  title Homepage 1
+block header
+  include components/header.pug
+block content
+  .spacing
+  +title({content: 'Search result'})
+  +shopLayout({title: 'Clothing', data: clothings, hideHeader: true})
