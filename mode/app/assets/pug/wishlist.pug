@@ -5,7 +5,7 @@ block header
   include components/header.pug
 block content
   .spacing
-  +title({content: "Cart"})
+  +title({content: "Wishlist"})
   .cart
     .mode-container
       .cart-table
@@ -16,39 +16,10 @@ block content
               th Name
               th Quantity
               th Price
-          tbody
-            each item in clothings.slice(3,6)
-              tr
-                td
-                  img(src=item.image, alt="Image")
-                td 
-                  p= item.name
-                  .cart-select.-has-label
-                    label Sizes
-                    select
-                      option(value="1") M
-                      option(value="2") L
-                      option(value="3") XL
-                  .cart-select.-has-label
-                    label Colors
-                    select
-                      option(value="1") White
-                      option(value="2") Red
-                      option(value="3") Blue
-                  a(href="#") Add to cart
-                td
-                  .cart-select
-                    select
-                      option(value="1") 1
-                      option(value="2") 2
-                      option(value="3") 3
-                td= item.price
-                td
-                  a(href="#")
-                    i.far.fa-times
+          tbody#wishlist-body
       .cart-footer
         .cart-footer__total
-          p Total
+          p#wishlist-total Total
             span 120$
         .cart-footer__button
           a(href="shop-clothing.html") Return to shop

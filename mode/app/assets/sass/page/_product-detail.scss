@@ -10,6 +10,7 @@
     &__small {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       img {
         width: 22%;
@@ -34,6 +35,9 @@
         }
         span {
           @include typo($fsz: 14px, $color: #00ff33);
+          &.-red {
+            color: #f94a41;
+          }
         }
       }
       &-select {
@@ -52,13 +56,13 @@
       }
       &-btn {
         margin-bottom: 30px;
-        a {
+        button {
           height: 40px;
           background-color: #000;
           text-align: center;
           display: inline-block;
           border: 1px solid #000;
-          @include link($fsz: 14px, $lh: 40px, $color: #fff);
+          @include link($fsz: 14px, $color: #fff);
           &:first-child {
             width: 235px;
             margin-right: 10px;

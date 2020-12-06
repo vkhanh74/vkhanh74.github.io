@@ -1,13 +1,13 @@
 mixin product(props = {})
-  -var {name, price, discount, image, status, rate, className = ''} = props
+  -var {id, name, price, discount, image, status, rate, className = ''} = props
   div(class=`product ${className}`)
-    a.product-wishlist(href="#")
+    button.product-wishlist(onclick=`addProductToWishlist(${id})`)
       i.far.fa-heart
-    a(href="product-detail.html").product-img
+    a(href=`product-detail.html?id=${id}`).product-img
       img(src=image, alt="Product image")
     .product-content__wrapper
       .product-content
-        a.product-name(href="product-detail.html")= name
+        a.product-name(href=`product-detail.html?id=${id}`)= name
         if discount
           del= price
           h5.product-price.-discount= discount

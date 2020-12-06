@@ -509,7 +509,7 @@ template {
 .product {
   position: relative; }
   .product:hover .product-img img {
-    transform: scale(1.05) rotate(1deg); }
+    transform: scale(1.05); }
   .product-img {
     display: block;
     margin-bottom: 17px;
@@ -566,6 +566,8 @@ template {
     top: 10px;
     right: 10px;
     z-index: 10;
+    background-color: transparent;
+    border: 0;
     color: #000;
     font-size: 20px;
     font-weight: normal;
@@ -1168,6 +1170,7 @@ template {
   .product-detail-image__small {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%; }
     .product-detail-image__small img {
       width: 22%; }
@@ -1196,6 +1199,8 @@ template {
       font-size: 14px;
       font-weight: 500;
       line-height: 1; }
+      .product-detail-content .product-detail-price span.-red {
+        color: #f94a41; }
   .product-detail-content .product-detail-select {
     display: flex;
     align-items: center;
@@ -1212,7 +1217,7 @@ template {
       font-size: 14px; }
   .product-detail-content .product-detail-btn {
     margin-bottom: 30px; }
-    .product-detail-content .product-detail-btn a {
+    .product-detail-content .product-detail-btn button {
       height: 40px;
       background-color: #000;
       text-align: center;
@@ -1222,17 +1227,17 @@ template {
       font-size: 14px;
       font-weight: normal;
       text-decoration: none;
-      line-height: 40px;
+      line-height: 1;
       transition: 0.2s ease-in-out;
       cursor: pointer; }
-      .product-detail-content .product-detail-btn a:hover {
+      .product-detail-content .product-detail-btn button:hover {
         color: #f26460; }
-      .product-detail-content .product-detail-btn a:first-child {
+      .product-detail-content .product-detail-btn button:first-child {
         width: 235px;
         margin-right: 10px; }
-        .product-detail-content .product-detail-btn a:first-child i {
+        .product-detail-content .product-detail-btn button:first-child i {
           margin-right: 10px; }
-      .product-detail-content .product-detail-btn a:last-child {
+      .product-detail-content .product-detail-btn button:last-child {
         width: 40px;
         background-color: transparent;
         color: #000; }

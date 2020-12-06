@@ -60,7 +60,7 @@ mixin shopLayout(props = {})
             .shop-content__main
               .products
                 each item in data
-                  +product({className: productClass, discount: item.discount, image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
+                  +product({id: item.id ? item.id : 0, className: productClass, discount: item.discount, image: item.image,name: item.name, price: item.price, status: item.status, rate: item.rate})
               if !hidePagination
                 .pagination
                   ul
