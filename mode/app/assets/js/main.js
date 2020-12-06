@@ -3,7 +3,7 @@ const products = [
     id: 0,
     name: "Jack & Jones Originals T-Shirt",
     price: 6.5,
-    status: 0,
+    status: 1,
     rate: 3,
     image: "assets/images/products/clothing/1.png",
     medias: [
@@ -17,7 +17,7 @@ const products = [
     id: 1,
     name: "Jack & Jones Originals T-Shirt",
     price: 19.02,
-    status: 0,
+    status: 1,
     rate: 4,
     image: "assets/images/products/clothing/1.png",
     medias: [
@@ -219,7 +219,7 @@ const renderProductDetail = () => {
                 <div class="product-detail-price">
                   <h5>$${foundProduct.price}</h5>
                   ${
-                    foundProduct.status === 1
+                    foundProduct.status == 1
                       ? "<span>Avaiable</span>"
                       : "<span class='-red'>Sold out</span>"
                   }
