@@ -739,11 +739,19 @@ template {
         vertical-align: top;
         margin-top: 50px;
         padding-top: 65px;
-        color: #000;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1;
         padding-right: 0; }
+        .cart-table table tbody tr td:nth-child(5) button {
+          background: transparent;
+          border: 0;
+          color: #000;
+          font-size: 18px;
+          font-weight: normal;
+          text-decoration: none;
+          line-height: 1;
+          transition: 0.2s ease-in-out;
+          cursor: pointer; }
+          .cart-table table tbody tr td:nth-child(5) button:hover {
+            color: #f26460; }
   .cart-footer__total {
     text-align: right;
     padding: 15px 50px 15px;
